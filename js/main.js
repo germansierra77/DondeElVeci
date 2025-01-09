@@ -16,7 +16,7 @@ document.addEventListener("click", (e)=> {
 /*FUNCION QUE SIRVE PARA GUARDAR DATOS*/
 document.addEventListener("click", (e)=> {
     if(e.target.matches("#btnguardar"))
-    location.href="menuprincipal"
+    location.href="seleccionusuario"
 })
 /*FUNCION QUE SIRVE PARA VOLVER A INICIO DE SESION*/
 document.addEventListener("click", (e)=> {
@@ -40,7 +40,7 @@ document.addEventListener("click", (e)=> {
 })
 /*FUNCION QUE DIRIGE AL MENU DE "INICIAR SESION" DE NUEVO*/
 document.addEventListener("click", (e)=> {
-    if(e.target.matches("#btncancelar"))
+    if(e.target.matches("#btnvolver"))
     location.href="iniciosesion"
 })
 /*FUNCION QUE DIRIGE AL MENU DE "REESTABLECER" DE NUEVO*/
@@ -52,4 +52,14 @@ document.addEventListener("click", (e)=> {
 document.addEventListener("click", (e)=> {
     if(e.target.matches("#btnregresar"))
     location.href="reestablecer"
+})
+/*FUNCION QUE DIRIGE AL MENU DE TENDERO*/
+document.addEventListener("click", (e)=> {
+    if(e.target.matches("#btntendero"))
+    location.href="menutendero"
+})
+/*FUNCION QUE DIRIGE AL MENU PRINCIPAL-CLIENTE*/
+document.addEventListener("click", (e)=> {
+    if(e.target.matches("#btncliente"))
+    location.href="menuprincipal"
 })

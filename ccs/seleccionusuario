@@ -72,6 +72,7 @@
     margin-left: 0.5em;
     margin: 0.5em;
     margin-top: 0,5em;
+    text-align: center;
 }
 .casillasaldo{
     color: white;
@@ -79,6 +80,16 @@
     border-radius: 1em;
     font-size: 33px;
 }
+#btncliente,#btntendero{ 
+    width: 40%;
+    height: 40px;
+    float: left;
+    background-position: center;
+    background-color: white;
+    margin-left: 3.5em;
+    border-radius: 20px;
+    margin-top: 0.5em;
+} 
 .footer{
     height: 13%;
     width: 97%;
@@ -87,15 +98,25 @@
     margin: 0.5em; 
     border-color: white;
 }
-#btnrecargar,#btnretirar{ 
-    width: 40%;
+#btncliente,#btntendero{ 
+    width: 25%;
+    height: 40px;
+    float: left;
+    background-position: center;
+    background-color: white;
+    margin-left: 3.5em;
+    border-radius: 20px;
+    margin-top: 0.5em;
+}
+#btnvolver{ 
+    width: 25%;
     height: 40px;
     float: left;
     background-position: center;
     background-color: green;
     margin-left: 3.5em;
     border-radius: 20px;
-    margin-top: 0.5em;
+    margin-top: 0.5em; 
 }
 fieldset{
     text-align: center;

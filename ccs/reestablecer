@@ -85,7 +85,7 @@
     margin: 0.5em; 
     border-color: white;
 }
-#btncodigo,#btncancelar{ 
+#btncodigo,#btnvolver{ 
     width: 40%;
     height: 60px;
     float: left;

@@ -6,7 +6,7 @@
   <title>MENU TENDERO</title>
   <link rel="stylesheet" href="../ccs/fontawesome.css">
   <link rel="stylesheet" href="../ccs/menutendero?v=1.1">
-  <script type="module" src="../js/main1.js"></script> 
+  <script type="module" src="../js/main.js"></script> 
 </head>
 <body>
   <div class="contenedor">
