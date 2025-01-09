@@ -6,7 +6,7 @@
     <title>CREACION DE USUARIO</title>
     <link rel="stylesheet" href="../ccs/fontawesome.css">
     <link rel="stylesheet" href="../ccs/creacionusuario.css?v=1.2">
-    <script type="module" src="../js/main1.js"></script>
+    <script type="module" src="../js/main.js"></script>
 </head>
 <body>
     <div class="contenedor">

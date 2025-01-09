@@ -38,8 +38,18 @@ document.addEventListener("click", (e)=> {
     if(e.target.matches("#btncodigo"))
     location.href="validar"
 })
-/*FUNCION QUE DIRIGE AL MENU DE INICIAR SESION DE NUEVO*/
+/*FUNCION QUE DIRIGE AL MENU DE "INICIAR SESION" DE NUEVO*/
 document.addEventListener("click", (e)=> {
     if(e.target.matches("#btncancelar"))
     location.href="iniciosesion"
+})
+/*FUNCION QUE DIRIGE AL MENU DE "REESTABLECER" DE NUEVO*/
+document.addEventListener("click", (e)=> {
+    if(e.target.matches("#btnvalidar"))
+    location.href="menuprincipal"
+})
+/*FUNCION QUE DIRIGE AL MENU DE "REESTABLECER" DE NUEVO*/
+document.addEventListener("click", (e)=> {
+    if(e.target.matches("#btnregresar"))
+    location.href="reestablecer"
 })

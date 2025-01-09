@@ -6,7 +6,7 @@
     <title>INICIO DE SESION</title>
     <link rel="stylesheet" href="../ccs/fontawesome.css">
     <link rel="stylesheet" href="../ccs/iniciosesion?v=1.5">
-    <script type="module" src="../js/main1.js"></script>
+    <script type="module" src="../js/main.js"></script>
 </head>
 <body>
     <div class="contenedor">

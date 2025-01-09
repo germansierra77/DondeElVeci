@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VALIDACION CODIGO</title>
     <link rel="stylesheet" href="../ccs/fontawesome.css">
-    <link rel="stylesheet" href="../ccs/validar?v=1.2">
-    <script type="module" src="../js/main1.js"></script> 
+    <link rel="stylesheet" href="../ccs/validar?v=1.3">
+    <script type="module" src="../js/main.js"></script> 
 </head>
 <body>
     <div class="contenedor">
@@ -50,8 +50,8 @@
             </div>
         </div></div>
         <div class="footer">
-            <button type="button" class="btn-primary btn-lg" id="btnvalidacion">REGRESAR</button>
-            <button type="button" class="btn-primary btn-lg" id="btnvalidacion">VALIDAR CODIGO</button>   
+            <button type="button" class="btn-primary btn-lg" id="btnregresar">REGRESAR</button>
+            <button type="button" class="btn-primary btn-lg" id="btnvalidar">VALIDAR CODIGO</button>   
         </div>
     </div>
 </body>
