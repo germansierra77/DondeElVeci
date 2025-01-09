@@ -35,11 +35,11 @@ document.addEventListener("click", (e)=> {
 })
 /*FUNCION QUE DIRIGE AL MENU PARA VALIDAR CODIGO PARA REESTABLECER CONTRASEÑA*/
 document.addEventListener("click", (e)=> {
-    if(e.target.matches("#botoncodigo"))
+    if(e.target.matches("#btncodigo"))
     location.href="validar"
 })
 /*FUNCION QUE DIRIGE AL MENU DE INICIAR SESION DE NUEVO*/
 document.addEventListener("click", (e)=> {
-    if(e.target.matches("#botoncancelar"))
+    if(e.target.matches("#btncancelar"))
     location.href="iniciosesion"
 })

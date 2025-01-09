@@ -45,8 +45,8 @@
             </form>
         </div>
         <div class="footer">
-                <button type="button" id="botoncancelar">CANCELAR</button>
-                <button type="button" id="botoncodigo">ENVIAR CODIGO</button>
+                <button type="button" id="btncancelar">CANCELAR</button>
+                <button type="button" id="btncodigo">ENVIAR CODIGO</button>
         </div>
     </div>
 </body>
