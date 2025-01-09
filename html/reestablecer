@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>REESTABLECER CONTRASEÑA</title>
     <link rel="stylesheet" href="../ccs/fontawesome.css">
-    <link rel="stylesheet" href="../ccs/reestablecer?v=1.0">
+    <link rel="stylesheet" href="../ccs/reestablecer?v=1.1">
     <script type="module" src="../js/main1.js"></script> 
 </head>
 <body>
@@ -45,8 +45,8 @@
             </form>
         </div>
         <div class="footer">
-                <button type="button" class="btn-primary btn-lg" id="btnrecargar">CANCELAR</button>
-                <button type="button" class="btn-primary btn-lg" id="btnretirar">ENVIAR CODIGO</button>
+                <button type="button" id="botoncancelar">CANCELAR</button>
+                <button type="button" id="botoncodigo">ENVIAR CODIGO</button>
         </div>
     </div>
 </body>

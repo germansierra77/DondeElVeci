@@ -85,7 +85,7 @@
     margin: 0.5em; 
     border-color: white;
 }
-#btnrecargar,#btnretirar{ 
+#botoncodigo,#botoncancelar{ 
     width: 40%;
     height: 60px;
     float: left;
