@@ -6,7 +6,7 @@
     <title>TIPO DE USUARIO</title>
     <link rel="stylesheet" href="../ccs/fontawesome.css">
     <link rel="stylesheet" href="../ccs/seleccionusuario?v=1.0">
-    <script type="module" src="../js/main1.js"></script> 
+    <script type="module" src="../js/main.js"></script> 
 </head>
 <body>
     <div class="contenedor">
@@ -20,6 +20,7 @@
                 </div>
             </div>
         <div class="contenido">
+            <br>
             <div class="form-floating">ID CLIENTE
                 <input type="text" class="casillasinfo" placeholder="340957" disabled>
                 <label for="floatingInputDisabled"></label>
@@ -43,13 +44,13 @@
         </div>
         <div class="footer">
             <div class="buttoninfo">
-                <button type="button" class="btn-primary btn-lg" id="btntendero">TENDERO</button>
+                <button type="button" id="btntendero">TENDERO</button>
             </div>
             <div class="buttoninfo">
-                <button type="button" class="btn-primary btn-lg" id="btnvolver">CANCELAR</button>
+                <button type="button" id="btnvolver">CANCELAR</button>
             </div>
             <div class="buttoninfo">
-                <button type="button" class="btn-primary btn-lg" id="btncliente">CLIENTE</button>
+                <button type="button" id="btncliente">CLIENTE</button>
             </div>
         </div>
     </div>

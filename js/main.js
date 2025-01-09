@@ -1,7 +1,7 @@
 /*FUNCION QUE SIRVE PARA DIRIGIRSE A MENU PRINCIPAL*/
 document.addEventListener("click", (e)=> {
     if(e.target.matches("#btningreso"))
-    location.href="menuprincipal"
+    location.href="seleccionusuario"
 })
 /*FUNCION QUE SIRVE PARA REGISTRARSE */
 document.addEventListener("click", (e)=> {
