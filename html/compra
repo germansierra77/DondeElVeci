@@ -6,6 +6,7 @@
     <title>COMPRA</title>
     <link rel="stylesheet" href="../ccs/fontawesome.css">
     <link rel="stylesheet" href="../ccs/compra?v=1.5">
+    <script type="module" src="../js/main.js"></script>
 </head>
 <body>
     <div class="contenedor">
@@ -88,9 +89,5 @@
             </div>
         </div>
     </div>
-    <script src="../js/Boostrap/bootstrap.bundle.js"></script>
-    <script src="../js/Boostrap/popper.min.js"></script>
-    <script src="../js/Boostrap/bootstrap.js"></script>  
-    <script type="module" src="../js/main.js"></script> 
 </body>
 </html>

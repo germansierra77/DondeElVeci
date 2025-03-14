@@ -48,28 +48,37 @@
     margin: 0.5em;
     row-gap: 0.2em;
 }
-.btn-primary{
+#ventanacomprar{
+    background-color: green;
+    text-align: center;
     font-family: 'Courier New', Courier, monospace;
     border-radius: 20px;
     border-color: green;
     font-size: larger;
 }
-#ventanacomprar{
-    background-color: green;
-    text-align: center;
-}
 #ventanamicuenta{
     background-color: green;
     text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 20px;
+    border-color: green;
+    font-size: larger;
 }
 #ventanahistorial{
     background-color: green;
-    text-align: center; 
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 20px;
+    border-color: green;
+    font-size: larger;
 }
 #ventanarecargar{
     background-color: green;
-    text-align: center; 
-    float: left;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 20px;
+    border-color: green;
+    font-size: larger;
 }
 #footer{
     height: 15%;
