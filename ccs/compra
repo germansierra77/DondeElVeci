@@ -22,14 +22,14 @@
     border-radius: 0.5em;
     margin: 0.5em;
     float: left;
-    background-color:rgba(131, 216, 51, 0.534);
+    background-color:green;
 }
 #letreroapp{
     height: 80%;
     width: 80%;
     text-justify:right;
     font-family: 'Courier New', Courier, monospace;
-    background-color: rgba(131, 216, 51, 0.534);
+    background-color: green;
     border-radius: 0.5em;
     margin: 0.5em;
     float: right;
@@ -49,7 +49,7 @@
 .btn-listado{
     height: 70px;
     width: 245px;
-    background-color: rgba(131, 216, 51, 0.534);
+    background-color: green;
     margin: 0.1em;
     border-radius: 1em;
 }
@@ -64,10 +64,10 @@ table,th,td{
 }
 th{
     text-align: center;
-    background-color: rgba(131, 216, 51, 0.534);
+    background-color: green;
 }
 #btncomprar{
-    background-color: rgba(131, 216, 51, 0.534);
+    background-color: green;
     height: 50px;
     width: 170px;
     margin-left: 35%;
