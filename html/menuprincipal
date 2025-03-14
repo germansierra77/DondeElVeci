@@ -17,7 +17,7 @@
       </div>
     </div>
     <div class="cuerpo">
-      <button id="ventanacomprar" class="btn-primary" type="button">COMPRAR</button>
+      <button id="ventanacomprar" type="button" class="btn-primary">COMPRAR</button>
       <button id="ventanamicuenta" class="btn-primary" type="button">MI CUENTA</button>
       <button id="ventanahistorial" class="btn-primary" type="button">HISTORIAL</button>
       <button id="ventanarecargar" class="btn-primary" type="button" >RECARGAR CUENTA</button>

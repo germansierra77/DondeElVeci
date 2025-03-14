@@ -63,3 +63,8 @@ document.addEventListener("click", (e)=> {
     if(e.target.matches("#btncliente"))
     location.href="menuprincipal"
 })
+/*FUNCION QUE DIRIGE AL MENU-COMPRA (CLIENTE)*/
+document.addEventListener("click",(e)=> {
+    if(e.target.matches("#ventanacomprar"))
+    location.href="compra"
+})
