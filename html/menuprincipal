@@ -18,9 +18,9 @@
     </div>
     <div class="cuerpo">
       <button type="button" id="ventanacomprar">COMPRAR</button>
-      <button type="button" id="ventanamicuenta" class="btn-primary">MI CUENTA</button>
-      <button id="ventanahistorial" class="btn-primary" type="button">HISTORIAL</button>
-      <button id="ventanarecargar" class="btn-primary" type="button" >RECARGAR CUENTA</button>
+      <button type="button" id="ventanamicuenta">MI CUENTA</button>
+      <button type="button" id="ventanahistorial">HISTORIAL</button>
+      <button type="button" id="ventanarecargar">RECARGAR CUENTA</button>
     </div>
     <div id="footer">
       <div class="botonesfooter">
