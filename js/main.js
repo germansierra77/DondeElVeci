@@ -65,6 +65,6 @@ document.addEventListener("click", (e)=> {
 })
 /*FUNCION QUE DIRIGE AL MENU-COMPRA (CLIENTE)*/
 document.addEventListener("click", (e)=> {
-    if(e.target.matches("#ventanarecargar"))
+    if(e.target.matches("#compra"))
     location.href="comprar"
 })

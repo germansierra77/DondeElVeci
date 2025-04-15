@@ -12,7 +12,7 @@
     <div class="contenedor">
         <div id="header">
             <div>
-              <img id="imgusuario" src="../images/usuario.jpg" alt="usuario" width="100px" height="90px">
+              <img id="imgusuario" src="../images/usuario.jpg" width="100px" height="90px">
             <div id="letnuevousuario" class="text">NUEVO USUARIO</div></div>
         </div> 
         <div id="contenido">BIENVENIDOS A "DONDE EL VECI" APP <br> PARA QUE PUEDAS USAR LA APLICACION
