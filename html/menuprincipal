@@ -6,7 +6,7 @@
   <title>MENU PRINCIPAL</title>
   <link rel="stylesheet" href="../ccs/fontawesome.css">
   <link rel="stylesheet" href="../ccs/menuprincipal?v=1.2">
-  <script type="module" src="../js/main.js"></script> 
+  <script type="module" src="../js/main.js?v=1.0"></script> 
 </head>
 <body>
   <div class="contenedor">
@@ -17,7 +17,7 @@
       </div>
     </div>
     <div class="cuerpo">
-      <button type="button" id="menucomprar">COMPRAR</button>
+      <button type="button" id="ventanacomprar">COMPRAR</button>
       <button type="button" id="ventanamicuenta">MI CUENTA</button>
       <button type="button" id="ventanahistorial">HISTORIAL</button>
       <button type="button" id="ventanarecargar">RECARGAR CUENTA</button>

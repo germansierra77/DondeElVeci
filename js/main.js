@@ -65,6 +65,19 @@ document.addEventListener("click", (e)=> {
 })
 /*FUNCION QUE DIRIGE AL MENU-COMPRA (CLIENTE)*/
 document.addEventListener("click", (e)=> {
-    if(e.target.matches("#compra"))
-    location.href="comprar"
+    if(e.target.matches("#ventanacomprar"))
+    location.href="compra"
+})
+
+/*FUNCIONES PARA LA INTERFAZ COMPRA*/
+/*FUNCION PARA REGRESAR AL MENU PRINCIPAL*/
+document.addEventListener("click", (e) => {
+    if(e.target.matches("#btnvolvermenu"))
+        location.href="menuprincipal"
+})
+
+/*FUNCION QUE DIRIGE AL MENU-MI CUENTA (CLIENTE)*/
+document.addEventListener("click", (e)=> {
+    if(e.target.matches("#ventanamicuenta"))
+    location.href="infocuenta"
 })
