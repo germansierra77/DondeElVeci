@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HISTORIAL DE COMPRAS</title>
-    <link rel="stylesheet" href="../ccs/historialcompras?v=1.0">
     <link rel="stylesheet" href="../ccs/fontawesome.css">
+    <link rel="stylesheet" href="../ccs/historialcompras?v=1.1">
+    <script type="module" src="../js/main.js?v=1.0"></script> 
 </head>
 <body>
     <div class="contenedor">
@@ -92,11 +93,10 @@
         </div>
     </div></div>
     <div class="footer">
-        <div class="btninfo">
-            <button type="button" class="btninfo" id="btnvolver">VOLVER</button>
-            <button type="button" class="btninfo" id="btndescargarinforme">DESCARGAR INFORME</button>
+        <div class="botones">
+            <button type="button" class="botones" id="btnvolvermenu">VOLVER</button>
+            <button type="button" class="botones"  id="btndescargarinforme">DESCARGAR INFORME</button>
         </div>
     </div>
-    <script type="module" src="../js/main.js"></script> 
 </body>
 </html>

@@ -77,15 +77,14 @@ th{
     border-radius: 1em;
     margin: 0.6em; 
 }
-.btninfo{
-    width: 750px;
-    height: 40px;
-    background-position: center;
-    padding: 0.5em;
+.botones {
+    background: green;
+    width: 96%;
+    height: 85%;
+    padding: 0.3em;
     display: flex;
-    margin-right: 30px;
+    margin-right: 10px;
     margin-left: 10px;
     justify-content: center;
-    border-radius: 1em;
-    background-color: green;
+    border-radius: 2em;
 }

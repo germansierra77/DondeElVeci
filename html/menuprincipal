@@ -5,22 +5,50 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MENU PRINCIPAL</title>
   <link rel="stylesheet" href="../ccs/fontawesome.css">
-  <link rel="stylesheet" href="../ccs/menuprincipal?v=1.2">
+  <link rel="stylesheet" href="../ccs/menuprincipal?v=1.1">
   <script type="module" src="../js/main.js?v=1.0"></script> 
 </head>
 <body>
   <div class="contenedor">
     <div id="header">
       <div id="menualterno"></div>
-      <div id="letreroapp">
-        <div class="elemento">APP DONDE EL VECI</div>
-      </div>
+        <div id="letreroapp">
+          <div id="encabezado">APP DONDE EL VECI
+            <img src="../images/logo app.png" id="logoapp">
+          </div>
+        </div>
     </div>
     <div class="cuerpo">
-      <button type="button" id="ventanacomprar">COMPRAR</button>
-      <button type="button" id="ventanamicuenta">MI CUENTA</button>
-      <button type="button" id="ventanahistorial">HISTORIAL</button>
-      <button type="button" id="ventanarecargar">RECARGAR CUENTA</button>
+      <button type="button" class="ventanas" id="ventanacomprar">COMPRAR
+        <div type="icono">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="iconos" viewBox="0 0 16 16">
+            <path d="M5.071 1.243a.5.5 0 0 1 .858.514L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H15v5a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V9H.5a.5.5 0 0 1-.5-.5v-2A.5.5 0 0 1 .5 6h1.717zM3.5 10.5a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0zm2.5 0a.5.5 0 1 0-1 0v3a.5.5 0 0 0 1 0z"/>
+          </svg>
+        </div>
+      </button>
+      <button type="button" class="ventanas" id="ventanamicuenta">MI CUENTA
+        <div type="icono">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="iconos" viewBox="0 0 16 16">
+            <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2zm4.5 0a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1zM8 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6m5 2.755C12.146 12.825 10.623 12 8 12s-4.146.826-5 1.755V14a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1z"/>
+          </svg>
+        </div>
+      </button>
+      <button type="button" class="ventanas" id="ventanahistorial">HISTORIAL
+        <div type="icono">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="iconos" viewBox="0 0 16 16">
+            <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2z"/>
+            <path d="M7 5.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0M7 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0"/>
+          </svg>
+        </div>
+      </button>
+      <button type="button" class="ventanas" id="ventanarecargar">RECARGAR CUENTA
+        <div type="icono">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="iconos" viewBox="0 0 16 16">
+            <path d="M14 3a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zM2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2z"/>
+            <path d="M2 5.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5m3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5m3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5m3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5"/>
+          </svg>
+        </div>
+      </button>
     </div>
     <div id="footer">
       <div class="botonesfooter">

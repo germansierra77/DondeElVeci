@@ -25,20 +25,29 @@
     background-color:rgba(131, 216, 51, 0.534);
 }
 #letreroapp{
-    height: 80%;
+    height: 96%;
     width: 80%;
-    text-justify:right;
-    font-family: 'Courier New', Courier, monospace;
-    background-color: rgba(131, 216, 51, 0.534);
-    border-radius: 0.5em;
-    margin: 0.5em;
-    float: right;
-    font-size: larger;
+    float: left;
+    color: none;
 }
-.elemento{
-   text-align: center; 
-   margin: 0.5em;
-   font-size:40px;
+#encabezado{
+    height: 80%;
+    width: 98%;
+    color: white;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: green;
+    margin: 10px;
+    line-height: 65px;
+    font-size: 45px;
+    border-radius: 20px;
+}
+#logoapp {
+    height: 70px;
+    width: 70px;
+    float: right;
+    margin: 1px;
+    border-radius: 20px;
 }
 .cuerpo{
     display: grid;
@@ -48,37 +57,19 @@
     margin: 0.5em;
     row-gap: 0.2em;
 }
-#ventanacomprar{
+.ventanas{
+    color: white;
+    font-size: 50px;
     background-color: green;
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
     border-radius: 20px;
     border-color: green;
-    font-size: larger;
 }
-#ventanamicuenta{
-    background-color: green;
-    text-align: center;
-    font-family: 'Courier New', Courier, monospace;
-    border-radius: 20px;
-    border-color: green;
-    font-size: larger;
-}
-#ventanahistorial{
-    background-color: green;
-    text-align: center;
-    font-family: 'Courier New', Courier, monospace;
-    border-radius: 20px;
-    border-color: green;
-    font-size: larger;
-}
-#ventanarecargar{
-    background-color: green;
-    text-align: center;
-    font-family: 'Courier New', Courier, monospace;
-    border-radius: 20px;
-    border-color: green;
-    font-size: larger;
+.iconos {
+    width: 50px;
+    height: 50px;
+    color: white;
 }
 #footer{
     height: 15%;
