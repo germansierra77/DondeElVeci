@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HISTORIAL DE COMPRAS</title>
     <link rel="stylesheet" href="../ccs/fontawesome.css">
-    <link rel="stylesheet" href="../ccs/historialcompras?v=1.1">
-    <script type="module" src="../js/main.js?v=1.0"></script> 
+    <link rel="stylesheet" href="../ccs/historialcompras">
+    <script type="module" src="../js/main.js"></script> 
 </head>
 <body>
     <div class="contenedor">

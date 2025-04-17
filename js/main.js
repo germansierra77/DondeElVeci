@@ -90,28 +90,22 @@ document.addEventListener("click", (e)=> {
     location.href="recargarcuenta"
 })
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*FUNCIONES PARA LA INTERFAZ COMPRA*/
-
-/*FUNCION PARA REGRESAR AL MENU PRINCIPAL*/
-document.addEventListener("click", (e) => {
-    if(e.target.matches("#btnvolvermenu"))
-        location.href="menuprincipal"
+/*5.3 INT. MENU PRINCIPAL -> (B) LISTA DE PRODUCTOS -> INT. RECARGAR CUENTA*/
+document.addEventListener("click", (e)=> {
+    if(e.target.matches("#ventanarecargar"))
+    location.href="recargarcuenta"
 })
+
+
+
+
+
+
+
+
+
+
+
+
 
 
