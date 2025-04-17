@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TIPO DE USUARIO</title>
     <link rel="stylesheet" href="../ccs/fontawesome.css">
-    <link rel="stylesheet" href="../ccs/seleccionusuario?v=1.0">
+    <link rel="stylesheet" href="../ccs/seleccionusuario">
     <script type="module" src="../js/main.js"></script> 
 </head>
 <body>
@@ -47,7 +47,7 @@
                 <button type="button" id="btntendero">TENDERO</button>
             </div>
             <div class="buttoninfo">
-                <button type="button" id="btnvolver">CANCELAR</button>
+                <button type="button" id="btnvolver">VOLVER</button>
             </div>
             <div class="buttoninfo">
                 <button type="button" id="btncliente">CLIENTE</button>

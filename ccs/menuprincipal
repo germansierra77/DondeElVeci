@@ -16,23 +16,15 @@
     border-radius: 1em;
     margin: 0.5em;
 }
-#menualterno{
-    height:80%;
-    width: 15%;
-    border-radius: 0.5em;
-    margin: 0.5em;
-    float: left;
-    background-color:rgba(131, 216, 51, 0.534);
-}
 #letreroapp{
     height: 96%;
-    width: 80%;
+    width: 98%;
     float: left;
     color: none;
 }
 #encabezado{
-    height: 80%;
-    width: 98%;
+    height: 90%;
+    width: 99%;
     color: white;
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
@@ -43,11 +35,19 @@
     border-radius: 20px;
 }
 #logoapp {
-    height: 70px;
-    width: 70px;
+    height: 75px;
+    width: 90px;
     float: right;
     margin: 1px;
     border-radius: 20px;
+}
+#btnvolver{
+    width: 90px;
+    height: 75px;
+    float: left;
+    background-color: green;
+    border-radius: 80px;
+    margin-left: 6px;
 }
 .cuerpo{
     display: grid;
