@@ -6,7 +6,7 @@
     <title>LISTADO DE PRODUCTOS</title>
     <link rel="stylesheet" href="../ccs/fontawesome.css">
     <link rel="stylesheet" href="../ccs/listado">
-    <script type="module" src="../js/main.js"></script> 
+    <script type="module" src="../js/main.js"></script>
 </head>
 <body>
     <div class="contenedor">

@@ -92,14 +92,23 @@ document.addEventListener("click", (e)=> {
 
 /*5.5 INT. MENU PRINCIPAL -> (B) LISTA DE PRODUCTOS -> INT. RECARGAR CUENTA*/
 document.addEventListener("click", (e)=> {
-    if(e.target.matches("#botlistado"))
+    if(e.target.matches("#botlista"))
+        console.log("hola mundo")
     location.href="listado"
 })
 
 /*5.5 INT. MENU PRINCIPAL -> (B) LISTA DE PRODUCTOS -> INT. RECARGAR CUENTA*/
 document.addEventListener("click", (e)=> {
-    if(e.target.matches("#botcanasta"))
+    if(e.target.matches("#btnlista"))
     location.href="compra"
+})
+
+/*#6 ---FUNCIONES DE BOTONES INT. COMPRA---*/
+
+/*6.1 INT. COMPRA -> (B) VOLVER -> INT. MENU PRINCIPAL*/
+document.addEventListener("click", (e)=> {
+    if(e.target.matches("#btnvolver"))
+    location.href="menuprincipal"
 })
 
 

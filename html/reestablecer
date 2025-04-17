@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>REESTABLECER CONTRASEÑA</title>
     <link rel="stylesheet" href="../ccs/fontawesome.css">
-    <link rel="stylesheet" href="../ccs/reestablecer?v=1.2">
+    <link rel="stylesheet" href="../ccs/reestablecer">
     <script type="module" src="../js/main.js"></script> 
 </head>
 <body>
