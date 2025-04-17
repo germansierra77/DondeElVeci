@@ -84,17 +84,24 @@ document.addEventListener("click", (e)=> {
     location.href="historialcompras"
 })
 
-/*5.3 INT. MENU PRINCIPAL -> (B) RECARGAR CUENTA -> INT. RECARGAR CUENTA*/
+/*5.4 INT. MENU PRINCIPAL -> (B) RECARGAR CUENTA -> INT. RECARGAR CUENTA*/
 document.addEventListener("click", (e)=> {
     if(e.target.matches("#ventanarecargar"))
     location.href="recargarcuenta"
 })
 
-/*5.3 INT. MENU PRINCIPAL -> (B) LISTA DE PRODUCTOS -> INT. RECARGAR CUENTA*/
+/*5.5 INT. MENU PRINCIPAL -> (B) LISTA DE PRODUCTOS -> INT. RECARGAR CUENTA*/
 document.addEventListener("click", (e)=> {
-    if(e.target.matches("#ventanarecargar"))
-    location.href="recargarcuenta"
+    if(e.target.matches("#botlistado"))
+    location.href="listado"
 })
+
+/*5.5 INT. MENU PRINCIPAL -> (B) LISTA DE PRODUCTOS -> INT. RECARGAR CUENTA*/
+document.addEventListener("click", (e)=> {
+    if(e.target.matches("#botcanasta"))
+    location.href="compra"
+})
+
 
 
 
