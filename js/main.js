@@ -90,6 +90,7 @@ document.addEventListener("click", (e)=> {
     location.href="recargarcuenta"
 })
 
+<<<<<<< HEAD
 /*5.5 INT. MENU PRINCIPAL -> (B) LISTA DE PRODUCTOS -> INT. RECARGAR CUENTA*/
 document.addEventListener("click", (e)=> {
     if(e.target.matches("#botlista"))
@@ -125,3 +126,30 @@ document.addEventListener("click", (e)=> {
 
 
 
+=======
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*FUNCIONES PARA LA INTERFAZ COMPRA*/
+
+/*FUNCION PARA REGRESAR AL MENU PRINCIPAL*/
+document.addEventListener("click", (e) => {
+    if(e.target.matches("#btnvolvermenu"))
+        location.href="menuprincipal"
+})
+
+
+>>>>>>> parent of 4a52e2f (Ajuste de botones interfaces #2)

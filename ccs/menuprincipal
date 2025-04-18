@@ -30,7 +30,7 @@
     font-family: 'Courier New', Courier, monospace;
     background-color: green;
     margin: 10px;
-    line-height: 75px;
+    line-height: 65px;
     font-size: 45px;
     border-radius: 20px;
 }
@@ -45,7 +45,6 @@
     width: 90px;
     height: 75px;
     float: left;
-    color: white;
     background-color: green;
     border-radius: 80px;
     margin-left: 6px;
@@ -75,35 +74,26 @@
 #footer{
     height: 15%;
     width: 95%;
-    background-color: none;
+    background-color: green;
     border-radius: 0.5em;
     margin: 0.5em;
 }
 .contenedor1{
     font-family: 'Courier New', Courier, monospace;
-    background-color:green;
-    color: white;
+    background-color:rgba(148, 157, 238, 0.616);
     border-color:black; 
-    height: 55px;
+    height: 80px;
     width: 230px;
-    border-radius: 10px;
-    margin: 10px;
+    border-radius: 30px;
+    margin: 0.5em;
     font-size: medium;
-}
-.iconosbotones{
-    width: 40px;
-    height: 20px;
-    color: white;
-    float: right;
-    margin: 1px;
 }
 #botbuscar{
     font-family: 'Courier New', Courier, monospace;
-    background-color:green;
+    background-color:rgba(131, 216, 51, 0.534);
     border-color:black;
-    height: 65px;
+    height: 80px;
     width: 230px;
-    border-radius: 10px;
+    border-radius: 30px;
     margin: 0.5em;
-    font-size: 18px;
 }
