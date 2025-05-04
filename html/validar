@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VALIDACION CODIGO</title>
+    <link rel="stylesheet" href="../ccs/fontawesome.css">
+    <link rel="stylesheet" href="../ccs/validar?v=1.3">
+    <script type="module" src="../js/main.js"></script> 
+</head>
+<body>
+    <div class="contenedor">
+            <div id="header"><div id="menualterno"></div>
+                <div id="letreroapp">
+                    <div class="elemento">APP DONDE EL VECI</div>
+                </div>
+                <div id="letmicuenta">
+                    <div class="elemento">REESTABLECER MI CUENTA
+                    <img src="../images/usuario.jpg" id="imgusuario"></div>
+                </div>
+            </div>
+        <div class="contenido">
+            <div id="idcliente">
+                <div class="idcliente"> 
+                <label for="idcliente" class="form-label">ID_CLIENTE</label>
+                <input type="text" class="form-control" id="idcliente" placeholder="357894">
+            </div>
+            <div class="form-floating">NOMBRE
+                <input type="text" class="casillasinfor" placeholder="GERMAN SIERRA" disabled>
+                <label for="floatingInputDisabled"></label>
+              </div>
+              <div class="form-floating">CORREO
+                <input type="email" class="casillasinfor" placeholder="germansierra@mail.com" disabled>
+                <label for="floatingInputDisabled"></label>
+              </div>
+              <div class="form-floating">CELULAR
+                <input type="text" class="casillasinfor" placeholder="300300300" disabled>
+                <label for="floatingInputDisabled"></label>
+              </div>
+            <form>
+                <fieldset disabled>ESTADO DE CUENTA
+                  <div class="casillaestado">
+                    <label for="casillaestado" class="form-label">ACTIVO</label>
+                  </div></fieldset>
+            </form>
+            <div id="idcliente">
+                <div class="idcliente"> 
+                <label for="idcliente" class="form-label">CODIGO ENVIADO</label>
+                <input type="text" class="form-control" id="idcliente" placeholder="357894">
+            </div>
+        </div></div>
+        <div class="footer">
+            <button type="button" class="btn-primary btn-lg" id="btnregresar">REGRESAR</button>
+            <button type="button" class="btn-primary btn-lg" id="btnvalidar">VALIDAR CODIGO</button>   
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMPRA</title>
+    <link rel="stylesheet" href="../ccs/fontawesome.css">
+    <link rel="stylesheet" href="../ccs/compra?v=1.5">
+    <script type="module" src="../js/main.js"></script>
+</head>
+<body>
+    <div class="contenedor">
+        <div id="header"><div id="menualterno"></div>
+            <div id="letreroapp">
+                <div class="elemento">APP DONDE EL VECI</div>
+        </div>
+        <div id="idcliente">
+                <div class="idcliente"> 
+                    <label for="idcliente" class="form-label">IDCLIENTE</label>
+                    <input type="text" class="form-control" id="idcliente" placeholder="357894">
+        </div>
+        </div>
+        <div id="contenido">   
+            <div class="botoneslistado" role="group" aria-label="Basic mixed styles example">
+                <button type="button" class="btn-listado">AGREGAR</button>
+                <button type="button" class="btn-listado">BUSCAR</button>
+                <button type="button" class="btn-listado">ELIMINAR</button>
+            </div>
+            <div class="listado"> 
+                <table>
+                    <tr>
+                        <th>PRODUCTO</th>
+                        <th>MEDIDA</th>
+                        <th>PRECIO</th>
+                        <th>CANTIDAD</th>
+                    </tr>
+                    <tr>
+                        <td>Arroz</td>
+                        <td>Libra</td>
+                        <td>$3500</td>
+                        <td>
+                            <div class="form-floating mb-3">
+                            <input type="number" class="form-control" id="casillascantidad" placeholder="cantidad">
+                            <label for="floatingInput"></label>
+                        </div></td>
+                    </tr>
+                    <tr>
+                        <td>Papa criolla</td>
+                        <td>Libra</td>
+                        <td>$1200</td>
+                        <td><div class="form-floating mb-3">
+                            <input type="number" class="form-control" id="casillascantidad" placeholder="cantidad">
+                            <label for="floatingInput"></label>
+                        </div></td>
+                    </tr>
+                    <tr>
+                        <td>Frijol bola roja</td>
+                        <td>Libra</td>
+                        <td>$5500</td>
+                        <td><div class="form-floating mb-3">
+                            <input type="number" class="form-control" id="casillascantidad" placeholder="cantidad">
+                            <label for="floatingInput"></label>
+                        </div></td>
+                    </tr>
+                    <tr>
+                        <td>Aceite de oliva</td>
+                        <td>Frasco*500ml</td>
+                        <td>$32000</td>
+                        <td><div class="form-floating mb-3">
+                            <input type="number" class="form-control" id="casillascantidad" placeholder="cantidad">
+                            <label for="floatingInput"></label>
+                        </div></td>
+                    </tr>
+                    <tr>
+                        <td>Gaseosa coca cola</td>
+                        <td>Unidad*200ml</td>
+                        <td>$8000</td>
+                        <td><div class="form-floating mb-3">
+                            <input type="number" class="form-control" id="casillascantidad" placeholder="cantidad">
+                            <label for="floatingInput"></label>
+                        </div></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div id="footer">
+            <div class="button">
+                <button type="button" class="btn-primary btn-lg" id="btncomprar">COMPRAR</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

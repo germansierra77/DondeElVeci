@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.contenedor{
+    width: 800px;
+    height: 600px;
+    background-color: aliceblue;
+    margin: 0.5em auto;
+    padding: 0.5em;
+}
+#header{
+    height: 15%;
+    width: 95%;
+    background-color: white;
+    border-radius: 1em;
+    margin: 0.5em;
+}
+#menualterno{
+    height:80%;
+    width: 15%;
+    border-radius: 0.5em;
+    margin: 0.5em;
+    float: left;
+    background-color:rgba(131, 216, 51, 0.534);
+}
+#letreroapp{
+    height: 80%;
+    width: 80%;
+    text-justify:right;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgba(131, 216, 51, 0.534);
+    border-radius: 0.5em;
+    margin: 0.5em;
+    float: right;
+    font-size: larger;
+}
+.elemento{
+   text-align: center; 
+   margin: 0.5em;
+   font-size:40px;
+}
+.cuerpo{
+    display: grid;
+    grid-template-columns: 48% 48% ;
+    grid-template-rows: 190px 190px;
+    column-gap: 0.5em;
+    margin: 0.5em;
+    row-gap: 0.2em;
+}
+.btn-primary{
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 20px;
+    border-color: green;
+    font-size: larger;
+}
+#ventanacomprar{
+    background-color: green;
+    text-align: center;
+}
+#ventanamicuenta{
+    background-color: green;
+    text-align: center;
+}
+#ventanahistorial{
+    background-color: green;
+    text-align: center; 
+}
+#ventanarecargar{
+    background-color: green;
+    text-align: center; 
+    float: left;
+}
+#footer{
+    height: 15%;
+    width: 95%;
+    background-color: green;
+    border-radius: 0.5em;
+    margin: 0.5em;
+}
+.contenedor1{
+    font-family: 'Courier New', Courier, monospace;
+    background-color:rgba(148, 157, 238, 0.616);
+    border-color:black; 
+    height: 80px;
+    width: 230px;
+    border-radius: 30px;
+    margin: 0.5em;
+    font-size: medium;
+}
+#botbuscar{
+    font-family: 'Courier New', Courier, monospace;
+    background-color:rgba(131, 216, 51, 0.534);
+    border-color:black;
+    height: 80px;
+    width: 230px;
+    border-radius: 30px;
+    margin: 0.5em;
+}

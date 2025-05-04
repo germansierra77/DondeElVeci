@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.contenedor{
+    width: 800px;
+    height: 600px;
+    background-color: rgb(233, 239, 245);
+    margin: 0.5em auto;
+    padding: 0.5em;
+}
+#header{
+    height: 15%;
+    width: 95%;
+    background-color: white;
+    border-radius: 1em;
+    margin: 0.5em;
+}
+#menualterno{
+    height:80%;
+    width: 15%;
+    border-radius: 0.5em;
+    margin: 0.5em;
+    float: left;
+    background-color:green;
+}
+#letreroapp{
+    height: 80%;
+    width: 80%;
+    text-justify:right;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: green;
+    border-radius: 0.5em;
+    margin: 0.5em;
+    float: right;
+    font-size: larger;
+}
+.elemento{
+   text-align: center; 
+   margin: 0.5em;
+   font-size:40px;
+   margin: 20px;
+}
+#idcliente{
+    font-size: 35px;
+    border-color: black;
+    text-align: center;
+}
+.btn-listado{
+    height: 70px;
+    width: 245px;
+    background-color: green;
+    margin: 0.1em;
+    border-radius: 1em;
+}
+table,th,td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 99%;
+    height: 50px;
+    border-style: groove;
+    font-size: large;
+    text-align: center;
+}
+th{
+    text-align: center;
+    background-color: green;
+}
+#btncomprar{
+    background-color: green;
+    height: 50px;
+    width: 170px;
+    margin-left: 35%;
+    margin-right: 35%;
+    border-bottom: 0,5px;
+}

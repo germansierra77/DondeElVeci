@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INFO CUENTA</title>
+    <link rel="stylesheet" href="../ccs/fontawesome.css">
+    <link rel="stylesheet" href="../ccs/infocuenta?v=1.4">
+</head>
+<body>
+    <div class="contenedor">
+            <div id="header"><div id="menualterno"></div>
+                <div id="letreroapp">
+                    <div class="elemento">APP DONDE EL VECI</div>
+                </div>
+                <div id="letmicuenta">
+                    <div class="elemento">MI CUENTA
+                    <img src="../images/usuario.jpg" id="imgusuario"></div>
+                </div>
+            </div>
+        <div class="contenido">
+            <div id="idcliente">
+                <div class="idcliente"> 
+                <label for="idcliente" class="form-label">ID CLIENTE</label>
+                <input type="text" class="form-control" id="idcliente" placeholder="357894">
+            </div>
+            <div class="form-floating">NOMBRE
+                <input type="text" class="casillasinfo" placeholder="GERMAN SIERRA" disabled>
+                <label for="floatingInputDisabled"></label>
+              </div>
+              <div class="form-floating">CORREO
+                <input type="email" class="casillasinfo" placeholder="germansierra@mail.com" disabled>
+                <label for="floatingInputDisabled"></label>
+              </div>
+              <div class="form-floating">CELULAR
+                <input type="text" class="casillasinfo" placeholder="300300300" disabled>
+                <label for="floatingInputDisabled"></label>
+              </div>
+            <form>
+                <fieldset disabled>ESTADO DE CUENTA
+                  <div class="casillaestado">
+                    <label for="casillaestado" class="form-label">ACTIVO</label>
+                  </div></fieldset>
+                <div class="form-control">
+                    <span class="casillasaldo">SALDO CUENTA $</span>
+                    <input type="text" class="form-control" aria-label="label" placeholder="500.000">
+                </div>
+            </form></div>
+        </div>
+        <div class="footer">
+            <div class="buttoninfo">
+                <button type="button" class="btn-primary btn-lg" id="btnrecargar">RECARGAR</button>
+            </div>
+            <div class="buttoninfo">
+                <button type="button" class="btn-primary btn-lg" id="btnretirar">RETIRAR</button>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="../js/main.js"></script> 
+</body>
+</html>

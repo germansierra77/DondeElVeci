@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CREACION DE USUARIO</title>
+    <link rel="stylesheet" href="../ccs/fontawesome.css">
+    <link rel="stylesheet" href="../ccs/creacionusuario.css?v=1.2">
+    <script type="module" src="../js/main.js"></script>
+</head>
+<body>
+    <div class="contenedor">
+        <div id="header">
+            <div>
+              <img id="imgusuario" src="../images/usuario.jpg" width="100px" height="90px">
+            <div id="letnuevousuario" class="text">NUEVO USUARIO</div></div>
+        </div> 
+        <div id="contenido">BIENVENIDOS A "DONDE EL VECI" APP <br> PARA QUE PUEDAS USAR LA APLICACION
+          LO PRIMERO QUE DEBES REALIZAR ES EL DILIGENCIAMIENTO DE LOS SIGUIENTES DATOS,ESTOS SE REQUIEREN Y 
+          SON NECESARIOS PARA EL BUEN FUNCIONAMIENTO DENTRO DE LA APLICACION.
+            <br>
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="casillanombre" placeholder="NOMBRE">
+                <label for="casillanombre"></label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="casillacorreo" placeholder="CORREO">
+                <label for="casillacorreo"></label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="casillaid" placeholder="ID">
+                <label for="casillaid"></label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="casillatelefono" placeholder="TELEFONO">
+                <label for="casillatelefono"></label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="password" class="form-control" id="casillatelefono" placeholder="CONTRASEÑA">
+                <label for="casillacontraseña"></label>
+              </div>
+        </div>
+        <div id="footer">
+            <button type="button" id="btnvolver">VOLVER</button>
+            <button type="button" id="btnguardar">GUARDAR</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,78 @@
+*{
+   margin: 0;
+   padding: 0; 
+}
+.contenedor{
+    width: 800px;
+    height: 600px;
+    background-color: aliceblue;
+    margin: 0.5em auto;
+    padding: 0.5em;
+}
+#logologin{
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size: 20% 30%;
+}
+/*ESTO HACE PARTE DEL HEADER*/
+#header{
+    height: 15%;
+    width: 95%;
+    background-color: green;
+    border-radius: 1em;
+    margin: 1em;
+}
+#letreroapp{
+    text-align: center;
+    margin: 1em;
+    padding: 2em;
+    font-size: 20px;
+}
+/*ESTO ES PARTE DEL CONTENIDO*/
+#imagenlogin{
+    height: 120px;
+    width: 120px;
+    margin: 5px;
+    border-radius: 5px;
+    margin-left: 43%;
+    font-family: 'Courier New', Courier, monospace; 
+}
+.form-control{
+    height: 45px;
+    width: 95%;
+    background-color: rgba(131, 216, 51, 0.534);
+    border-radius: 0.5em;
+    margin: 0.5em;
+    text-align: center;
+    border-color: black;
+    font-family: 'Courier New', Courier, monospace; 
+    font-size: medium;
+    border-color: black;
+}
+/*ESTO ES PARTE DEL FOOTER*/
+#btningreso{
+    height:50px;
+    width:40%;
+    margin-left:30%;
+    background-color: green;
+    font-family: 'Courier New', Courier, monospace; 
+    border-radius: 20px;
+}
+#btnrecordar{
+    height:50px;
+    width:40%;
+    margin-left:30%;
+    background-color: green;
+    font-family: 'Courier New', Courier, monospace; 
+    border-radius: 20px;
+}
+#btnregistrarse{
+    height:50px;
+    width:40%;
+    margin-left:30%;
+    background-color: green;
+    font-family: 'Courier New', Courier, monospace; 
+    border-radius: 20px;
+}
+
+

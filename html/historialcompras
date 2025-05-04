@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HISTORIAL DE COMPRAS</title>
+    <link rel="stylesheet" href="../ccs/historialcompras?v=1.0">
+    <link rel="stylesheet" href="../ccs/fontawesome.css">
+</head>
+<body>
+    <div class="contenedor">
+        <div id="header"><div id="menualterno"></div>
+            <div id="letreroapp">
+                <div class="elemento">APP DONDE EL VECI</div>
+            </div>
+            <div id="letmicuenta">
+                <div class="elemento">HISTORIAL DE COMPRAS
+                </div>
+            </div>
+        </div>
+    <div class="contenido">
+        <div id="casillaform">
+            <div class="casillaform"> 
+            <label for="casillaform" class="form-label">ID CLIENTE</label>
+            <input type="text" class="form-control" id="idcliente" placeholder="357894">
+        </div> 
+        <div class="listado"> 
+            <table>
+                <tr>
+                    <th scope="col">PRODUCTO</th>
+                    <th scope="col">MEDIDA</th>
+                    <th scope="col">PRECIO</th>
+                    <th scope="col">CANTIDAD</th>
+                    <th scope="col">TOTAL</th>
+                </tr>
+                <tr>
+                    <td>Arroz</td>
+                    <td>Libra</td>
+                    <td class="precio1">$3500</td>
+                    <td>
+                        <div class="form-floating">
+                        <input type="text" class="casillacantidad" placeholder="4" disabled>
+                        <label for="floatingInputDisabled"></label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Papa criolla</td>
+                    <td>Libra</td>
+                    <td>$1200</td>
+                    <td>
+                        <div class="form-floating">
+                            <input type="text" class="casillacantidad" placeholder="2" disabled>
+                            <label for="floatingInputDisabled"></label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Frijol bola roja</td>
+                    <td>Libra</td>
+                    <td>$5500</td>
+                    <td>
+                        <div class="form-floating">
+                        <input type="text" class="casillacantidad" placeholder="6" disabled>
+                        <label for="floatingInputDisabled"></label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Aceite de oliva</td>
+                    <td>Frasco*500ml</td>
+                    <td>$32000</td>
+                    <td>
+                        <div class="form-floating">
+                        <input type="text" class="casillacantidad" placeholder="15" disabled>
+                        <label for="floatingInputDisabled"></label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Gaseosa coca cola</td>
+                    <td>Unidad*200ml</td>
+                    <td>$8000</td>
+                    <td>
+                        <div class="form-floating">
+                        <input type="text" class="casillacantidad" placeholder="7" disabled>
+                        <label for="floatingInputDisabled"></label>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div></div>
+    <div class="footer">
+        <div class="btninfo">
+            <button type="button" class="btninfo" id="btnvolver">VOLVER</button>
+            <button type="button" class="btninfo" id="btndescargarinforme">DESCARGAR INFORME</button>
+        </div>
+    </div>
+    <script type="module" src="../js/main.js"></script> 
+</body>
+</html>

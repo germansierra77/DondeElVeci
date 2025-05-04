@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIPO DE USUARIO</title>
+    <link rel="stylesheet" href="../ccs/fontawesome.css">
+    <link rel="stylesheet" href="../ccs/seleccionusuario?v=1.0">
+    <script type="module" src="../js/main.js"></script> 
+</head>
+<body>
+    <div class="contenedor">
+            <div id="header"><div id="menualterno"></div>
+                <div id="letreroapp">
+                    <div class="elemento">APP DONDE EL VECI</div>
+                </div>
+                <div id="letmicuenta">
+                    <div class="elemento">TIPO DE USUARIO
+                    <img src="../images/usuario.jpg" id="imgusuario"></div>
+                </div>
+            </div>
+        <div class="contenido">
+            <br>
+            <div class="form-floating">ID CLIENTE
+                <input type="text" class="casillasinfo" placeholder="340957" disabled>
+                <label for="floatingInputDisabled"></label>
+              </div>
+            <div class="form-floating">NOMBRE
+                <input type="text" class="casillasinfo" placeholder="GERMAN SIERRA" disabled>
+                <label for="floatingInputDisabled"></label>
+              </div>
+              <div class="form-floating">CORREO
+                <input type="email" class="casillasinfo" placeholder="germansierra@mail.com" disabled>
+                <label for="floatingInputDisabled"></label>
+              </div>
+              <div class="form-floating">ID
+                <input type="text" class="casillasinfo" placeholder="100100100" disabled>
+                <label for="floatingInputDisabled"></label>
+              </div>
+              <div class="form-floating">TELEFONO
+                <input type="text" class="casillasinfo" placeholder="300300300" disabled>
+                <label for="floatingInputDisabled"></label>
+              </div>
+        </div>
+        <div class="footer">
+            <div class="buttoninfo">
+                <button type="button" id="btntendero">TENDERO</button>
+            </div>
+            <div class="buttoninfo">
+                <button type="button" id="btnvolver">CANCELAR</button>
+            </div>
+            <div class="buttoninfo">
+                <button type="button" id="btncliente">CLIENTE</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

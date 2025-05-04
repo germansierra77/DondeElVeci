@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MENU TENDERO</title>
+  <link rel="stylesheet" href="../ccs/fontawesome.css">
+  <link rel="stylesheet" href="../ccs/menutendero?v=1.1">
+  <script type="module" src="../js/main.js"></script> 
+</head>
+<body>
+  <div class="contenedor">
+    <div id="header">
+      <div id="menualterno"></div>
+      <div id="letreroapp">
+        <div class="elemento">APP DONDE EL VECI</div>
+      </div>
+    </div>
+    <div class="cuerpo">
+      <button id="ventanacomprar" class="btn-primary" type="button">MOVIMIENTOS</button>
+      <button id="ventanamicuenta" class="btn-primary" type="button">MI TIENDA</button>
+      <button id="ventanahistorial" class="btn-primary" type="button">NUEVO MOVIMIENTO</button>
+      <button id="ventanarecargar" class="btn-primary" type="button" >LISTA DE PRODUCTOS</button>
+    </div>
+    <div id="footer">
+      <div class="botonesfooter">
+        <button id="botlistaproductos" class="contenedor1" type="button">CREAR</button>
+        <button id="botbuscar" class="contenedor1" type="button">ACTUALIZAR PRODUCTO</button>
+        <button id="botcanasta" class="contenedor1" type="button">BUSCAR</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

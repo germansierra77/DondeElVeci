@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REESTABLECER CONTRASEÑA</title>
+    <link rel="stylesheet" href="../ccs/fontawesome.css">
+    <link rel="stylesheet" href="../ccs/reestablecer?v=1.2">
+    <script type="module" src="../js/main.js"></script> 
+</head>
+<body>
+    <div class="contenedor">
+            <div id="header"><div id="menualterno"></div>
+                <div id="letreroapp">
+                    <div class="elemento">APP DONDE EL VECI</div>
+                </div>
+                <div id="letmicuenta">
+                    <div class="elemento">REESTABLECER MI CUENTA
+                    <img src="../images/usuario.jpg" id="imgusuario"></div>
+                </div>
+            </div>
+        <div class="contenido">
+            <div id="idcliente">
+                <div class="idcliente"> 
+                <label for="idcliente" class="form-label">ID CLIENTE</label>
+                <input type="text" class="form-control" id="idcliente1" placeholder="357894">
+            </div>
+            <div class="form-floating">NOMBRE
+                <input type="text" class="casillasinfor" placeholder="GERMAN SIERRA" disabled>
+                <label for="floatingInputDisabled"></label>
+              </div>
+              <div class="form-floating">CORREO
+                <input type="email" class="casillasinfor" placeholder="germansierra@mail.com" disabled>
+                <label for="floatingInputDisabled"></label>
+              </div>
+              <div class="form-floating">CELULAR
+                <input type="text" class="casillasinfor" placeholder="300300300" disabled>
+                <label for="floatingInputDisabled"></label>
+              </div>
+            <form>
+                <fieldset disabled>ESTADO DE CUENTA
+                  <div class="casillaestado">
+                    <label for="casillaestado" class="form-label">ACTIVO</label>
+                  </div></fieldset>
+            </form>
+        </div>
+        <div class="footer">
+                <button type="button" id="btnvolver">VOLVER</button>
+                <button type="button" id="btncodigo">ENVIAR CODIGO</button>
+        </div>
+    </div>
+</body>
+</html>

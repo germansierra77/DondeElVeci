@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.contenedor{
+    width: 800px;
+    height: 600px;
+    background-color: rgb(233, 239, 245);
+    margin: 0.5em auto;
+    padding: 0.5em;
+}
+#header{
+    height: 25%;
+    width: 97%;
+    background-color: white;
+    border-radius: 1em;
+    margin: 0.5em; 
+}
+#menualterno{
+    height:130px;
+    width: 15%;
+    border-radius: 0.5em;
+    margin: 0.5em;
+    float: left;
+    background-color:green;
+}
+.elemento{
+    height: 55px;
+    width: 80%;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    background-color:green ;
+    border-radius: 0.5em;
+    margin: 0.5em;
+    float: right;
+    font-size: 20px;
+}
+#imgusuario{
+    width: 60px;
+    height: 60px;
+    float: left;
+}
+.contenido{
+    background-color:green;
+    height: 55%;
+    width: 97%;
+    border-radius: 1em;
+    margin-left: 0.8em;
+}
+#idcliente{
+    font-size: 20px;
+    border-color: black;
+    text-align: center;
+    background-color: green;
+    font-family: 'Courier New', Courier, monospace;
+}
+.casillasinfo{
+    width: 500px;
+    font-size:35px;
+    border-color: rgba(148, 157, 238, 0.616);
+    text-align: center;
+    border-radius: 100px;
+    font-style: inherit;
+    background-color: white;
+    font-family: 'Courier New', Courier, monospace;
+} 
+.form-floating{
+    background-color: green; 
+    border-radius: 20px;
+    width: 96%;
+    margin-left: 0.5em;
+    margin: 0.5em;
+    margin-top: 0,5em;
+}
+.casillaestado{
+    font-size: 35px;
+    text-align: center;
+    background-color: green;
+}
+.casillasaldo{
+    color: white;
+    background-color: green;
+    border-radius: 1em;
+    font-size: 33px;
+}
+.footer{
+    height: 13%;
+    width: 97%;
+    background-color: green;
+    border-radius: 1em;
+    margin: 0.5em; 
+    border-color: white;
+}
+#btnrecargar,#btnretirar{ 
+    width: 40%;
+    height: 60px;
+    float: left;
+    background-position: center;
+    background-color: green;
+    margin-left: 3.5em;
+    border-radius: 20px;
+    margin-top: 0.5em;
+}
+fieldset{
+    text-align: center;
+    font-size: 40px;
+}
+.form-label{
+    color: white;
+    border-top: 2em;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RECARGAR CUENTA</title>
+    <link rel="stylesheet" href="../ccs/fontawesome.css">
+    <link rel="stylesheet" href="../ccs/recargarcuenta?v=1.0">
+    <script type="module" src="../js/main1.js"></script> 
+</head>
+<body>
+    <div class="contenedor">
+            <div id="header"><div id="menualterno"></div>
+                <div id="letreroapp">
+                    <div class="elemento">APP DONDE EL VECI</div>
+                </div>
+                <div id="letmicuenta">
+                    <div class="elemento">RECARGAR CUENTA
+                        <img src="../images/Dollar_Sign.svg.png" id="imgpeso">
+                    </div>
+                </div>
+            </div>
+        <div class="contenido">
+            <div id="casillaform">
+                <div class="casillaform"> 
+                <label for="casillaform" class="form-label">ID CLIENTE</label>
+                <input type="text" class="form-control" id="idcliente" placeholder="357894">
+            </div>  
+            <div class="form-floating">NOMBRE
+                <input type="text" class="casillasinfo" placeholder="GERMAN SIERRA" disabled>
+                <label for="floatingInputDisabled"></label>
+              </div>
+              <div class="form-floating">CORREO
+                <input type="email" class="casillasinfo" placeholder="germansierra@mail.com" disabled>
+                <label for="floatingInputDisabled"></label>
+              </div>
+              <div class="form-floating">CELULAR
+                <input type="text" class="casillasinfo" placeholder="300300300" disabled>
+                <label for="floatingInputDisabled"></label>
+              </div>
+              <div class="casillaform"> 
+                <label for="casillamonto" class="form-label">MONTO $</label>
+                <input type="text" class="form-control" id="idcliente" placeholder="">
+            </div>
+            <br>
+            <select class="form-select" aria-label="ENTIDAD BANCARIA" id="btnentidadbancaria">
+                <option selected>ENTIDAD BANCARIA</option>
+                <option value="1">BANCOLOMBIA</option>
+                <option value="2">BANCO BBVA</option>
+                <option value="3">BANCO DE BOGOTA</option>
+                <option value="4">BANCO ITAU</option>
+                <option value="5">BANCO AV VILLAS</option>
+                <option value="6">DAVIPLATA</option>
+                <option value="7">NEQUI</option>
+              </select>
+              <br><br>
+                <div class="form-control">
+                    <span class="casillasaldo">SALDO CUENTA $</span>
+                    <input type="text" class="form-control" aria-label="label" placeholder="500.000">
+                </div>
+        </div></div>
+        <div class="footer">
+            <div class="btntransaccion">
+                <button type="button" class="btn-primary" id="btntransaccion">REALIZAR TRANSACCION</button>
+            </div>
+        </div>
+    </div>
+    <script src="../js/Boostrap/bootstrap.bundle.js"></script>
+    <script src="../js/Boostrap/popper.min.js"></script>
+    <script src="../js/Boostrap/bootstrap.js"></script>  
+</body>
+</html>

@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.contenedor{
+    width: 800px;
+    height: 600px;
+    background-color: aliceblue;
+    margin: 0.5em auto;
+    padding: 0.5em;
+}
+#header{
+    height: 15%;
+    width: 95%;
+    background-color: green;
+    border-radius: 1em;
+    margin: 0.5em;
+}
+/*ESTAS SON LAS CASILLAS DE HEADER */
+img{
+    border-radius: 3em;
+    margin-left: 4em;
+}
+#letnuevousuario{
+    height: 100%;
+    width: 50%;
+    font-family: 'Courier New', Courier, monospace; 
+    font-size: 1.5em;
+    border-radius: 0.5em;
+    margin: 0.4em;
+    padding: 0.8em;
+    float: right;
+    background-color: white;
+}
+/*ESTAS SON LAS CASILLAS DE CONTENIDO */
+#contenido{
+    height: 65%;
+    width: 95%;
+    background-color: green;
+    border-radius: 0.5em;
+    margin: 0.5em;
+    font-size: 14px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace; 
+}
+#casillanombre{
+    height: 30px;
+    width: 95%;
+    background-color: white;
+    border-radius: 0.5em;
+    margin: 1em;
+    text-align: center;
+    border-color: white;
+}
+#casillacorreo{
+    height: 30px;
+    width: 95%;
+    background-color: white;
+    border-radius: 0.5em;
+    margin: 1em;
+    text-align: center;
+    border-color: white;
+}
+#casillaid{
+    height: 30px;
+    width: 95%;
+    background-color: white;
+    border-radius: 0.5em;
+    margin: 1em;
+    text-align: center;
+    border-color: white;
+}
+#casillatelefono{
+    height: 30px;
+    width: 95%;
+    background-color: white;
+    border-radius: 0.5em;
+    margin: 1em;
+    text-align: center;
+    border-color: white;
+}
+#casillacontraseña{
+    height: 30px;
+    width: 95%;
+    background-color: white;
+    border-radius: 0.5em;
+    margin: 1em;
+    text-align: center;
+    border-color: white;
+}
+#footer{
+    height: 15%;
+    width: 95%;
+    background-color: green;
+    border-radius: 0.5em;
+    margin: 0.5em;
+}
+/*ESTAS SON LAS CASILLAS DEL FOOTER */
+#btnguardar{
+    height: 65%;
+    width: 47%;
+    background-color: rgba(131, 216, 51, 0.534);
+    border-radius: 0.5em;
+    margin: 0.5em; 
+    float:inline-start; 
+    font-family: 'Courier New', Courier, monospace;
+}
+#btnvolver{
+    height: 60%;
+    width: 47%;
+    background-color: rgba(148, 157, 238, 0.616);
+    border-radius: 0.5em;
+    margin: 0.5em; 
+    float:left; 
+    font-family: 'Courier New', Courier, monospace;
+}
+.form-control{
+    font-family: 'Courier New', Courier, monospace; 
+}
