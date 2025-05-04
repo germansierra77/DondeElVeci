@@ -7,7 +7,7 @@ document.addEventListener("click", (e)=> {
     if(e.target.matches("#btnrecordar"))
     location.href="reestablecer"
 })
-/*FUNCION QUE SIRVE PARA VOLVER A INICIO DE SESION*/
+/*FUNCIONES DE BOTONES SELECCION DE USUARIO*/
 document.addEventListener("click", (e)=> {
     if(e.target.matches("#btniniciosesion"))
     location.href="iniciosesion"
@@ -16,17 +16,23 @@ document.addEventListener("click", (e)=> {
     if(e.target.matches("#btnmenuprincipal"))
     location.href="menuprincipal"
 })
-
-
-document.addEventListener("click", (e)=> {
-    if(e.target.matches("#opciontendero"))
-    location.href="menutendero"
-})
-/*FUNCION QUE DIRIGE AL MENU PARA VALIDAR CODIGO PARA REESTABLECER CONTRASEÑA*/
+/*FUNCIONES DE BOTONES REESTABLECER*/
 document.addEventListener("click", (e)=> {
     if(e.target.matches("#btncodigo"))
     location.href="validar"
 })
+/*FUNCIONES DE BOTONES VALIDAR*/
+document.addEventListener("click", (e)=> {
+    if(e.target.matches("#btnreestablecer"))
+    location.href="reestablecer"
+    if(e.target.matches("#btnvalidacioncodigo"))
+    location.href="seleccionusuario"
+})
+
+
+
+
+
 /*FUNCION QUE DIRIGE AL MENU DE "INICIAR SESION" DE NUEVO*/
 document.addEventListener("click", (e)=> {
     if(e.target.matches("#btnvolver"))
