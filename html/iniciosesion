@@ -5,17 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>INICIO DE SESION</title>
     <link rel="stylesheet" href="../ccs/fontawesome.css">
-    <link rel="stylesheet" href="../ccs/iniciosesion?v=1.5">
-    <script type="module" src="../js/main.js"></script>
+    <link rel="stylesheet" href="../ccs/iniciosesion?v=1.2">
+    <script type="module" src="../js/main.js?v=1.0" defer></script>
 </head>
 <body>
     <div class="contenedor">
-    <body background="../images/logo app.png" id="logologin"></body>
     <div id="header">
       <div id="letreroapp">BIENVENIDO A "DONDE EL VECI" APP</div>
     </div>
     <div id="contenido">
-        <img src="../images/usuario.jpg" id="imagenlogin">
+        <img src="../images/logo app.png" id="imagenlogin">
       <div class="form-floating mb-3">
         <input type="text" class="form-control"  placeholder="USUARIO">
       </div>

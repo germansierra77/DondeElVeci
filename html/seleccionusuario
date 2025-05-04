@@ -3,55 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TIPO DE USUARIO</title>
+    <title>SELECCION DE USUARIO</title>
     <link rel="stylesheet" href="../ccs/fontawesome.css">
-    <link rel="stylesheet" href="../ccs/seleccionusuario?v=1.0">
-    <script type="module" src="../js/main.js"></script> 
+    <link rel="stylesheet" href="../ccs/seleccionusuario?v=1.1">
+    <script type="module" src="../js/main.js?v=1.1" defer></script> 
 </head>
 <body>
     <div class="contenedor">
-            <div id="header"><div id="menualterno"></div>
-                <div id="letreroapp">
-                    <div class="elemento">APP DONDE EL VECI</div>
-                </div>
-                <div id="letmicuenta">
-                    <div class="elemento">TIPO DE USUARIO
-                    <img src="../images/usuario.jpg" id="imgusuario"></div>
-                </div>
+            <div id="header">
+                    <div class="elemento">APP DONDE EL VECI
+                    <img src="../images/logo app.png" alt="logo" id="imagenlogo"> 
+                    </div>
             </div>
         <div class="contenido">
             <br>
             <div class="form-floating">ID CLIENTE
-                <input type="text" class="casillasinfo" placeholder="340957" disabled>
+                <input class="casillasinfo" type="text" id="idcliente" placeholder="340957" disabled>
                 <label for="floatingInputDisabled"></label>
               </div>
             <div class="form-floating">NOMBRE
-                <input type="text" class="casillasinfo" placeholder="GERMAN SIERRA" disabled>
+                <input class="casillasinfo" type="text" placeholder="GERMAN SIERRA" disabled>
                 <label for="floatingInputDisabled"></label>
               </div>
               <div class="form-floating">CORREO
-                <input type="email" class="casillasinfo" placeholder="germansierra@mail.com" disabled>
+                <input class="casillasinfo" type="email"  placeholder="germansierra@mail.com" disabled>
                 <label for="floatingInputDisabled"></label>
               </div>
               <div class="form-floating">ID
-                <input type="text" class="casillasinfo" placeholder="100100100" disabled>
+                <input class="casillasinfo" type="text"  placeholder="100100100" disabled>
                 <label for="floatingInputDisabled"></label>
               </div>
               <div class="form-floating">TELEFONO
-                <input type="text" class="casillasinfo" placeholder="300300300" disabled>
+                <input class="casillasinfo" type="text"  placeholder="300300300" disabled>
                 <label for="floatingInputDisabled"></label>
               </div>
         </div>
         <div class="footer">
-            <div class="buttoninfo">
-                <button type="button" id="btntendero">TENDERO</button>
-            </div>
-            <div class="buttoninfo">
-                <button type="button" id="btnvolver">CANCELAR</button>
-            </div>
-            <div class="buttoninfo">
-                <button type="button" id="btncliente">CLIENTE</button>
-            </div>
+                <button type="button" class="botonesfooter" id="btnmenutendero">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="iconosbotones" viewBox="0 0 16 16">
+                        <path d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.37 2.37 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0M1.5 8.5A.5.5 0 0 1 2 9v6h1v-5a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v5h6V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5M4 15h3v-5H4zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1zm3 0h-2v3h2z"/>
+                      </svg>
+                    TENDERO</button>
+                <button type="button" class="botonesfooter" id="btniniciosesion">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="iconosbotones" viewBox="0 0 16 16">
+                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293z"/>
+                      </svg>CANCELAR</button>
+                <button type="button" class="botonesfooter" id="btnmenuprincipal">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="iconosbotones" viewBox="0 0 16 16">
+                        <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z"/>
+                      </svg>
+                    CLIENTE</button>
         </div>
     </div>
 </body>
