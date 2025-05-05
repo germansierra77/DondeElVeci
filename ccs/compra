@@ -5,60 +5,75 @@
 .contenedor{
     width: 800px;
     height: 600px;
-    background-color: rgb(233, 239, 245);
+    background-color: rgb(159, 219, 182);
     margin: 0.5em auto;
     padding: 0.5em;
+    border-radius: 10px;
 }
 #header{
+    width:96%;
     height: 15%;
-    width: 95%;
-    background-color: white;
-    border-radius: 1em;
-    margin: 0.5em;
-}
-#menualterno{
-    height:80%;
-    width: 15%;
-    border-radius: 0.5em;
-    margin: 0.5em;
-    float: left;
-    background-color:green;
-}
-#letreroapp{
-    height: 80%;
-    width: 80%;
-    text-justify:right;
-    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
     background-color: green;
-    border-radius: 0.5em;
-    margin: 0.5em;
-    float: right;
-    font-size: larger;
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
 }
 .elemento{
-   text-align: center; 
-   margin: 0.5em;
-   font-size:40px;
-   margin: 20px;
+    height: 80%;
+    width: 80%;
+    color: white;
+    text-align:center;
+    position: initial;
+    font-family: 'Courier New', Courier, monospace;
+    background-color:green ;
+    border-radius: 10px;
+    font-size: 50px;
 }
-#idcliente{
-    font-size: 35px;
-    border-color: black;
-    text-align: center;
-}
-.btn-listado{
+#imagenlogo{
+    width: 80px;
     height: 70px;
-    width: 245px;
-    background-color: green;
-    margin: 0.1em;
-    border-radius: 1em;
+    float: right;
+    border-radius: 10px;
 }
+.contenido{
+    background-color:rgb(159, 219, 182);
+    height: 65%;
+    width: 98%;
+    border-radius: 10px;
+    margin-top: 8px;
+    padding: 2px;
+}
+.form-floating{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 28px;
+    width: 100%;
+    margin: 2px;
+    color: white;
+}
+.casillasinfo{
+    width: 600px;
+    font-size:25px;
+    border-color: rgba(148, 157, 238, 0.616);
+    text-align: center;
+    margin: 2px;
+    border-radius: 10px;
+    background-color: white;
+    font-family: 'Courier New', Courier, monospace;
+} 
 table,th,td{
     border: 1px solid black;
+    font-family: 'Courier New', Courier, monospace;
+    border:1px;
     border-collapse: collapse;
     width: 99%;
     height: 50px;
-    border-style: groove;
+    border-style:groove;
     font-size: large;
     text-align: center;
 }
@@ -66,11 +81,34 @@ th{
     text-align: center;
     background-color: green;
 }
-#btncomprar{
+.form-control{
+    height: 30px;
+    text-align: center;
+}
+.footer{
+    height: 13%;
+    width: 98%;
     background-color: green;
-    height: 50px;
-    width: 170px;
-    margin-left: 35%;
-    margin-right: 35%;
-    border-bottom: 0,5px;
+    border-radius: 1em;
+    margin-top: 8px;
+    border-color: white;
+}
+.botonesfooter{
+    width: 200px;
+    height: 60px;
+    font-size:25px;
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
+    background-color: rgb(159, 219, 182);
+    margin-left: 40px;
+    border-radius:15px;
+    margin-top: 10px;
+    text-align: center;
+}
+.iconosbotones{
+    width: 25px;
+    height: 25px;
+    color: black;
+    float: left;
+    margin-left: 20px;
 }

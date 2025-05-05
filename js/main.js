@@ -28,38 +28,19 @@ document.addEventListener("click", (e)=> {
     if(e.target.matches("#btnvalidacioncodigo"))
     location.href="seleccionusuario"
 })
+/*FUNCIONES DE BOTONES MENU PRINCIPAL*/
+document.addEventListener("click",(e)=> {
+    if(e.target.matches("#btnmenucomprar"))
+    location.href="compra"
+    if(e.target.matches("#btnmenumicuenta"))
+    location.href="infocuenta"
+    if(e.target.matches("#btnmenuhistorial"))
+    location.href="historialcompras"
+    if(e.target.matches("#btnmenurecargar"))
+    location.href="recargarcuenta"
+})
 
 
 
 
 
-/*FUNCION QUE DIRIGE AL MENU DE "INICIAR SESION" DE NUEVO*/
-document.addEventListener("click", (e)=> {
-    if(e.target.matches("#btnvolver"))
-    location.href="iniciosesion"
-})
-/*FUNCION QUE DIRIGE AL MENU DE "REESTABLECER" DE NUEVO*/
-document.addEventListener("click", (e)=> {
-    if(e.target.matches("#btnvalidar"))
-    location.href="menuprincipal"
-})
-/*FUNCION QUE DIRIGE AL MENU DE "REESTABLECER" DE NUEVO*/
-document.addEventListener("click", (e)=> {
-    if(e.target.matches("#btnregresar"))
-    location.href="reestablecer"
-})
-/*FUNCION QUE DIRIGE AL MENU DE TENDERO*/
-document.addEventListener("click", (e)=> {
-    if(e.target.matches("#btntendero"))
-    location.href="menutendero"
-})
-/*FUNCION QUE DIRIGE AL MENU PRINCIPAL-CLIENTE*/
-document.addEventListener("click", (e)=> {
-    if(e.target.matches("#btncliente"))
-    location.href="menuprincipal"
-})
-/*FUNCION QUE DIRIGE AL MENU-COMPRA (CLIENTE)*/
-document.addEventListener("click", (e)=> {
-    if(e.target.matches("#compra"))
-    location.href="comprar"
-})

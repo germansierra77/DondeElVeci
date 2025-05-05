@@ -5,115 +5,100 @@
 .contenedor{
     width: 800px;
     height: 600px;
-    background-color: aliceblue;
+    background-color: rgb(159, 219, 182);
     margin: 0.5em auto;
     padding: 0.5em;
 }
 #header{
+    width:96%;
     height: 15%;
-    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
     background-color: green;
-    border-radius: 1em;
-    margin: 0.5em;
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
 }
-/*ESTAS SON LAS CASILLAS DE HEADER */
-img{
-    border-radius: 3em;
-    margin-left: 4em;
+.elemento{
+    height: 80%;
+    width: 80%;
+    color: white;
+    text-align:center;
+    position: initial;
+    font-family: 'Courier New', Courier, monospace;
+    background-color:green ;
+    border-radius: 10px;
+    font-size: 50px;
 }
-#letnuevousuario{
-    height: 100%;
-    width: 50%;
-    font-family: 'Courier New', Courier, monospace; 
-    font-size: 1.5em;
-    border-radius: 0.5em;
-    margin: 0.4em;
-    padding: 0.8em;
+#imagenlogo{
+    width: 80px;
+    height: 70px;
     float: right;
-    background-color: white;
+    border-radius: 10px;
 }
 /*ESTAS SON LAS CASILLAS DE CONTENIDO */
-#contenido{
+.contenido{
+    background-color:green;
     height: 65%;
-    width: 95%;
-    background-color: green;
-    border-radius: 0.5em;
-    margin: 0.5em;
-    font-size: 14px;
+    width: 98%;
+    border-radius: 10px;
+    margin-top: 8px;
+    padding: 2px;
+}
+.aviso{
     text-align: center;
-    font-family: 'Courier New', Courier, monospace; 
-}
-#casillanombre{
-    height: 30px;
-    width: 95%;
-    background-color: white;
-    border-radius: 0.5em;
-    margin: 1em;
-    text-align: center;
-    border-color: white;
-}
-#casillacorreo{
-    height: 30px;
-    width: 95%;
-    background-color: white;
-    border-radius: 0.5em;
-    margin: 1em;
-    text-align: center;
-    border-color: white;
-}
-#casillaid{
-    height: 30px;
-    width: 95%;
-    background-color: white;
-    border-radius: 0.5em;
-    margin: 1em;
-    text-align: center;
-    border-color: white;
-}
-#casillatelefono{
-    height: 30px;
-    width: 95%;
-    background-color: white;
-    border-radius: 0.5em;
-    margin: 1em;
-    text-align: center;
-    border-color: white;
-}
-#casillacontraseña{
-    height: 30px;
-    width: 95%;
-    background-color: white;
-    border-radius: 0.5em;
-    margin: 1em;
-    text-align: center;
-    border-color: white;
-}
-#footer{
-    height: 15%;
-    width: 95%;
-    background-color: green;
-    border-radius: 0.5em;
-    margin: 0.5em;
-}
-/*ESTAS SON LAS CASILLAS DEL FOOTER */
-#btnguardar{
-    height: 65%;
-    width: 47%;
-    background-color: rgba(131, 216, 51, 0.534);
-    border-radius: 0.5em;
-    margin: 0.5em; 
-    float:inline-start; 
     font-family: 'Courier New', Courier, monospace;
+    color: white;
+    width: 620px;
+    float: inline-start;
+    margin-left: 100px;
 }
-#btnvolver{
-    height: 60%;
-    width: 47%;
-    background-color: rgba(148, 157, 238, 0.616);
-    border-radius: 0.5em;
-    margin: 0.5em; 
-    float:left; 
-    font-family: 'Courier New', Courier, monospace;
+.form-floating{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 28px;
+    width: 100%;
+    margin: 15px;
+    color: white;
 }
 .form-control{
-    font-family: 'Courier New', Courier, monospace; 
+    width: 600px;
+    font-size:30px;
+    border-color: rgb(159, 219, 182);
+    text-align: center;
+    margin: 2px;
+    border-radius: 10px;
+    background-color: white;
+    font-family: 'Courier New', Courier, monospace;
 }
+.footer{
+    height: 13%;
+    width: 98%;
+    background-color: green;
+    border-radius: 1em;
+    margin-top: 8px;
+    border-color: white;
+}
+.botonesfooter{
+    width: 280px;
+    height: 60px;
+    font-size:25px;
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
+    background-color: rgb(159, 219, 182);
+    margin-left: 70px;
+    border-radius:15px;
+    margin-top: 10px;
+    text-align: center;
+}
+.iconosbotones1{
+    width: 30px;
+    height: 30px;
+    color: black;
+    float: left;
+    margin-left: 20px;
+}
+
