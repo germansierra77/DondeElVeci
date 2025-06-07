@@ -1,0 +1,5 @@
+/*6.1 INT. COMPRA -> (B) VOLVER -> INT. MENU PRINCIPAL*/
+document.addEventListener("click", (e)=> {
+    if(e.target.matches("#btnvolver"))
+    location.href="menuprincipal"
+})
