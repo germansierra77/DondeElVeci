@@ -40,7 +40,36 @@ document.addEventListener("click",(e)=> {
     location.href="recargarcuenta"
 })
 
-
+/*
+<div class="contenido">
+            <div id="idcliente">
+                <div class="idcliente"> 
+                <label for="idcliente" class="form-label">ID CLIENTE</label>
+                <input type="text" class="form-control" id="idcliente" placeholder="357894">
+            </div>
+            <div class="form-floating">NOMBRE
+                <input type="text" class="casillasinfo" placeholder="GERMAN SIERRA" disabled>
+                <label for="floatingInputDisabled"></label>
+              </div>
+              <div class="form-floating">CORREO
+                <input type="email" class="casillasinfo" placeholder="germansierra@mail.com" disabled>
+                <label for="floatingInputDisabled"></label>
+              </div>
+              <div class="form-floating">CELULAR
+                <input type="text" class="casillasinfo" placeholder="300300300" disabled>
+                <label for="floatingInputDisabled"></label>
+              </div>
+            <form>
+                <fieldset disabled>ESTADO DE CUENTA
+                  <div class="casillaestado">
+                    <label for="casillaestado" class="form-label">ACTIVO</label>
+                  </div></fieldset>
+                <div class="form-control">
+                    <span class="casillasaldo">SALDO CUENTA $</span>
+                    <input type="text" class="form-control" aria-label="label" placeholder="500.000">
+                </div>
+            </form></div>
+        </div> */
 
 
 

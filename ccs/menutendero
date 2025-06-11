@@ -5,95 +5,98 @@
 .contenedor{
     width: 800px;
     height: 600px;
-    background-color: aliceblue;
+    background-color: rgb(159, 219, 182);
     margin: 0.5em auto;
     padding: 0.5em;
 }
 #header{
+    width:96%;
     height: 15%;
-    width: 95%;
-    background-color: white;
-    border-radius: 1em;
-    margin: 0.5em;
-}
-#menualterno{
-    height:80%;
-    width: 15%;
-    border-radius: 0.5em;
-    margin: 0.5em;
-    float: left;
-    background-color:rgba(131, 216, 51, 0.534);
-}
-#letreroapp{
-    height: 80%;
-    width: 80%;
-    text-justify:right;
-    font-family: 'Courier New', Courier, monospace;
-    background-color: rgba(131, 216, 51, 0.534);
-    border-radius: 0.5em;
-    margin: 0.5em;
-    float: right;
-    font-size: larger;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    background-color: green;
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
 }
 .elemento{
-   text-align: center; 
-   margin: 0.5em;
-   font-size:40px;
+    height: 80%;
+    width: 80%;
+    color: white;
+    text-align:center;
+    position: initial;
+    font-family: 'Courier New', Courier, monospace;
+    background-color:green ;
+    border-radius: 10px;
+    font-size: 50px;
 }
-.cuerpo{
+#imagenlogo{
+    width: 80px;
+    height: 70px;
+    float: right;
+    border-radius: 10px;
+}
+.contenido{
+    background-color:none;
+    height: 65%;
+    width: 98%;
+    border-radius: 10px;
+    margin-top: 8px;
+    padding: 2px;
+}
+.contbotonesmenus {
     display: grid;
-    grid-template-columns: 48% 48% ;
-    grid-template-rows: 190px 190px;
-    column-gap: 0.5em;
-    margin: 0.5em;
-    row-gap: 0.2em;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+    width: 250px;
+    margin: 8px;
 }
-.btn-primary{
+.botonesmenus{
+    width: 380px;
+    height: 180px;
+    background-color: green;
+    border-color: white;
+    text-align: center;
     font-family: 'Courier New', Courier, monospace;
-    border-radius: 20px;
-    border-color: green;
-    font-size: larger;
+    border-radius: 10px;
+    color: white;
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
 }
-#ventanacomprar{
+.iconosbotonesmenus{
+    width: 80px;
+    height: 80px;
+    color: white;
+}
+.footer{
+    height: 13%;
+    width: 98%;
     background-color: green;
+    border-radius: 1em;
+    margin-top: 8px;
+    border-color: white;
+}
+.botonesfooter{
+    width: 200px;
+    height: 60px;
+    font-size:25px;
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
+    background-color: rgb(159, 219, 182);
+    margin-left: 40px;
+    border-radius:15px;
+    margin-top: 10px;
     text-align: center;
 }
-#ventanamicuenta{
-    background-color: green;
-    text-align: center;
-}
-#ventanahistorial{
-    background-color: green;
-    text-align: center; 
-}
-#ventanarecargar{
-    background-color: green;
-    text-align: center; 
+.iconosbotones{
+    width: 25px;
+    height: 25px;
+    color: black;
     float: left;
-}
-#footer{
-    height: 15%;
-    width: 95%;
-    background-color: green;
-    border-radius: 0.5em;
-    margin: 0.5em;
-}
-.contenedor1{
-    font-family: 'Courier New', Courier, monospace;
-    background-color:rgba(148, 157, 238, 0.616);
-    border-color:black; 
-    height: 80px;
-    width: 230px;
-    border-radius: 30px;
-    margin: 0.5em;
-    font-size: medium;
-}
-#botbuscar{
-    font-family: 'Courier New', Courier, monospace;
-    background-color:rgba(131, 216, 51, 0.534);
-    border-color:black;
-    height: 80px;
-    width: 230px;
-    border-radius: 30px;
-    margin: 0.5em;
+    margin-left: 20px;
 }

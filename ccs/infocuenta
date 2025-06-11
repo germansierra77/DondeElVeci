@@ -5,107 +5,126 @@
 .contenedor{
     width: 800px;
     height: 600px;
-    background-color: rgb(233, 239, 245);
+    background-color: rgb(159, 219, 182);
     margin: 0.5em auto;
     padding: 0.5em;
+    border-radius: 10px;
 }
 #header{
-    height: 25%;
-    width: 97%;
-    background-color: white;
-    border-radius: 1em;
-    margin: 0.5em; 
-}
-#menualterno{
-    height:130px;
-    width: 15%;
-    border-radius: 0.5em;
-    margin: 0.5em;
-    float: left;
-    background-color:green;
+    width:96%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    background-color: green;
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
 }
 .elemento{
-    height: 55px;
+    height: 80%;
     width: 80%;
-    text-align: center;
+    text-align:center;
+    color: white;
+    position: initial;
     font-family: 'Courier New', Courier, monospace;
     background-color:green ;
-    border-radius: 0.5em;
-    margin: 0.5em;
-    float: right;
-    font-size: 20px;
+    border-radius: 10px;
+    font-size: 50px;
 }
-#imgusuario{
-    width: 60px;
-    height: 60px;
-    float: left;
+#imagenlogo{
+    width: 80px;
+    height: 70px;
+    float: right;
+    border-radius: 10px;
 }
 .contenido{
     background-color:green;
-    height: 55%;
-    width: 97%;
-    border-radius: 1em;
-    margin-left: 0.8em;
+    height: 65%;
+    width: 98%;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 2px;
 }
 #idcliente{
-    font-size: 20px;
-    border-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    background-color: green;
+    font-size: 28px;
+    width: 100%;
+    margin: 3px;
+    color: white;
+}
+.form-floating{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 28px;
+    width: 100%;
+    margin: 3px;
+    color: white;
+}
+.form-control{
+    text-align: center;
+    font-size: 32px;
+    width: 70%;
+    margin-left: 120px;
+    background-color: rgb(159, 219, 182);
     font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
 }
 .casillasinfo{
-    width: 500px;
-    font-size:35px;
+    width: 600px;
+    font-size:25px;
     border-color: rgba(148, 157, 238, 0.616);
     text-align: center;
-    border-radius: 100px;
-    font-style: inherit;
+    margin: 2px;
+    border-radius: 10px;
     background-color: white;
     font-family: 'Courier New', Courier, monospace;
 } 
-.form-floating{
-    background-color: green; 
-    border-radius: 20px;
-    width: 96%;
-    margin-left: 0.5em;
-    margin: 0.5em;
-    margin-top: 0,5em;
-}
 .casillaestado{
-    font-size: 35px;
+    font-size: 30px;
     text-align: center;
     background-color: green;
-}
-.casillasaldo{
-    color: white;
-    background-color: green;
-    border-radius: 1em;
-    font-size: 33px;
+    font-family: 'Courier New', Courier, monospace;
 }
 .footer{
     height: 13%;
-    width: 97%;
+    width: 98%;
     background-color: green;
     border-radius: 1em;
-    margin: 0.5em; 
+    margin: 5px; 
     border-color: white;
 }
-#btnrecargar,#btnretirar{ 
-    width: 40%;
+.botonesfooter{
+    width: 280px;
     height: 60px;
+    font-size:25px;
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
+    background-color: rgb(159, 219, 182);
+    margin-left: 70px;
+    border-radius:15px;
+    margin-top: 10px;
+    text-align: center;
+}
+.iconosbotones1{
+    width: 30px;
+    height: 30px;
+    color: black;
     float: left;
-    background-position: center;
-    background-color: green;
-    margin-left: 3.5em;
-    border-radius: 20px;
-    margin-top: 0.5em;
+    margin-left: 20px;
 }
 fieldset{
     text-align: center;
     font-size: 40px;
+    font-family: 'Courier New', Courier, monospace;
 }
 .form-label{
     color: white;
-    border-top: 2em;
+    border-top: 10px;
+    font-family: 'Courier New', Courier, monospace;
 }
