@@ -1,5 +1,7 @@
 <?php
     require_once "../configbd/db.php";
+    header("Access-control-Allow-Origin: *");
+    header("Content-Type: application/json");
 
     if($_SERVER["REQUEST_METHOD"] == "GET"){
         $data= json_decode(file_get_contents("php://input"));

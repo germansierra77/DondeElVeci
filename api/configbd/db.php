@@ -1,6 +1,5 @@
 <?php
-    $credenciales = file_get_contents("../configbd/config.json");
-    $credenciales = json_decode($credenciales, true);
+    include_once "llaves.php";
     
     class Db {
         private $servidor = "localhost";
