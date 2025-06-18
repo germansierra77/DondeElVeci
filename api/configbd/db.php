@@ -15,12 +15,14 @@
             $this->base = $credenciales ["db"];
         }
         public function conectar() {
-            $conexion = new mysqli
-            ($this->servidor,$this->usuario, $this->contrasena, $this->base);
-                if($conexion->connect_error){
-                    die("ERROR DE CONEXION".$conexion->connect_error);
+            try {
+                $conexion = new PDO("mysql:host=$this->servidor;dbname=$this->base",$this->usuario,
+                $this->contrasena);
+                $conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                return $conexion;
+                } catch (PDOException $e){
+                    return "Error:" . $e->getMessage();
                 }
-            return $conexion;               
         }
     }
 
