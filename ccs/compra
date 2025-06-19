@@ -5,10 +5,15 @@
 .contenedor{
     width: 800px;
     height: 600px;
-    background-color: rgb(159, 219, 182);
+    background-color: none;
     margin: 0.5em auto;
     padding: 0.5em;
     border-radius: 10px;
+}
+body {
+    background-image: url('../images/best-food-background-ydy5u31lnrmww1pk.jpg');
+    background-size: cover;
+    background-position: center;
 }
 #header{
     width:96%;
@@ -16,30 +21,37 @@
     display: flex;
     justify-content: center;
     align-items: center; 
-    background-color: green;
+    background-color: none;
     padding: 10px;
     border-radius: 10px;
     position: relative;
 }
 .elemento{
-    height: 80%;
+    height: 60%;
     width: 80%;
     color: white;
     text-align:center;
     position: initial;
     font-family: 'Courier New', Courier, monospace;
-    background-color:green ;
+    background-color:none;
     border-radius: 10px;
     font-size: 50px;
+    text-shadow: 
+    -1px -1px 0 black, 
+    1px -1px 0  black,  
+    -1px 1px 0  black,  
+    1px 1px 0  black;   
+    font-family: 'Courier New', Courier, monospace; 
+    color: white;
 }
 #imagenlogo{
-    width: 80px;
+    width: 85px;
     height: 70px;
     float: right;
     border-radius: 10px;
 }
 .contenido{
-    background-color:rgb(159, 219, 182);
+    background-color:none;
     height: 65%;
     width: 98%;
     border-radius: 10px;
@@ -59,7 +71,7 @@
 .casillasinfo{
     width: 600px;
     font-size:25px;
-    border-color: rgba(148, 157, 238, 0.616);
+    border-color: black;
     text-align: center;
     margin: 2px;
     border-radius: 10px;
@@ -74,8 +86,15 @@ table,th,td{
     width: 99%;
     height: 50px;
     border-style:groove;
-    font-size: large;
+    font-size: 25px;
     text-align: center;
+    color: white;
+    text-shadow: 
+    -1px -1px 0 green, 
+    1px -1px 0  green,  
+    -1px 1px 0  green,  
+    1px 1px 0  green; 
+    box-shadow: 0 100px 100px rgba(0, 0, 0, 0.15);
 }
 th{
     text-align: center;
@@ -88,19 +107,18 @@ th{
 .footer{
     height: 13%;
     width: 98%;
-    background-color: green;
+    background-color: none;
     border-radius: 1em;
     margin-top: 8px;
-    border-color: white;
 }
 .botonesfooter{
     width: 200px;
     height: 60px;
     font-size:25px;
     font-family: 'Courier New', Courier, monospace;
-    color: black;
-    background-color: rgb(159, 219, 182);
-    margin-left: 40px;
+    color: green;
+    background-color: white;
+    margin-left: 50px;
     border-radius:15px;
     margin-top: 10px;
     text-align: center;
@@ -108,7 +126,7 @@ th{
 .iconosbotones{
     width: 25px;
     height: 25px;
-    color: black;
+    color: green;
     float: left;
     margin-left: 20px;
 }

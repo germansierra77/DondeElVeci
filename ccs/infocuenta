@@ -5,10 +5,15 @@
 .contenedor{
     width: 800px;
     height: 600px;
-    background-color: rgb(159, 219, 182);
+    background-color: none;
     margin: 0.5em auto;
     padding: 0.5em;
     border-radius: 10px;
+}
+body {
+    background-image: url('../images/best-food-background-ydy5u31lnrmww1pk.jpg');
+    background-size: cover;
+    background-position: center;
 }
 #header{
     width:96%;
@@ -16,30 +21,37 @@
     display: flex;
     justify-content: center;
     align-items: center; 
-    background-color: green;
+    background-color: none;
     padding: 10px;
     border-radius: 10px;
     position: relative;
 }
 .elemento{
-    height: 80%;
+    height: 60%;
     width: 80%;
-    text-align:center;
     color: white;
+    text-align:center;
     position: initial;
     font-family: 'Courier New', Courier, monospace;
-    background-color:green ;
+    background-color:none;
     border-radius: 10px;
     font-size: 50px;
+    text-shadow: 
+    -1px -1px 0 black, 
+    1px -1px 0  black,  
+    -1px 1px 0  black,  
+    1px 1px 0  black;   
+    font-family: 'Courier New', Courier, monospace; 
+    color: white;
 }
 #imagenlogo{
-    width: 80px;
+    width: 85px;
     height: 70px;
     float: right;
     border-radius: 10px;
 }
 .contenido{
-    background-color:green;
+    background-color:none;
     height: 65%;
     width: 98%;
     border-radius: 10px;
@@ -71,9 +83,11 @@
     font-size: 32px;
     width: 70%;
     margin-left: 120px;
-    background-color: rgb(159, 219, 182);
+    background-color: white;
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
+    border-color: black;
+    border-radius: 30px;
 }
 .casillasinfo{
     width: 600px;
@@ -85,28 +99,21 @@
     background-color: white;
     font-family: 'Courier New', Courier, monospace;
 } 
-.casillaestado{
-    font-size: 30px;
-    text-align: center;
-    background-color: green;
-    font-family: 'Courier New', Courier, monospace;
-}
 .footer{
     height: 13%;
     width: 98%;
-    background-color: green;
+    background-color: none;
     border-radius: 1em;
     margin: 5px; 
-    border-color: white;
 }
 .botonesfooter{
     width: 280px;
     height: 60px;
     font-size:25px;
     font-family: 'Courier New', Courier, monospace;
-    color: black;
-    background-color: rgb(159, 219, 182);
-    margin-left: 70px;
+    color: green;
+    background-color: white;
+    margin-left: 75px;
     border-radius:15px;
     margin-top: 10px;
     text-align: center;
@@ -114,7 +121,7 @@
 .iconosbotones1{
     width: 30px;
     height: 30px;
-    color: black;
+    color: green;
     float: left;
     margin-left: 20px;
 }

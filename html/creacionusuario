@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CREACION DE USUARIO</title>
     <link rel="stylesheet" href="../ccs/fontawesome.css">
-    <link rel="stylesheet" href="../ccs/creacionusuario.css?v=1.1">
+    <link rel="stylesheet" href="../ccs/creacionusuario.css?v=1.2">
     <script type="module" src="../js/main.js?v=1.1"></script>
 </head>
 <body>
@@ -18,7 +18,7 @@
         <div class="contenido">
           <div class="aviso">
             <div class="card-body">
-              <h2>BIENVENIDOS A "DONDE EL VECI" APP</h2> <br> <h3> USAR LA APP DEBES INGRESAR LOS SIGUIENTES DATOS, 
+              <h2>BIENVENIDOS A "DONDE EL VECI" APP</h2> <br> <h3> PARA USAR LA APP DEBES INGRESAR LOS SIGUIENTES DATOS, 
               SON NECESARIOS PARA EL BUEN FUNCIONAMIENTO DENTRO DE ESTA.</h3>
             </div>
           </div>

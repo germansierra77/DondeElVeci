@@ -5,9 +5,14 @@
 .contenedor{
     width: 800px;
     height: 600px;
-    background-color: rgb(159, 219, 182);
+    background-color: none;
     margin: 0.5em auto;
     padding: 0.5em;
+}
+body {
+    background-image: url('../images/best-food-background-ydy5u31lnrmww1pk.jpg');
+    background-size: cover;
+    background-position: center;
 }
 #header{
     width:96%;
@@ -15,24 +20,31 @@
     display: flex;
     justify-content: center;
     align-items: center; 
-    background-color: green;
+    background-color: none;
     padding: 10px;
     border-radius: 10px;
     position: relative;
 }
 .elemento{
-    height: 80%;
+    height: 60%;
     width: 80%;
     color: white;
     text-align:center;
     position: initial;
     font-family: 'Courier New', Courier, monospace;
-    background-color:green ;
+    background-color:none;
     border-radius: 10px;
     font-size: 50px;
+    text-shadow: 
+    -1px -1px 0 black, 
+    1px -1px 0  black,  
+    -1px 1px 0  black,  
+    1px 1px 0  black;   
+    font-family: 'Courier New', Courier, monospace; 
+    color: white;
 }
 #imagenlogo{
-    width: 80px;
+    width: 85px;
     height: 70px;
     float: right;
     border-radius: 10px;
@@ -55,12 +67,12 @@
 .botonesmenus{
     width: 380px;
     height: 180px;
-    background-color: green;
-    border-color: white;
+    color: green;
+    background-color: white;
+    border-color: green;
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
     border-radius: 10px;
-    color: white;
     font-size: 25px;
     display: flex;
     flex-direction: column;
@@ -71,24 +83,23 @@
 .iconosbotonesmenus{
     width: 80px;
     height: 80px;
-    color: white;
+    color: green;
 }
 .footer{
     height: 13%;
     width: 98%;
-    background-color: green;
+    background-color: none;
     border-radius: 1em;
     margin-top: 8px;
-    border-color: white;
 }
 .botonesfooter{
     width: 200px;
     height: 60px;
     font-size:25px;
     font-family: 'Courier New', Courier, monospace;
-    color: black;
-    background-color: rgb(159, 219, 182);
-    margin-left: 40px;
+    color: green;
+    background-color: white;
+    margin-left: 45px;
     border-radius:15px;
     margin-top: 10px;
     text-align: center;
@@ -96,7 +107,7 @@
 .iconosbotones{
     width: 25px;
     height: 25px;
-    color: black;
+    color: green;
     float: left;
     margin-left: 20px;
 }

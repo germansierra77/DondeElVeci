@@ -5,104 +5,150 @@
 .contenedor{
     width: 800px;
     height: 600px;
-    background-color: rgb(233, 239, 245);
+    background-color: none;
     margin: 0.5em auto;
     padding: 0.5em;
+    border-radius: 10px;
+}
+body {
+    background-image: url('../images/best-food-background-ydy5u31lnrmww1pk.jpg');
+    background-size: cover;
+    background-position: center;
 }
 #header{
-    height: 25%;
-    width: 97%;
-    background-color: white;
-    border-radius: 1em;
-    margin: 0.5em; 
-}
-#menualterno{
-    height:130px;
-    width: 15%;
-    border-radius: 0.5em;
-    margin: 0.5em;
-    float: left;
-    background-color:green;
+    width:96%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    background-color: none;
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
 }
 .elemento{
-    height: 55px;
+    height: 60%;
     width: 80%;
-    text-align: center;
+    color: white;
+    text-align:center;
+    position: initial;
     font-family: 'Courier New', Courier, monospace;
-    background-color:green ;
-    border-radius: 0.5em;
-    margin: 0.5em;
-    float: right;
-    font-size: 20px;
+    background-color:none;
+    border-radius: 10px;
+    font-size: 50px;
+    text-shadow: 
+    -1px -1px 0 black, 
+    1px -1px 0  black,  
+    -1px 1px 0  black,  
+    1px 1px 0  black;   
+    font-family: 'Courier New', Courier, monospace; 
+    color: white;
 }
-#imgpeso{
-    width: 30px;
-    height: 30px;
-    float: left;
-    margin-left: 4em;
+#imagenlogo{
+    width: 85px;
+    height: 70px;
+    float: right;
+    border-radius: 10px;
 }
 .contenido{
-    background-color:green;
-    height: 55%;
-    width: 97%;
-    border-radius: 1em;
-    margin-left: 0.8em;
+    background-color:none;
+    height: 65%;
+    width: 98%;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 2px;
 }
-.casillaform{
-    font-size: 40px;
-    border-color: black;
+#idcliente{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    background-color: darkgreen;
+    font-size: 28px;
+    width: 100%;
+    margin: 3px;
+    color: white;
+}
+.form-floating{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 28px;
+    width: 100%;
+    margin: 3px;
+    color: white;
+}
+.form-control{
+    text-align: center;
+    font-size: 32px;
+    width: 70%;
+    margin-left: 120px;
+    background-color: white;
     font-family: 'Courier New', Courier, monospace;
-    border-radius: 20px;
+    font-weight: bold;
+    border-color: black;
+    border-radius: 30px;
 }
 .casillasinfo{
-    width: 400px;
+    width: 600px;
     font-size:25px;
     border-color: rgba(148, 157, 238, 0.616);
     text-align: center;
-    border-radius: 20px;
+    margin: 2px;
+    border-radius: 10px;
     background-color: white;
     font-family: 'Courier New', Courier, monospace;
 } 
-.form-floating{
-    background-color: green; 
-    border-radius: 20px;
-    width: 75%;
-    margin-left: 5em;
-    font-size: 27px;
-}
-.casillasaldo{
-    color: white;
-    background-color: green;
-    border-radius: 1em;
-    font-size: 33px;
-    margin-left: 5em;
+.form-select{
+    width: 300px;
+    font-size:25px;
+    border-color: rgba(148, 157, 238, 0.616);
+    text-align: center;
+    margin: 2px;
+    border-radius: 10px;
+    background-color: white;
+    font-family: 'Courier New', Courier, monospace; 
 }
 #btnentidadbancaria{
     background-color: white;
     border-color: green;
     font-size: 20px;
-    margin-left: 40%;
+    margin-left: 32%;
     border-radius: 2em;
-}
-.form-control{
-    height: 40px;
-    font-size: 20px;
 }
 .footer{
     height: 13%;
-    width: 97%;
-    background-color: forestgreen;
+    width: 98%;
+    background-color: none;
     border-radius: 1em;
-    margin: 0.6em; 
+    margin: 5px; 
 }
-#btntransaccion{ 
-    width: 40%;
+.botonesfooter{
+    width: 280px;
     height: 60px;
-    background-position: center;
-    background-color: green;
-    margin-left: 16em;
-    border-radius: 20px;
-    margin-top: 0.5em;
+    font-size:25px;
+    font-family: 'Courier New', Courier, monospace;
+    color: green;
+    background-color: white;
+    margin-left: 75px;
+    border-radius:15px;
+    margin-top: 10px;
+    text-align: center;
+}
+.iconosbotones1{
+    width: 30px;
+    height: 30px;
+    color: green;
+    float: left;
+    margin-left: 20px;
+}
+fieldset{
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.form-label{
+    color: white;
+    border-top: 10px;
+    font-family: 'Courier New', Courier, monospace;
 }

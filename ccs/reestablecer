@@ -5,7 +5,7 @@
 .contenedor{
     width: 800px;
     height: 600px;
-    background-color: rgb(159, 219, 182);
+    background-color: none;
     margin: 0.5em auto;
     padding: 0.5em;
     border-radius: 10px;
@@ -16,21 +16,33 @@
     display: flex;
     justify-content: center;
     align-items: center; 
-    background-color: green;
+    background-color: none;
     padding: 10px;
     border-radius: 10px;
     position: relative;
 }
+body {
+    background-image: url('../images/best-food-background-ydy5u31lnrmww1pk.jpg');
+    background-size: cover;
+    background-position: center;
+}
 .elemento{
-    height: 80%;
+    height: 60%;
     width: 80%;
-    text-align:center;
     color: white;
+    text-align:center;
     position: initial;
     font-family: 'Courier New', Courier, monospace;
-    background-color:green ;
+    background-color:none;
     border-radius: 10px;
     font-size: 50px;
+    text-shadow: 
+    -1px -1px 0 black, /* Borde superior izquierdo */
+    1px -1px 0  black,  /* Borde superior derecho */
+    -1px 1px 0  black,  /* Borde inferior izquierdo */
+    1px 1px 0  black;   /* Borde inferior derecho */;
+    font-family: 'Courier New', Courier, monospace; 
+    color: white;
 }
 #imagenlogo{
     width: 80px;
@@ -39,7 +51,7 @@
     border-radius: 10px;
 }
 .contenido{
-    background-color:green;
+    background-color:none;
     height: 65%;
     width: 98%;
     border-radius: 10px;
@@ -63,7 +75,13 @@
     text-align: center;
     font-size: 28px;
     width: 100%;
-    margin: 3px;
+    margin: 2px;
+    text-shadow: 
+    -1px -1px 0 black, 
+    1px -1px 0  black,  
+    -1px 1px 0  black,  
+    1px 1px 0  black;  
+    font-family: 'Courier New', Courier, monospace; 
     color: white;
 }
 .form-control{
@@ -71,14 +89,15 @@
     font-size: 32px;
     width: 70%;
     margin-left: 120px;
-    background-color: rgb(159, 219, 182);
+    background-color: none;
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
+    border-radius: 30px;
 }
 .casillasinfo{
     width: 600px;
     font-size:25px;
-    border-color: rgba(148, 157, 238, 0.616);
+    border-color: green;
     text-align: center;
     margin: 2px;
     border-radius: 10px;
@@ -94,7 +113,7 @@
 .footer{
     height: 13%;
     width: 98%;
-    background-color: green;
+    background-color: none;
     border-radius: 1em;
     margin: 5px; 
     border-color: white;
@@ -104,27 +123,34 @@
     height: 60px;
     font-size:25px;
     font-family: 'Courier New', Courier, monospace;
-    color: black;
-    background-color: rgb(159, 219, 182);
+    color: green;
+    background-color: white;
     margin-left: 70px;
     border-radius:15px;
     margin-top: 10px;
     text-align: center;
+    border-color: green;
 }
 .iconosbotones1{
     width: 30px;
     height: 30px;
-    color: black;
+    color: green;
     float: left;
     margin-left: 20px;
 }
 fieldset{
     text-align: center;
+    color:white;
     font-size: 40px;
     font-family: 'Courier New', Courier, monospace;
+    text-shadow: 
+    -1px -1px 0 black, 
+    1px -1px 0  black,  
+    -1px 1px 0  black,  
+    1px 1px 0  black;  
 }
 .form-label{
-    color: white;
+    background-color: none;
     border-top: 10px;
     font-family: 'Courier New', Courier, monospace;
 }

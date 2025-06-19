@@ -5,34 +5,46 @@
 .contenedor{
     width: 800px;
     height: 600px;
-    background-color: rgb(159, 219, 182);
+    background-color: none;
     margin: 0.5em auto;
     padding: 0.5em;
     border-radius: 20px;
 }
+
+body {
+    background-image: url('../images/best-food-background-ydy5u31lnrmww1pk.jpg');
+    background-size: cover;
+    background-position: center;
+}
+#imagenlogin {
+  display: block;
+  margin: 20px auto;    
+  max-width: 170px;     
+  height: auto;
+  border-radius: 5px;
+}
+
 /*ESTO HACE PARTE DEL HEADER*/
 #header{
     height: 12%;
     width: 95%;
-    background-color: green;
+    background-color: none;
     border-radius: 1em;
     margin: 12px;
 }
 #letreroapp{
     text-align: center;
     padding: 25px;
-    font-size: 25px;
+    font-size: 30px;
+    text-shadow: 
+    -1px -1px 0 black, /* Borde superior izquierdo */
+    1px -1px 0  black,  /* Borde superior derecho */
+    -1px 1px 0  black,  /* Borde inferior izquierdo */
+    1px 1px 0  black;   /* Borde inferior derecho */;
     font-family: 'Courier New', Courier, monospace; 
     color: white;
 }
 /*ESTO ES PARTE DEL CONTENIDO*/
-#imagenlogin{
-    height: 180px;
-    width: 180px;
-    margin: 10px;
-    border-radius: 50px;
-    margin-left: 38%;
-}
 .form-control{
     height: 45px;
     width: 80%;
@@ -41,39 +53,41 @@
     margin: 8px;
     margin-left: 67px;
     text-align: center;
-    border-color: black;
     font-family: 'Courier New', Courier, monospace; 
     font-size: medium;
-    border-color: black;
+    border-color: green;
 }
 /*ESTO ES PARTE DEL FOOTER*/
 #btningreso{
     height:50px;
     width:40%;
-    color: white;
+    color: green;
     margin-left:30%;
-    background-color: green;
+    background-color: white;
     font-family: 'Courier New', Courier, monospace; 
     font-size: 20px;
     border-radius: 20px;
+    border-color: green;
 }
 #btnrecordar{
     height:50px;
     width:40%;
-    color: white;
+    color: green;
     margin-left:30%;
-    background-color: green;
+    background-color: white;
     font-family: 'Courier New', Courier, monospace; 
-    font-size: 15px;
+    font-size: 18px;
     border-radius: 20px;
+    border-color: green;
 }
 #btnregistrarse{
     height:50px;
     width:40%;
-    color: white;
+    color: green;
     margin-left:30%;
-    background-color: green;
+    background-color: white;
     font-family: 'Courier New', Courier, monospace; 
-    font-size: 15px;
+    font-size: 20px;
     border-radius: 20px;
+    border-color: green;
 }
