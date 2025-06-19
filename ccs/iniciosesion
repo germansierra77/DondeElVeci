@@ -18,8 +18,8 @@ body {
 }
 #imagenlogin {
   display: block;
-  margin: 20px auto;    
-  max-width: 170px;     
+  margin: 10px auto;    
+  max-width: 150px;
   height: auto;
   border-radius: 5px;
 }
@@ -37,12 +37,23 @@ body {
     padding: 25px;
     font-size: 30px;
     text-shadow: 
-    -1px -1px 0 black, /* Borde superior izquierdo */
-    1px -1px 0  black,  /* Borde superior derecho */
-    -1px 1px 0  black,  /* Borde inferior izquierdo */
-    1px 1px 0  black;   /* Borde inferior derecho */;
+    -1px -1px 0 black, 
+    1px -1px 0  black,  
+    -1px 1px 0  black,  
+    1px 1px 0  black;   
     font-family: 'Courier New', Courier, monospace; 
     color: white;
+}
+#msg_log{
+    color: white;
+    font-size: 20px;
+    text-shadow: 
+    -1px -1px 0 black, 
+    1px -1px 0  black,  
+    -1px 1px 0  black,  
+    1px 1px 0  black;   
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace; 
 }
 /*ESTO ES PARTE DEL CONTENIDO*/
 .form-control{

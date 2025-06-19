@@ -1,75 +1,85 @@
-/*FUNCIONES DE BOTONES MENU PRINCIPAL*/
-document.addEventListener("click", (e)=> {
-    if(e.target.matches("#btningreso"))
-    location.href="seleccionusuario"
-    if(e.target.matches("#btnregistrarse"))
-    location.href="creacionusuario"
-    if(e.target.matches("#btnrecordar"))
-    location.href="reestablecer"
-})
-/*FUNCIONES DE BOTONES SELECCION DE USUARIO*/
-document.addEventListener("click", (e)=> {
-    if(e.target.matches("#btniniciosesion"))
-    location.href="iniciosesion"
-    if(e.target.matches("#btnmenutendero"))
-    location.href="menutendero"
-    if(e.target.matches("#btnmenuprincipal"))
-    location.href="menuprincipal"
-})
-/*FUNCIONES DE BOTONES REESTABLECER*/
-document.addEventListener("click", (e)=> {
-    if(e.target.matches("#btncodigo"))
-    location.href="validar"
-})
-/*FUNCIONES DE BOTONES VALIDAR*/
-document.addEventListener("click", (e)=> {
-    if(e.target.matches("#btnreestablecer"))
-    location.href="reestablecer"
-    if(e.target.matches("#btnvalidacioncodigo"))
-    location.href="seleccionusuario"
-})
-/*FUNCIONES DE BOTONES MENU PRINCIPAL*/
-document.addEventListener("click",(e)=> {
-    if(e.target.matches("#btnmenucomprar"))
-    location.href="compra"
-    if(e.target.matches("#btnmenumicuenta"))
-    location.href="infocuenta"
-    if(e.target.matches("#btnmenuhistorial"))
-    location.href="historialcompras"
-    if(e.target.matches("#btnmenurecargar"))
-    location.href="recargarcuenta"
-})
+document.addEventListener("DOMContentLoaded", () => {
+    // Elementos del DOM
+    const formLogin = document.getElementById("f_login");
+    const btnRecordar = document.getElementById("btnrecordar");
+    const btnRegistrarse = document.getElementById("btnregistrarse");
 
-/*
-<div class="contenido">
-            <div id="idcliente">
-                <div class="idcliente"> 
-                <label for="idcliente" class="form-label">ID CLIENTE</label>
-                <input type="text" class="form-control" id="idcliente" placeholder="357894">
-            </div>
-            <div class="form-floating">NOMBRE
-                <input type="text" class="casillasinfo" placeholder="GERMAN SIERRA" disabled>
-                <label for="floatingInputDisabled"></label>
-              </div>
-              <div class="form-floating">CORREO
-                <input type="email" class="casillasinfo" placeholder="germansierra@mail.com" disabled>
-                <label for="floatingInputDisabled"></label>
-              </div>
-              <div class="form-floating">CELULAR
-                <input type="text" class="casillasinfo" placeholder="300300300" disabled>
-                <label for="floatingInputDisabled"></label>
-              </div>
-            <form>
-                <fieldset disabled>ESTADO DE CUENTA
-                  <div class="casillaestado">
-                    <label for="casillaestado" class="form-label">ACTIVO</label>
-                  </div></fieldset>
-                <div class="form-control">
-                    <span class="casillasaldo">SALDO CUENTA $</span>
-                    <input type="text" class="form-control" aria-label="label" placeholder="500.000">
-                </div>
-            </form></div>
-        </div> */
+    // Evento de submit del formulario
+    formLogin.addEventListener("submit", (e) => {
+        e.preventDefault();
+        if(validarLogin()) {
+            window.location.href = "seleccionusuario";
+        }
+    });
+
+    // Eventos de otros botones
+    btnRecordar.addEventListener("click", () => {
+        window.location.href = "reestablecer";
+    });
+
+    btnRegistrarse.addEventListener("click", () => {
+        window.location.href = "creacionusuario";
+    });
+});
+
+// Función para mostrar mensajes temporales
+function showTemporaryMessage(element, message, duration = 3000) {
+    element.innerHTML = message;
+    // Limpiar cualquier temporizador previo
+    if (element.messageTimer) {
+        clearTimeout(element.messageTimer);
+    }
+    // Configurar nuevo temporizador
+    element.messageTimer = setTimeout(() => {
+        element.innerHTML = '';
+    }, duration);
+}
+
+function validarLogin() {
+    // Expresiones regulares
+    const ExReg_mail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    const ExRegContraseña = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{4,18}$/;
+
+    const msgDiv = document.getElementById("msg_log");
+    
+    // Mostrar mensaje de procesamiento
+    showTemporaryMessage(msgDiv, "Procesando...");
+    
+    // Obtener valores
+    const usuario = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+    
+    console.log("User:", usuario, "Password:", password);
+
+    let msg = "";
+    let isValid = true;
+    
+    // Validaciones
+    if (!usuario) {
+        msg = "<b>Ingrese su correo electrónico</b>";
+        isValid = false;
+    } else if (!ExReg_mail.test(usuario)) {
+        msg = "<b>Correo inválido</b>";
+        isValid = false;
+    }
+    
+    if (!password) {
+        msg = msg ? "<b>Ingrese ambos campos</b>" : "<b>Ingrese su contraseña</b>";
+        isValid = false;
+    } else if (!ExRegContraseña.test(password)) {
+        msg = msg ? "<b>Correo y contraseña inválidos</b>" : "<b>Contraseña inválida</b>";
+        isValid = false;
+    }
+    
+    // Mostrar resultado
+    if (!isValid) {
+        showTemporaryMessage(msgDiv, msg);
+        return false;
+    }
+    
+    showTemporaryMessage(msgDiv, "<b>Datos ingresados correctamente</b>");
+    return true;
+}
 
 
 
