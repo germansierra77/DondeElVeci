@@ -6,7 +6,7 @@
     <title>INICIO DE SESION</title>
     <link rel="stylesheet" href="../ccs/fontawesome.css">
     <link rel="stylesheet" href="../ccs/iniciosesion?v=1.2">
-    <script type="module" src="../js/main.js?v=1.2" defer></script>
+    <script type="module" src="../js/main.js?v=1.3" defer></script>
 </head>
 <body>
     <div class="contenedor">
@@ -20,12 +20,13 @@
           </div>
           <div class="form-floating mb-3">
             <input type="password" id="password" class="form-control" placeholder="CONTRASEÑA">
-          </div>
-          <button type="submit" id="btningreso">INGRESAR</button>
+          <button type="submit" id="btningreso">INGRESAR</button> 
+         </div>
+         </form>
           <div class="text-center mb-4" id="msg_log"></div>
-       </form>
-       <button type="button" id="btnrecordar">¿OLVIDASTE TU CONTRASEÑA?</button>
-       <div id="footer">
+          <br>
+         <button type="button" id="btnrecordar">¿OLVIDASTE TU CONTRASEÑA?</button>
+         <div id="footer">
           <br>
           <button type="button" id="btnregistrarse">REGISTRARTE</button>
        </div>

@@ -44,3 +44,94 @@ document.addEventListener("click",(e)=> {
     if(e.target.matches("#btnmenurecargar"))
     location.href="recargarcuenta"
 })
+
+/*
+document.addEventListener("submit", (e) => {
+    e.preventDefault();
+    // console.log(e.target);
+    if (e.target.matches("#loginForm")) validarLogin();
+});
+
+function url(destino) {
+    location.href = destino;
+}
+
+function validarLogin() {
+    let ExReg_mail = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    let ExRegContraseña = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{4,18}$/;
+
+    let $div_msg = document.querySelector("#div_msg"), msg = "";
+    $div_msg.innerHTML = "Procesando...";
+
+    let usuario = username.value, pass = password.value;
+    console.log("user:", usuario, "pass:", pass);
+
+    if (!ExReg_mail.test(usuario)) {
+        msg = "Correo inválido";
+        if (pass.trim() === "") {
+            msg = "Correo y Contraseña inválidos";
+        }
+    } else if (pass.trim() === "") {
+        msg = "Contraseña requerida";
+    } else if (!ExRegContraseña.test(pass)) {
+        msg = "Contraseña inválida";
+    }
+
+    if (msg) {
+        $div_msg.innerHTML = `<b class="text-red">${msg}</b>`;
+        setTimeout(() => {
+            $div_msg.innerHTML = "";
+        }, 3000);
+        return false;
+    }
+
+    $div_msg.innerHTML = "Datos ingresados correctamente";
+}
+
+
+
+
+//IMPORTAR ARCHIVOS DE FUNCIONES
+/*import { validarLogin } from "./login.js"
+
+
+
+    document.addEventListener("submit", (e) => {
+        e.preventDefault()
+        if(e.target.matches("#formlogin")) validarLogin()
+    })
+
+    // Evento de submit del formulario
+    formLogin.addEventListener("submit", (e) => {
+        e.preventDefault();
+        if(validarLogin()) {
+            window.location.href = "seleccionusuario";
+        }
+    });
+
+    // Eventos de otros botones
+    btnRecordar.addEventListener("click", () => {
+        window.location.href = "reestablecer";
+    });
+
+    btnRegistrarse.addEventListener("click", () => {
+        window.location.href = "creacionusuario";
+    });
+});
+
+    // Función para mostrar mensajes temporales
+function showTemporaryMessage(element, message, duration = 3000) {
+    element.innerHTML = message;
+    // Limpiar cualquier temporizador previo
+    if (element.messageTimer) {
+        clearTimeout(element.messageTimer);
+    }
+    // Configurar nuevo temporizador
+    element.messageTimer = setTimeout(() => {
+        element.innerHTML = '';
+    }, duration);
+
+}
+function url(destino){
+    location.href=destino   
+}

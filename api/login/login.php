@@ -8,7 +8,7 @@ try {
         $data = json_decode(file_get_contents("php://input"), true);
         try {
             // Validación de parámetros
-            if (isset($_GET['usuario']) && isset($_GET['clave'])) {
+            if (isset($_POST['usuario']) && isset($_POST['clave'])) {
                 $base = new Db();
                 $conn = $base->conectar();
 
