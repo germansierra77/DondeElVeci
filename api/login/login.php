@@ -5,7 +5,7 @@ header("Content-Type: application/json");
 
 try {
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $data = json_decode(file_get_contents("php://input"), true);
+        $_POST = json_decode(file_get_contents("php://input"), true);
         try {
             // Validación de parámetros
             if (isset($_POST['usuario']) && isset($_POST['clave'])) {

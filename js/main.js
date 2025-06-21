@@ -9,11 +9,11 @@ document.addEventListener("click", (e) => {
     location.href="reestablecer";
 })
 document.addEventListener("submit", (e) => {
-    e.preventDefault(); 
-    console.log("Formulario enviado:", e.target);  // Verifica si entra aquí
-    if (e.target.matches("#f_login")) {
-        console.log("Ejecutando validarLogin...");
+    e.preventDefault()
+    if (e.target.matches("#f_login"))
         validarLogin();
-    }
 });
 
+function url(destino){
+    location.href=destino
+}
