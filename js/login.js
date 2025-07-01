@@ -1,3 +1,5 @@
+import {enviarAjax} from "../js/tools.js"
+
 export function validarLogin() {
     const ExReg_mail = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
     const ExRegContraseña = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{4,18}$/;
@@ -30,33 +32,21 @@ export function validarLogin() {
         }, 3000);
         return false;
     }
-    
-    enviarAjax(usuario, pass);
-}
- function enviarAjax(user , pass){ 
- //console.log(user,pass)
 
- const $msg_log = document.querySelector("#msg_log");
- //PETICION FETCH
- let header = {
-    headers: {
-        "content-type":"application/json"},
+    enviarAjax({
+        url: "../api/login/login.php",
         method: "POST",
-        body: JSON.stringify({
-            "usuario": user,
-            "clave": pass
-        })
- }
- fetch("../api/login/login.php",header)
-    .then(resp=>resp.json())
-    .then((data)=>{
-        console.log(data)
+        param: {
+            usuario: usuario,
+            clave: pass
+        },
+        fresp: (data)=>{
         if(data.code==200){
             location.href="seleccionusuario"
         }else{
             $msg_log.innerHTML = data.msg
         }
-    })
-    .catch((error)=>{})
- 
+    }
+    });
+    //console.log ("OK DESPUES DEL FETCH")
 }
