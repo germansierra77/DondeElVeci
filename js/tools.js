@@ -17,5 +17,5 @@ export async function enviarAjax(info){
         console.error("Error en la solicitud",error)
         fresp({code:500, msg: "Error en la solicitud"})
     }
-    console.log("Ok despues de que se ejecuta el fecth")
+    //console.log("Ok despues de que se ejecuta el fecth")
 }

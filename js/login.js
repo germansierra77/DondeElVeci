@@ -34,15 +34,16 @@ export function validarLogin() {
     }
 
     enviarAjax({
-        url: "../api/login/login.php",
-        method: "POST",
-        param: {
-            usuario: usuario,
-            clave: pass
-        },
-        fresp: (data)=>{
+    url: "../api/login/login.php",
+    method: "POST",
+    param: {
+        usuario: usuario,
+        clave: pass
+    },
+    fresp: (data)=>{
         if(data.code==200){
-            location.href="seleccionusuario"
+            // Cambia esta línea para incluir el ID del usuario en la URL
+            location.href=`seleccionusuario?id=${data.idUser}`;
         }else{
             $msg_log.innerHTML = data.msg
         }
