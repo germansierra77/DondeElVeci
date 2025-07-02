@@ -1,4 +1,5 @@
 import {enviarAjax} from "../js/tools.js"
+import { } from "../js/md5.js"
 
 export function validarLogin() {
     const ExReg_mail = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
@@ -8,8 +9,8 @@ export function validarLogin() {
     let msg = "";
     $msg_log.innerHTML = "Procesando...";
 
-    let usuario = username.value,
-        pass = password.value;
+    let usuario = username.value, pass = password.value;
+    password.value= md5(pass)
 
     //console.log("user:", usuario, "Password:", pass);
 
@@ -38,7 +39,7 @@ export function validarLogin() {
     method: "POST",
     param: {
         usuario: usuario,
-        clave: pass
+        clave: md5(pass)
     },
     fresp: (data)=>{
         if(data.code==200){

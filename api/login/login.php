@@ -16,7 +16,7 @@ try {
                 $pass = $_POST['clave'];
 
                 $sql = "SELECT `Id`, `Nombre`, `Apellido` FROM `tbusuarios` WHERE `Correo` = :user_name 
-                AND `Contrasena` =MD5(:password_user)";
+                AND `Contrasena` =:password_user";
 
                 $stmt = $conn->prepare($sql);
                 $stmt->bindValue(':user_name', trim($user), PDO::PARAM_STR);
