@@ -20,15 +20,15 @@
           </div>
           <div class="form-floating mb-3">
             <input type="password" id="password" class="form-control" placeholder="CONTRASEÑA" autocomplete="current-password" />
-          <button type="submit" id="btningreso">INGRESAR</button> 
+          <button class="botonesinicio" type="submit" id="btningreso">INGRESAR</button> 
          </div>
          </form>
           <div class="text-center mb-4" id="msg_log"></div>
           <br>
-         <button type="button" id="btnrecordar">¿OLVIDASTE TU CONTRASEÑA?</button>
+         <button class="botonesinicio" type="button" id="btnrecordar">¿OLVIDASTE TU CONTRASEÑA?</button>
          <div id="footer">
           <br>
-          <button type="button" id="btnregistrarse">REGISTRARTE</button>
+          <button class="botonesinicio" type="button" id="btnregistrarse">REGISTRARTE</button>
        </div>
     </div>
 </body>

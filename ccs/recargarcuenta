@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: 'Courier New', Courier, monospace;
 }
 .contenedor{
     width: 800px;
@@ -31,8 +32,6 @@ body {
     width: 80%;
     color: white;
     text-align:center;
-    position: initial;
-    font-family: 'Courier New', Courier, monospace;
     background-color:none;
     border-radius: 10px;
     font-size: 50px;
@@ -41,7 +40,6 @@ body {
     1px -1px 0  black,  
     -1px 1px 0  black,  
     1px 1px 0  black;   
-    font-family: 'Courier New', Courier, monospace; 
     color: white;
 }
 #imagenlogo{
@@ -84,7 +82,6 @@ body {
     width: 70%;
     margin-left: 120px;
     background-color: white;
-    font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
     border-color: black;
     border-radius: 30px;
@@ -97,7 +94,6 @@ body {
     margin: 2px;
     border-radius: 10px;
     background-color: white;
-    font-family: 'Courier New', Courier, monospace;
 } 
 .form-select{
     width: 300px;
@@ -107,7 +103,6 @@ body {
     margin: 2px;
     border-radius: 10px;
     background-color: white;
-    font-family: 'Courier New', Courier, monospace; 
 }
 #btnentidadbancaria{
     background-color: white;
@@ -127,7 +122,6 @@ body {
     width: 280px;
     height: 60px;
     font-size:25px;
-    font-family: 'Courier New', Courier, monospace;
     color: green;
     background-color: white;
     margin-left: 75px;
@@ -145,10 +139,23 @@ body {
 fieldset{
     text-align: center;
     font-size: 40px;
-    font-family: 'Courier New', Courier, monospace;
 }
 .form-label{
     color: white;
     border-top: 10px;
-    font-family: 'Courier New', Courier, monospace;
+}
+.botonesfooter:hover {
+    background-color: green;
+    color: white;
+}
+
+.botonesfooter:hover .iconosbotones1 {
+    color: white;
+}
+
+.iconosbotones1{
+    width: 25px;
+    height: 25px;
+    color: green;
+    transition: all 0.3s ease;
 }

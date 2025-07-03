@@ -9,7 +9,7 @@
     background-color: none;
     margin: 0.5em auto;
     padding: 0.5em;
-    border-radius: 20px;
+    border-radius: 10px;
 }
 body {
     background-image: url('../images/best-food-background-ydy5u31lnrmww1pk.jpg');
@@ -38,56 +38,84 @@ body {
     font-size: 50px;
     text-shadow: 
     -1px -1px 0 black, 
-    1px -1px 0  black,  
-    -1px 1px 0  black,  
-    1px 1px 0  black;  
-    color: white;
+    1px -1px 0 black,  
+    -1px 1px 0 black,  
+    1px 1px 0 black;
 }
 #imagenlogo{
-    width: 80px;
+    width: 85px;
     height: 70px;
     float: right;
     border-radius: 10px;
 }
-.contenido{
-    background-color:none;
-    height: 65%;
+
+.contenido {
+    height: 62%;
     width: 98%;
     border-radius: 10px;
     margin-top: 8px;
-    padding: 2px;
-}
-.form-floating{
+    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
-    font-size: 28px;
-    width: 100%;
-    margin: 2px;
-    text-shadow: 
-    -1px -1px 0 black, 
-    1px -1px 0  black,  
-    -1px 1px 0  black,  
-    1px 1px 0  black;   
-    color: white;
 }
-.casillasinfo{
-    width: 600px;
-    font-size:25px;
-    border-color: green;
-    text-align: center;
-    margin: 2px;
-    border-radius: 10px;
+
+.form-floating {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+.form-floating label {
+    font-size: 20px;
+    color: white;
+    margin-bottom: 8px;
+    font-weight: bold;
+    text-align: center; 
+    width: 100%;
+}
+
+.casillasinfo {
+    width: 100%;
+    max-width: 400px; 
+    font-size: 18px;
+    border: 1px solid #ddd;
+    text-align: center; 
+    padding: 12px 15px; 
+    border-radius: 8px;
     background-color: white;
-} 
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0 auto; 
+}
+
+select.casillasinfo {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 15px;
+    text-align-last: center;
+}
+
+.casillasinfo::placeholder {
+    text-align: center;
+    color: #999;
+}
+
+select.casillasinfo option {
+    text-align: center;
+}
+
 .footer{
     height: 13%;
     width: 98%;
     background-color: none;
     border-radius: 1em;
     margin-top: 8px;
-    border-color: white;
+    display: flex;
+    justify-content: space-between;
 }
 .botonesfooter{
     width: 200px;
@@ -95,27 +123,19 @@ body {
     font-size:25px;
     color: green;
     background-color: white;
-    margin-left: 47px;
+    margin-left: 50px;
     border-radius:15px;
     margin-top: 10px;
     text-align: center;
-    border-color: green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: 2px solid green;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
-.iconosbotones{
-    width: 25px;
-    height: 25px;
-    color: green;
-    float: left;
-    margin-left: 20px;
-    border-color: green;
-}
-.iconosbotones{
-    width: 25px;
-    height: 25px;
-    color: green;
-    float: left;
-    margin-left: 20px;
-}
+
 .botonesfooter:hover {
     background-color: green;
     color: white;

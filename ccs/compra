@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: 'Courier New', Courier, monospace;
 }
 .contenedor{
     width: 800px;
@@ -32,7 +33,6 @@ body {
     color: white;
     text-align:center;
     position: initial;
-    font-family: 'Courier New', Courier, monospace;
     background-color:none;
     border-radius: 10px;
     font-size: 50px;
@@ -41,7 +41,6 @@ body {
     1px -1px 0  black,  
     -1px 1px 0  black,  
     1px 1px 0  black;   
-    font-family: 'Courier New', Courier, monospace; 
     color: white;
 }
 #imagenlogo{
@@ -76,11 +75,9 @@ body {
     margin: 2px;
     border-radius: 10px;
     background-color: white;
-    font-family: 'Courier New', Courier, monospace;
 } 
 table,th,td{
     border: 1px solid black;
-    font-family: 'Courier New', Courier, monospace;
     border:1px;
     border-collapse: collapse;
     width: 99%;
@@ -115,7 +112,6 @@ th{
     width: 200px;
     height: 60px;
     font-size:25px;
-    font-family: 'Courier New', Courier, monospace;
     color: green;
     background-color: white;
     margin-left: 50px;
@@ -129,4 +125,19 @@ th{
     color: green;
     float: left;
     margin-left: 20px;
+}
+.botonesfooter:hover {
+    background-color: green;
+    color: white;
+}
+
+.botonesfooter:hover .iconosbotones {
+    color: white;
+}
+
+.iconosbotones{
+    width: 25px;
+    height: 25px;
+    color: green;
+    transition: all 0.3s ease;
 }

@@ -158,3 +158,18 @@ fieldset{
     border-top: 10px;
     font-family: 'Courier New', Courier, monospace;
 }
+.botonesfooter:hover {
+    background-color: green;
+    color: white;
+}
+
+.botonesfooter:hover .iconosbotones1 {
+    color: white;
+}
+
+.iconosbotones1{
+    width: 25px;
+    height: 25px;
+    color: green;
+    transition: all 0.3s ease;
+}

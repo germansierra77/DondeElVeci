@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: 'Courier New', Courier, monospace;
 }
 .contenedor{
     width: 800px;
@@ -26,7 +27,6 @@
     color: white;
     text-align:center;
     position: initial;
-    font-family: 'Courier New', Courier, monospace;
     background-color:none;
     border-radius: 10px;
     font-size: 50px;
@@ -35,7 +35,6 @@
     1px -1px 0  black,  
     -1px 1px 0  black,  
     1px 1px 0  black;   
-    font-family: 'Courier New', Courier, monospace; 
     color: white;
 }
 #imagenlogo{
@@ -60,7 +59,6 @@ body {
 }
 .aviso{
     text-align: center;
-    font-family: 'Courier New', Courier, monospace;
     color: white;
     width: 80%;
     float: inline-start;
@@ -90,7 +88,6 @@ body {
     margin: 2px;
     border-radius: 10px;
     background-color: white;
-    font-family: 'Courier New', Courier, monospace;
 }
 .footer{
     height: 13%;
@@ -104,7 +101,6 @@ body {
     width: 280px;
     height: 60px;
     font-size:25px;
-    font-family: 'Courier New', Courier, monospace;
     color: green;
     background-color: white;
     margin-left: 80px;
@@ -120,5 +116,27 @@ body {
     float: left;
     margin-left: 20px;
     border-color: green;
+}
+.iconosbotones1{
+    width: 25px;
+    height: 25px;
+    color: green;
+    float: left;
+    margin-left: 20px;
+}
+.botonesfooter:hover {
+    background-color: green;
+    color: white;
+}
+
+.botonesfooter:hover .iconosbotones {
+    color: white;
+}
+
+.iconosbotones1{
+    width: 25px;
+    height: 25px;
+    color: green;
+    transition: all 0.3s ease;
 }
 

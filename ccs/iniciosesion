@@ -1,6 +1,7 @@
 *{
    margin: 0;
-   padding: 0; 
+   padding: 0;
+    font-family: 'Courier New', Courier, monospace; 
 }
 .contenedor{
     width: 800px;
@@ -41,7 +42,6 @@ body {
     1px -1px 0  black,  
     -1px 1px 0  black,  
     1px 1px 0  black;   
-    font-family: 'Courier New', Courier, monospace; 
     color: white;
 }
 #msg_log{
@@ -53,7 +53,6 @@ body {
     -1px 1px 0  black,  
     1px 1px 0  black;   
     text-align: center;
-    font-family: 'Courier New', Courier, monospace; 
 }
 /*ESTO ES PARTE DEL CONTENIDO*/
 .form-control{
@@ -64,41 +63,39 @@ body {
     margin: 8px;
     margin-left: 67px;
     text-align: center;
-    font-family: 'Courier New', Courier, monospace; 
     font-size: medium;
     border-color: green;
 }
 /*ESTO ES PARTE DEL FOOTER*/
-#btningreso{
+.botonesinicio{
     height:50px;
     width:40%;
     color: green;
     margin-left:30%;
     background-color: white;
-    font-family: 'Courier New', Courier, monospace; 
     font-size: 20px;
     border-radius: 20px;
     border-color: green;
 }
-#btnrecordar{
-    height:50px;
-    width:40%;
+.iconosbotones{
+    width: 25px;
+    height: 25px;
     color: green;
-    margin-left:30%;
-    background-color: white;
-    font-family: 'Courier New', Courier, monospace; 
-    font-size: 18px;
-    border-radius: 20px;
-    border-color: green;
+    float: left;
+    margin-left: 20px;
 }
-#btnregistrarse{
-    height:50px;
-    width:40%;
+.botonesinicio:hover {
+    background-color: green;
+    color: white;
+}
+
+.botonesinicio:hover .iconosbotones {
+    color: white;
+}
+
+.iconosbotones{
+    width: 25px;
+    height: 25px;
     color: green;
-    margin-left:30%;
-    background-color: white;
-    font-family: 'Courier New', Courier, monospace; 
-    font-size: 20px;
-    border-radius: 20px;
-    border-color: green;
+    transition: all 0.3s ease;
 }

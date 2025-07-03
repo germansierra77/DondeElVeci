@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .contenedor {
@@ -38,7 +39,6 @@ body {
     gap: 20px;
     height: 60%;
     color: white;
-    font-family: 'Courier New', Courier, monospace;
     background-color: none;
     border-radius: 10px;
     font-size: 50px;
@@ -50,14 +50,14 @@ body {
 }
 
 .titulo-app {
-    line-height: 1; /* Asegura que el texto no tenga espacio extra */
+    line-height: 1;
 }
 
 #imagenlogo {
     width: 85px;
     height: 70px;
     border-radius: 10px;
-    object-fit: contain; /* Para mantener las proporciones de la imagen */
+    object-fit: contain;
 }
 
 .contenido {
@@ -93,7 +93,6 @@ body {
     padding: 8px;
     border-radius: 5px;
     background-color: white;
-    font-family: 'Courier New', Courier, monospace;
 }
 
 label{
@@ -112,7 +111,6 @@ th, td {
     padding: 12px 15px;
     text-align: center;
     border-bottom: 1px solid #ddd;
-    font-family: 'Courier New', Courier, monospace;
     color: #333;
 }
 
@@ -137,7 +135,6 @@ tr:hover {
     padding: 8px 12px;
     border-radius: 5px;
     cursor: pointer;
-    font-family: 'Courier New', Courier, monospace;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -159,27 +156,36 @@ tr:hover {
     justify-content: space-between;
 }
 
-.botonesfooter {
+.botonesfooter{
     width: 200px;
     height: 60px;
-    font-size: 25px;
-    font-family: 'Courier New', Courier, monospace;
+    font-size:25px;
     color: green;
     background-color: white;
-    border-radius: 15px;
+    margin-left: 40px;
+    border-radius:15px;
     margin-top: 10px;
-    margin-left: 45px;
-    margin-right: 45px;
     text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    border: 2px solid green;
+    border-color: green;
 }
 
 .iconosbotones {
     width: 25px;
     height: 25px;
     color: green;
+}
+.botonesfooter:hover {
+    background-color: green;
+    color: white;
+}
+
+.botonesfooter:hover .iconosbotones {
+    color: white;
+}
+
+.iconosbotones{
+    width: 25px;
+    height: 25px;
+    color: green;
+    transition: all 0.3s ease;
 }
