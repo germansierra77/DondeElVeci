@@ -7,12 +7,23 @@ document.addEventListener("click", (e) => {
     location.href="creacionusuario";
     if(e.target.matches("#btnrecordar"))
     location.href="reestablecer";
+    
+    
+    //BOTON GENERICO QUE DA LA OPCION DE VOLVER AL MENU PRINCIPAL EN TODAS LAS INTERFACES
+    if(e.target.matches("#btnvolver"))
+    location.href="menuprincipal";
+
+    //BOTON GENERICO QUE DA LA OPCION DE VOLVER AL INICIO DE SESION EN TODAS LAS INTERFACES
+    if(e.target.matches("#btniniciosesion"))
+    location.href="iniciosesion";
+
 })
 document.addEventListener("submit", (e) => {
     e.preventDefault()
     if (e.target.matches("#f_login"))
         validarLogin();
 });
+
 
 function url(destino){
     location.href=destino
@@ -21,15 +32,7 @@ function url(destino){
 
 //BOTONES PARA EL RESTO DEL PROYECTO,SE VAN AJUSTANDO SEGUN SE VA REALIZANDO LAS APIS
 
-/*FUNCIONES DE BOTONES SELECCION DE USUARIO*/
-document.addEventListener("click", (e)=> {
-    if(e.target.matches("#btniniciosesion"))
-    location.href="iniciosesion"
-    if(e.target.matches("#btnmenutendero"))
-    location.href="menutendero"
-    if(e.target.matches("#btnmenuprincipal"))
-    location.href="menuprincipal"
-})
+
 /*FUNCIONES DE BOTONES REESTABLECER*/
 document.addEventListener("click", (e)=> {
     if(e.target.matches("#btncodigo"))
@@ -48,6 +51,19 @@ document.addEventListener("click",(e)=> {
     location.href="compra"
     if(e.target.matches("#btnmenumicuenta"))
     location.href="infocuenta"
+    if(e.target.matches("#btnmenuhistorial"))
+    location.href="historialcompras"
+    if(e.target.matches("#btnmenurecargar"))
+    location.href="recargarcuenta"
+})
+
+
+/*FUNCIONES DE BOTONES MENU TENDERO*/
+document.addEventListener("click",(e)=> {
+    if(e.target.matches("#btnmovimientos"))
+    location.href="movimientos"
+    if(e.target.matches("#btninfotendero"))
+    location.href="infotendero"
     if(e.target.matches("#btnmenuhistorial"))
     location.href="historialcompras"
     if(e.target.matches("#btnmenurecargar"))
