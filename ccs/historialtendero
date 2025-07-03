@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.contenedor {
+    width: 800px;
+    height: 600px;
+    background-color: none;
+    margin: 0.5em auto;
+    padding: 0.5em;
+    border-radius: 10px;
+}
+
+body {
+    background-image: url('../images/best-food-background-ydy5u31lnrmww1pk.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Estilos para el header */
+#header {
+    width: 96%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    background-color: none;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.elemento {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    height: 60%;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: none;
+    border-radius: 10px;
+    font-size: 50px;
+    text-shadow: 
+        -1px -1px 0 black, 
+        1px -1px 0 black,  
+        -1px 1px 0 black,  
+        1px 1px 0 black;
+}
+
+.titulo-app {
+    line-height: 1; /* Asegura que el texto no tenga espacio extra */
+}
+
+#imagenlogo {
+    width: 85px;
+    height: 70px;
+    border-radius: 10px;
+    object-fit: contain; /* Para mantener las proporciones de la imagen */
+}
+
+.contenido {
+    background-color: rgba(255, 255, 255, 0.8);
+    height: 70%;
+    width: 98%;
+    border-radius: 10px;
+    margin-top: 8px;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.filtros {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    gap: 10px;
+}
+
+.form-floating {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    color: #333;
+}
+
+.casillasinfo {
+    width: 100%;
+    font-size: 20px;
+    border: 1px solid #ccc;
+    text-align: center;
+    padding: 8px;
+    border-radius: 5px;
+    background-color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+label{
+    font-size: 20px;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background-color: white;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    font-family: 'Courier New', Courier, monospace;
+    color: #333;
+}
+
+th {
+    background-color: green;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+    font-size: 17px;
+}
+
+.btn-detalle {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin: 0 auto;
+}
+
+.btn-detalle:hover {
+    background-color: darkgreen;
+}
+
+.footer {
+    height: 13%;
+    width: 98%;
+    background-color: none;
+    border-radius: 1em;
+    margin-top: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.botonesfooter {
+    width: 200px;
+    height: 60px;
+    font-size: 25px;
+    font-family: 'Courier New', Courier, monospace;
+    color: green;
+    background-color: white;
+    border-radius: 15px;
+    margin-top: 10px;
+    margin-left: 45px;
+    margin-right: 45px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: 2px solid green;
+}
+
+.iconosbotones {
+    width: 25px;
+    height: 25px;
+    color: green;
+}
