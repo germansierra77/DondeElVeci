@@ -12,8 +12,6 @@ export function validarLogin() {
     let usuario = username.value, pass = password.value;
     password.value= md5(pass)
 
-    //console.log("user:", usuario, "Password:", pass);
-
     if (!ExReg_mail.test(usuario)) {
         msg = "Correo inválido";
         if (pass === "") {
@@ -39,16 +37,24 @@ export function validarLogin() {
     method: "POST",
     param: {
         usuario: usuario,
+        // El "md5" sirve para poder encriptar la contraseña y no salga el texto plano
         clave: md5(pass)
     },
     fresp: (data)=>{
         if(data.code==200){
-            // Cambia esta línea para incluir el ID del usuario en la URL
-            location.href=`seleccionusuario?id=${data.idUser}`;
+            // Aqui se envia al menu segun el tipo de usuario ya que puede ser cliente o tendero 
+            // y segun el tipo que esta en la base de datos varian las opciones
+            if(data.tipoUsuario === "Tendero") {
+                location.href = "menutendero";
+            } else if(data.tipoUsuario === "Cliente") {
+                location.href = "menuprincipal";
+            } else {
+                // Si no reconoce el tipo de usuario lo redirige a la pagina de inicio de sesion
+                location.href = "iniciosesion";
+            }
         }else{
             $msg_log.innerHTML = data.msg
         }
     }
     });
-    //console.log ("OK DESPUES DEL FETCH")
 }
