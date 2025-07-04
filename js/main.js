@@ -71,10 +71,10 @@ document.addEventListener("click",(e)=> {
     location.href="historialtendero"
     if(e.target.matches("#btninfotendero"))
     location.href="infotendero"
-    if(e.target.matches("#btnmenuhistorial"))
-    location.href="historialcompras"
-    if(e.target.matches("#btnmenurecargar"))
-    location.href="recargarcuenta"
+    if(e.target.matches("#btnnuevoproducto"))
+    location.href="nuevoproducto"
+    if(e.target.matches("#btnlistaproductos"))
+    location.href="listaproductos"
 })
 
     //BOTON GENERICO QUE DA LA OPCION DE VOLVER AL MENU TENDERO EN TODAS LAS INTERFACES
@@ -87,3 +87,4 @@ document.addEventListener("click",(e)=> {
     if(e.target.matches("#btniniciosesion"))
     location.href="iniciosesion";
 })
+
