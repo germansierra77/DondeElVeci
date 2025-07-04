@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LISTA DE PRODUCTOS - DONDE EL VECI</title>
+    <title>LISTA DE PRODUCTOS</title>
     <link rel="stylesheet" href="../ccs/fontawesome.css">
     <link rel="stylesheet" href="../ccs/listaproductos">
     <script type="module" src="../js/main.js"></script>

@@ -1,9 +1,11 @@
-*{
+/* Estilos generales */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: 'Courier New', Courier, monospace;
 }
-.contenedor{
+.contenedor {
     width: 800px;
     height: 600px;
     background-color: none;
@@ -11,13 +13,16 @@
     padding: 0.5em;
     border-radius: 10px;
 }
+
 body {
     background-image: url('../images/best-food-background-ydy5u31lnrmww1pk.jpg');
     background-size: cover;
     background-position: center;
 }
-#header{
-    width:96%;
+
+/* Cabecera */
+#header {
+    width: 96%;
     height: 15%;
     display: flex;
     justify-content: center;
@@ -27,105 +32,145 @@ body {
     border-radius: 10px;
     position: relative;
 }
-.elemento{
+
+.elemento {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
     height: 60%;
-    width: 80%;
     color: white;
-    text-align:center;
-    position: initial;
-    background-color:none;
+    background-color: none;
     border-radius: 10px;
     font-size: 50px;
     text-shadow: 
-    -1px -1px 0 black, 
-    1px -1px 0  black,  
-    -1px 1px 0  black,  
-    1px 1px 0  black;   
-    color: white;
+        -1px -1px 0 black, 
+        1px -1px 0 black,  
+        -1px 1px 0 black,  
+        1px 1px 0 black;
 }
-#imagenlogo{
+
+#imagenlogo {
     width: 85px;
     height: 70px;
-    float: right;
+    margin-left: 20px;
     border-radius: 10px;
 }
-.contenido{
-    background-color:none;
-    height: 65%;
+
+.contenido {
+    background-color: rgba(255, 255, 255, 0.8);
+    height: 70%;
     width: 98%;
     border-radius: 10px;
     margin-top: 8px;
-    padding: 2px;
+    padding: 10px;
+    overflow-y: auto;
 }
-.form-floating{
+
+#btn-buscar{
+    background-color: green;
+    color: white;
+}
+
+.filtros {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    gap: 10px;
+}
+
+.form-floating {
+    flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-    font-size: 28px;
+}
+
+.casillasinfo {
     width: 100%;
-    margin: 2px;
-    color: white;
-}
-.casillasinfo{
-    width: 600px;
-    font-size:25px;
-    border-color: black;
+    font-size: 20px;
+    border: 1px solid #ccc;
     text-align: center;
-    margin: 2px;
-    border-radius: 10px;
+    padding: 8px;
+    border-radius: 5px;
     background-color: white;
-} 
-table,th,td{
-    border: 1px solid black;
-    border:1px;
+}
+
+.input-cantidad{
+    font-size: 15px;
+    text-align: center;
+}
+
+label {
+    font-size: 20px;
+    text-align: center;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+table {
+    width: 100%;
     border-collapse: collapse;
-    width: 99%;
-    height: 50px;
-    border-style:groove;
-    font-size: 25px;
-    text-align: center;
-    color: white;
-    text-shadow: 
-    -1px -1px 0 green, 
-    1px -1px 0  green,  
-    -1px 1px 0  green,  
-    1px 1px 0  green; 
-    box-shadow: 0 100px 100px rgba(0, 0, 0, 0.15);
+    margin-top: 10px;
+    background-color: white;
 }
-th{
+
+th, td {
+    padding: 12px 15px;
     text-align: center;
+    border-bottom: 1px solid #ddd;
+    color: #333;
+}
+
+th {
     background-color: green;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
 }
-.form-control{
-    height: 30px;
-    text-align: center;
+
+tr:hover {
+    background-color: #f5f5f5;
+    font-size: 17px;
 }
-.footer{
+
+.footer {
     height: 13%;
     width: 98%;
     background-color: none;
     border-radius: 1em;
     margin-top: 8px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
 }
-.botonesfooter{
+
+.botonesfooter {
     width: 200px;
     height: 60px;
-    font-size:25px;
+    font-size: 25px;
     color: green;
     background-color: white;
-    margin-left: 50px;
-    border-radius:15px;
+    border-radius: 15px;
     margin-top: 10px;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    margin-left: 100px;
+    margin-right: 100px;
 }
-.iconosbotones{
+
+.iconosbotones {
     width: 25px;
     height: 25px;
     color: green;
-    float: left;
-    margin-left: 20px;
+    transition: all 0.3s ease;
 }
+
 .botonesfooter:hover {
     background-color: green;
     color: white;
@@ -135,9 +180,25 @@ th{
     color: white;
 }
 
-.iconosbotones{
-    width: 25px;
-    height: 25px;
-    color: green;
-    transition: all 0.3s ease;
+
+/* Responsive */
+@media (max-width: 768px) {
+    .elemento {
+        font-size: 30px;
+    }
+    
+    .filtros {
+        flex-direction: column;
+    }
+    
+    th, td {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+    
+    .botonesfooter {
+        width: 150px;
+        height: 50px;
+        font-size: 20px;
+    }
 }
