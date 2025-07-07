@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MENU TENDERO</title>
   <link rel="stylesheet" href="../ccs/fontawesome.css">
-  <link rel="stylesheet" href="../ccs/menutendero?v=1.1">
+  <link rel="stylesheet" href="../ccs/menutendero.ccs?v=1.1">
   <script type="module" src="../js/main.js?v=1.2"></script> 
 </head>
 <body>

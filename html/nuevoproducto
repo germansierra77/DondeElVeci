@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NUEVO PRODUCTO</title>
     <link rel="stylesheet" href="../ccs/fontawesome.css">
-    <link rel="stylesheet" href="../ccs/nuevoproducto?v=1.2">
-    <script type="module" src="../js/nuevoproducto.js?v=1.0"></script>
+    <link rel="stylesheet" href="../ccs/nuevoproducto.ccs?v=1.2">
+    <script type="module" src="../js/nuevoproducto.js?v=1.1"></script>
     <script type="module" src="../js/main.js?v=1.1"></script>
     
 
@@ -60,6 +60,7 @@
                     <option value="frutas">FRUTAS</option>
                     <option value="carnicos">CARNICOS</option>
                     <option value="verduras">VERDURAS</option>
+                    <option value="otros">OTROS</option>
                 </select>
             </div>
         </div>

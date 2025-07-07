@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>INFO DE TENDERO</title>
     <link rel="stylesheet" href="../ccs/fontawesome.css">
-    <link rel="stylesheet" href="../ccs/infotendero?v=1.4">
+    <link rel="stylesheet" href="../ccs/infotendero.ccs?v=1.4">
     <script type="module" src="../js/main.js?v=1.2" defer></script> 
 </head>
 <body>
@@ -17,8 +17,8 @@
             </div>
         <div class="contenido">
             <br>
-            <div class="form-floating">ID CLIENTE
-                <input class="casillasinfo" type="text" id="idcliente" placeholder="340957" disabled>
+            <div class="form-floating">ID TENDERO
+                <input class="casillasinfo" type="text" id="idtendero" placeholder="340957" disabled>
                 <label for="floatingInputDisabled"></label>
               </div>
             <div class="form-floating">NOMBRE
@@ -29,8 +29,8 @@
                 <input class="casillasinfo" type="email"  placeholder="germansierra@mail.com" disabled>
                 <label for="floatingInputDisabled"></label>
               </div>
-              <div class="form-floating">ID
-                <input class="casillasinfo" type="text"  placeholder="100100100" disabled>
+              <div class="form-floating">DIRECCION
+                <input class="casillasinfo" type="text"  placeholder="Calle 128#100-100" disabled>
                 <label for="floatingInputDisabled"></label>
               </div>
               <div class="form-floating">TELEFONO

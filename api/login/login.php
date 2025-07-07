@@ -15,7 +15,8 @@ try {
                 $user = $_POST['usuario'];
                 $pass = $_POST['clave'];
 
-                $sql = "SELECT `Id`, `Nombre`, `Apellido`, `TipoUsuario` FROM `tbusuarios` WHERE `Correo` = :user_name 
+                $sql = "SELECT `Id`, `Nombre`, `Apellido`, `TipoUsuario` FROM `tbusuarios` 
+                WHERE `Correo` = :user_name 
                 AND `Contrasena` =:password_user";
 
                 $stmt = $conn->prepare($sql);
@@ -28,14 +29,14 @@ try {
                     if (count($result) > 0) {
                         $idUser = $result[0]["Id"];
                         $userNombre = $result[0]["Nombre"] . " " . $result[0]["Apellido"];
-                        $tipoUsuario = $result[0]["TipoUsuario"]; // Nuevo campo
+                        $tipoUsuario = $result[0]["TipoUsuario"];
 
                         header("HTTP/1.1 200 OK");
                         echo json_encode([
                             "code" => 200,
                             "idUser" => $idUser,
                             "usuario" => $userNombre,
-                            "tipoUsuario" => $tipoUsuario, // Enviar tipo de usuario
+                            "tipoUsuario" => $tipoUsuario,
                             "msg" => "Usuario validado OK"
                         ]);
                     } else {

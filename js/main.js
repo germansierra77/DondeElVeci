@@ -16,8 +16,6 @@ document.addEventListener("click", (e)=> {
 document.addEventListener("click", (e)=> {
     if(e.target.matches("#btnreestablecer"))
     location.href="reestablecer"
-    if(e.target.matches("#btnvalidacioncodigo"))
-    location.href="seleccionusuario"
 })
 
 

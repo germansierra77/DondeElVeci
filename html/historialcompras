@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HISTORIAL DE COMPRAS</title>
     <link rel="stylesheet" href="../ccs/fontawesome.css">
-    <link rel="stylesheet" href="../ccs/historialcompras?v=1.3">
+    <link rel="stylesheet" href="../ccs/historialcompras.ccs?v=1.3">
     <script type="module" src="../js/main.js?v=1.4"></script>
 </head>
 <body>
@@ -39,27 +39,27 @@
                     <tbody>
                         <tr>
                             <td>2023-10-15</td>
-                            <td>EJECUTADO</td>
+                            <td>EXITOSO</td>
                             <td><button class="btn-detalle"><i class="fas fa-search"></i> Detalle</button></td>
                         </tr>
                         <tr>
                             <td>2023-10-14</td>
-                            <td>EJECUTADO</td>
+                            <td>EXITOSO</td>
                             <td><button class="btn-detalle"><i class="fas fa-search"></i> Detalle</button></td>
                         </tr>
                         <tr>
                             <td>2023-10-12</td>
-                            <td>EJECUTADO</td>
+                            <td>CANCELADO</td>
                             <td><button class="btn-detalle"><i class="fas fa-search"></i> Detalle</button></td>
                         </tr>
                         <tr>
                             <td>2023-10-10</td>
-                            <td>EJECUTADO</td>
+                            <td>EXISTOSO</td>
                             <td><button class="btn-detalle"><i class="fas fa-search"></i> Detalle</button></td>
                         </tr>
                         <tr>
                             <td>2023-10-08</td>
-                            <td>EJECUTADO</td>
+                            <td>CANCELADO</td>
                             <td><button class="btn-detalle"><i class="fas fa-search"></i> Detalle</button></td>
                         </tr>
                     </tbody>

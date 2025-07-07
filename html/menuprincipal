@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MENU PRINCIPAL</title>
   <link rel="stylesheet" href="../ccs/fontawesome.css">
-  <link rel="stylesheet" href="../ccs/menuprincipal?v=1.3">
+  <link rel="stylesheet" href="../ccs/menuprincipal.ccs?v=1.3">
   <script type="module" src="../js/main.js?v=1.2"></script> 
 </head>
 <body>

@@ -27,20 +27,4 @@
     }
 
 
-    /* ESTO ES UNA FORMA DE CONECTAR LA BASE DE DATOS PERO NO ES LA MAS RECOMENDADA,
-    LO MEJOR ES HACERLO MEDIANTE CLASES---
-
-    $servidor = "localhost";
-    $base = "mibasededatos";
-    $usuario = "root";
-    $contrasena = "";
-
-        $conexion = new mysqli($servidor,$usuario, $contrasena, $base);
-
-        if ($conexion->connect_error){
-            die("Error de conexion:" . $conexion->connect_error);
-        }
-    
-    echo "Conexion exitosa";
-    $conexion->close();*/
 ?>
