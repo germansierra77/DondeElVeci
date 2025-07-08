@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NUEVO PRODUCTO</title>
     <link rel="stylesheet" href="../ccs/fontawesome.css">
-    <link rel="stylesheet" href="../ccs/nuevoproducto.ccs?v=1.2">
+    <link rel="stylesheet" href="../ccs/nuevoproducto.css?v=1.2">
     <script type="module" src="../js/nuevoproducto.js?v=1.1"></script>
     <script type="module" src="../js/main.js?v=1.1"></script>
     
@@ -49,22 +49,21 @@
                 <input class="casillasinfo" type="number" id="precio-producto" placeholder="PRECIO">
             </div>
 
-            <div class="form-floating">
-                <label for="categoria-producto"></label>
-                <select class="casillasinfo" id="categoria-producto">
-                    <option value="">CATEGORIA</option>
-                    <option value="granos">GRANOS</option>
-                    <option value="cereales">CEREALES</option>
-                    <option value="lacteos">LACTEOS</option>
-                    <option value="embutidos">EMBUTIDOS</option>
-                    <option value="frutas">FRUTAS</option>
-                    <option value="carnicos">CARNICOS</option>
-                    <option value="verduras">VERDURAS</option>
-                    <option value="otros">OTROS</option>
-                </select>
-            </div>
+        <div class="form-floating">
+        <select class="casillasinfo" id="categoria-producto" name="categoria" required>
+            <option value="">SELECCIONE UNA CATEGORÍA</option>
+            <option value="GRANOS">GRANOS</option>
+            <option value="CEREALES">CEREALES</option>
+            <option value="LACTEOS">LÁCTEOS</option>
+            <option value="EMBUTIDOS">EMBUTIDOS</option>
+            <option value="FRUTAS">FRUTAS</option>
+            <option value="CARNICOS">CÁRNICOS</option>
+            <option value="VERDURAS">VERDURAS</option>
+            <option value="OTROS">OTROS</option>
+        </select>
+    <label for="categoria-producto"></label>
         </div>
-        
+        </div>
         <div class="footer">
             <button type="button" class="botonesfooter" id="btnvolvertendero">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="iconosbotones" viewBox="0 0 16 16">

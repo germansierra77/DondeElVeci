@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>INFO DE CLIENTE</title>
     <link rel="stylesheet" href="../ccs/fontawesome.css">
-    <link rel="stylesheet" href="../ccs/infocuenta.ccs?v=1.4">
+    <link rel="stylesheet" href="../ccs/infocuenta.css?v=1.4">
     <script type="module" src="../js/main.js?v=1.1" defer></script> 
 </head>
 <body>

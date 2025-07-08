@@ -1,11 +1,10 @@
-
 export async function enviarAjax(info){
     let {url,method, param, fresp}= info 
 
     if(param!==undefined && method==="GET") url += "?"+new URLSearchParams(param).toString()
     
     if(method==="POST" || method==="PUT" || method==="DELETE") method= {method,headers:
-        {"Content-type":"applicaction/json"}, body: JSON.stringify(param)} 
+        {"Content-type":"application/json"}, body: JSON.stringify(param)} 
     else method= {method,headers:{"Content-type":"application/json"}}
     
     try {
