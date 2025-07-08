@@ -1,46 +1,71 @@
-}document.getElementById('btnguardar').addEventListener('click', async function() {
-    const btn = this;
-    const originalText = btn.innerHTML;
-    
-    try {
-        btn.disabled = true;
-        btn.innerHTML = 'Guardando...';
+import { enviarAjax } from "../js/tools.js";
 
-        // Validar y preparar datos usando los IDs directos
-        const producto = {
-            nombre: document.getElementById('nombre-producto').value.trim(),
-            marca: document.getElementById('marca-producto').value.trim(),
-            medida: document.getElementById('medida-producto').value,
-            precio: parseFloat(document.getElementById('precio-producto').value),
-            categoria: document.getElementById('categoria-producto').value
-        };
+document.addEventListener('DOMContentLoaded', function() {
+    // Botones
+    const btnVolver = document.getElementById('btnvolvertendero');
+    const btnLimpiar = document.getElementById('btnlimpiar');
+    const btnGuardar = document.getElementById('btnguardar');
 
-        // Resto del código permanece igual...
-        const data = await enviarAjax({
-            url: '../api/productos/guardarproducto.php',
-            method: 'POST',
-            param: producto,
-            fresp: (response) => {
-                console.log('Respuesta recibida:', response);
-            }
-        });
+    // Campos del formulario
+    const nombreProducto = document.getElementById('nombre-producto');
+    const marcaProducto = document.getElementById('marca-producto');
+    const medidaProducto = document.getElementById('medida-producto');
+    const precioProducto = document.getElementById('precio-producto');
+    const categoriaProducto = document.getElementById('categoria-producto');
 
-        alert('✅ ' + data.message);
-        limpiarFormulario();
+    // Evento para el botón Volver
+    btnVolver.addEventListener('click', function() {
+        window.history.back(); // Método alternativo para volver
+    });
+
+    // Evento para el botón Limpiar
+    btnLimpiar.addEventListener('click', function() {
+        document.querySelector('form').reset(); // Limpiar todo el formulario
+    });
+
+    // Evento para el botón Guardar
+    btnGuardar.addEventListener('click', async function(e) {
+        e.preventDefault(); // Prevenir el comportamiento por defecto
         
-    } catch (error) {
-        console.error('Error al guardar:', error);
-        alert('❌ ' + error.message);
-    } finally {
-        btn.disabled = false;
-        btn.innerHTML = originalText;
-    }
-});
+        // Validar campos obligatorios
+        if (!nombreProducto.value.trim() || !medidaProducto.value || 
+            !precioProducto.value.trim() || !categoriaProducto.value) {
+            alert('Por favor complete todos los campos obligatorios');
+            return;
+        }
 
-function limpiarFormulario() {
-    document.getElementById('nombre-producto').value = '';
-    document.getElementById('marca-producto').value = '';
-    document.getElementById('medida-producto').value = '';
-    document.getElementById('precio-producto').value = '';
-    document.getElementById('categoria-producto').value = '';
-}
+        // Validar que el precio sea un número positivo
+        if (isNaN(precioProducto.value) || parseFloat(precioProducto.value) <= 0) {
+            alert('Por favor ingrese un precio válido');
+            return;
+        }
+
+        // Crear FormData para enviar los datos
+        const formData = new FormData();
+        formData.append('nombre', nombreProducto.value.trim());
+        formData.append('marca', marcaProducto.value.trim());
+        formData.append('medida', medidaProducto.value);
+        formData.append('precio', parseFloat(precioProducto.value));
+        formData.append('categoria', categoriaProducto.value);
+
+        try {
+            // Enviar datos al servidor
+            const respuesta = await fetch('../api/productos/guardarproducto.php', {
+                method: 'POST',
+                body: formData
+            });
+            
+            const resultado = await respuesta.json();
+            
+            if (resultado.success) {
+                alert('Producto guardado correctamente');
+                btnLimpiar.click(); // Limpiar formulario
+            } else {
+                alert('Error al guardar: ' + resultado.message);
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            alert('Error de conexión con el servidor');
+        }
+    });
+});

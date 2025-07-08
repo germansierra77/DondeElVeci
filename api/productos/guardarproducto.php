@@ -1,102 +1,63 @@
 <?php
-require_once __DIR__.'/../configbd/db.php';
-
-// Establecer headers primero para evitar cualquier salida antes
 header('Content-Type: application/json');
-header('Access-Control-Allow-Origin: *');
-header('Access-Control-Allow-Methods: POST');
-header('Access-Control-Allow-Headers: Content-Type');
 
-// Configuración de errores
-ini_set('display_errors', 0);
-ini_set('log_errors', 1);
-error_reporting(E_ALL);
-ini_set('error_log', __DIR__.'/php_errors.log');
+// Incluir la configuración de la base de datos
+require_once '../configbd/db.php';
 
-function enviarRespuesta($success, $message, $data = [], $statusCode = 200) {
-    http_response_code($statusCode);
-    echo json_encode([
-        'success' => $success,
-        'message' => $message,
-        'data' => $data
-    ]);
-    exit;
-}
+$response = ['success' => false, 'message' => ''];
 
 try {
-    // Verificar método POST
+    // Verificar método de solicitud
     if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-        enviarRespuesta(false, 'Método no permitido', [], 405);
+        throw new Exception('Método no permitido');
     }
 
-    // Obtener datos JSON
-    $input = file_get_contents('php://input');
-    if (empty($input)) {
-        enviarRespuesta(false, 'No se recibieron datos', [], 400);
-    }
-
-    $data = json_decode($input, true);
-    if (json_last_error() !== JSON_ERROR_NONE) {
-        enviarRespuesta(false, 'Formato JSON inválido: ' . json_last_error_msg(), [], 400);
-    }
-
-    // Validación de campos
-    $required = ['nombre', 'medida', 'precio', 'categoria'];
-    foreach ($required as $field) {
-        if (!isset($data[$field]) || empty(trim($data[$field]))) {
-            enviarRespuesta(false, "El campo $field es requerido", [], 400);
+    // Obtener y validar datos
+    $requiredFields = ['nombre', 'medida', 'precio', 'categoria'];
+    foreach ($requiredFields as $field) {
+        if (empty($_POST[$field])) {
+            throw new Exception("El campo $field es obligatorio");
         }
     }
 
-    // Validar precio
-    if (!is_numeric($data['precio']) || $data['precio'] <= 0) {
-        enviarRespuesta(false, "El precio debe ser un número mayor a cero", [], 400);
+    // Asignar y sanitizar datos
+    $nombre = htmlspecialchars(trim($_POST['nombre']));
+    $marca = isset($_POST['marca']) ? htmlspecialchars(trim($_POST['marca'])) : null;
+    $medida = htmlspecialchars(trim($_POST['medida']));
+    $precio = filter_var($_POST['precio'], FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
+    $categoria = htmlspecialchars(trim($_POST['categoria']));
+
+    // Validaciones adicionales
+    if (strlen($nombre) > 60) {
+        throw new Exception('El nombre no puede exceder los 60 caracteres');
+    }
+    
+    if ($precio <= 0) {
+        throw new Exception('El precio debe ser mayor que cero');
     }
 
-    // Conexión a la base de datos
+    // Conectar a la base de datos
     $db = new Db();
     $conn = $db->conectar();
 
-    if (!($conn instanceof PDO)) {
-        enviarRespuesta(false, "Error de conexión a la base de datos", [], 500);
-    }
-
-    // Configurar PDO
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-    // Insertar producto
-    $sql = "INSERT INTO tbproductos 
-            (Nombre, Marca, Medida, Precio, Categoria) 
-            VALUES (:nombre, :marca, :medida, :precio, :categoria)";
+    // Preparar y ejecutar la consulta
+    $stmt = $conn->prepare("INSERT INTO tbproductos 
+                          (Nombre, Medida, Precio, Marca, Categoria) 
+                          VALUES (?, ?, ?, ?, ?)");
     
-    $stmt = $conn->prepare($sql);
-    
-    // Limpieza de datos
-    $nombre = trim($data['nombre']);
-    $marca = isset($data['marca']) ? trim($data['marca']) : null;
-    $medida = trim($data['medida']);
-    $precio = (float)$data['precio'];
-    $categoria = trim($data['categoria']);
-    
-    // Bind de parámetros
-    $stmt->bindParam(':nombre', $nombre, PDO::PARAM_STR);
-    $stmt->bindParam(':marca', $marca, $marca === null ? PDO::PARAM_NULL : PDO::PARAM_STR);
-    $stmt->bindParam(':medida', $medida, PDO::PARAM_STR);
-    $stmt->bindParam(':precio', $precio);
-    $stmt->bindParam(':categoria', $categoria, PDO::PARAM_STR);
+    $stmt->execute([$nombre, $medida, $precio, $marca, $categoria]);
 
-    if (!$stmt->execute()) {
-        enviarRespuesta(false, "Error al guardar el producto", [], 500);
-    }
-
-    // Respuesta exitosa
-    enviarRespuesta(true, 'Producto guardado correctamente', ['id' => $conn->lastInsertId()]);
+    $response = [
+        'success' => true,
+        'message' => 'Producto registrado exitosamente',
+        'id' => $conn->lastInsertId()
+    ];
 
 } catch (PDOException $e) {
-    error_log("PDOException: ".$e->getMessage());
-    enviarRespuesta(false, 'Error de base de datos: ' . $e->getMessage(), [], 500);
+    $response['message'] = 'Error en la base de datos: ' . $e->getMessage();
 } catch (Exception $e) {
-    error_log("Exception: ".$e->getMessage());
-    enviarRespuesta(false, $e->getMessage(), [], $e->getCode() ?: 500);
+    $response['message'] = $e->getMessage();
 }
+
+echo json_encode($response);
 ?>
