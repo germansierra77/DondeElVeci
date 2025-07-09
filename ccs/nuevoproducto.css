@@ -58,36 +58,27 @@ body {
     height: 62%;
     width: 98%;
     border-radius: 10px;
-    margin-top: 8px;
     padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; /* Centra verticalmente el contenido */
+    justify-content:baseline;
 }
 
 .form-floating {
     display: flex;
-    flex-direction: column;
+    flex-direction:initial;
     align-items: center; 
-    width: 100%;
+    width: 500px;
+    height: 50px;
     margin-bottom: 20px;
 }
 
-.form-floating label {
-    font-size: 20px;
-    color: white;
-    margin-bottom: 8px;
-    font-weight: bold;
-    text-align: center; 
-    width: 100%;
-}
-
 .casillasinfo {
-    width: 100%; /* Ocupará el 100% del ancho de su contenedor (.form-floating) */
-    max-width: 500px; /* Ancho máximo más grande para los campos */
-    font-size: 18px;
-    border: 1px solid #ddd;
+    width: 100%;
+    font-size: 20px;
+    border: 2px solid #ddd;
+    border-color: green;
     text-align: center; 
     padding: 12px 15px; 
     border-radius: 8px;
@@ -107,11 +98,12 @@ select.casillasinfo {
 
 .casillasinfo::placeholder {
     text-align: center;
-    color: #999;
+    color: grey;
 }
 
 select.casillasinfo option {
     text-align: center;
+    color: green;
 }
 
 .footer {
@@ -119,10 +111,9 @@ select.casillasinfo option {
     width: 98%;
     background-color: none;
     border-radius: 1em;
-    margin-top: 8px;
     display: flex;
     justify-content: space-between;
-    align-items: center; /* Centra verticalmente los botones */
+    align-items: center;
 }
 
 .botonesfooter {
@@ -131,7 +122,7 @@ select.casillasinfo option {
     font-size: 25px;
     color: green;
     background-color: white;
-    margin: 0 25px; /* Margen igual a ambos lados para mejor centrado */
+    margin: 0 25px;
     border-radius: 15px;
     text-align: center;
     display: flex;
