@@ -1,90 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NUEVO PRODUCTO</title>
-    <link rel="stylesheet" href="../ccs/fontawesome.css">
-    <link rel="stylesheet" href="../ccs/nuevoproducto.css?v=1.2">
+    <link rel="stylesheet" href="../css/fontawesome.css">
+    <link rel="stylesheet" href="../ccs/nuevoproducto.css?v=1.0">
     <script type="module" src="../js/nuevoproducto.js?v=1.1"></script>
     <script type="module" src="../js/main.js?v=1.1"></script>
-    
-
 </head>
 <body>
     <div class="contenedor">
-        <div id="header">
-            <div class="elemento">APP DONDE EL VECI
-                <img src="../images/logo app.png" alt="logo" id="imagenlogo"> 
+        <header id="header">
+            <div class="elemento">
+                APP DONDE EL VECI
+                <img src="../images/logo app.png" alt="Logo de la aplicación" id="imagenlogo"> 
             </div>
-        </div>
+        </header>
         
-        <div class="contenido"> 
-            <h2 class="titulo-nuevo">NUEVO PRODUCTO</h2>
+        <main class="contenido">
+            <h1 class="titulo-nuevo"></h1>
             
-            <div class="form-floating">
-                <label for="nombre-producto"></label>
-                <input class="casillasinfo" type="text" id="nombre-producto" placeholder="NOMBRE DEL PRODUCTO">
-            </div>
-            
-            <div class="form-floating">
-                <label for="marca-producto"></label>
-                <input class="casillasinfo" type="text" id="marca-producto" placeholder="MARCA">
-            </div>
-            
-            <div class="form-floating">
-                <label for="medida-producto"></label>
-                <select class="casillasinfo" id="medida-producto">
-                    <option value="">UNIDAD DE MEDIDA</option>
-                    <option value="libra">Libra</option>
-                    <option value="kilo">Kilo</option>
-                    <option value="unidad">Unidad</option>
-                    <option value="litro">Litro</option>
-                    <option value="frasco">Frasco</option>
-                </select>
-            </div>
-            
-            <div class="form-floating">
-                <label for="precio-producto"></label>
-                <input class="casillasinfo" type="number" id="precio-producto" placeholder="PRECIO">
-            </div>
+            <form id="formulario-producto" class="formulario-producto">
+                <div class="form-floating">
+                    <input class="casillasinfo" type="text" id="nombre-producto" 
+                           placeholder="NOMBRE DEL PRODUCTO" required>
+                    <label for="nombre-producto"></label>
+                </div>
+                
+                <div class="form-floating">
+                    <input class="casillasinfo" type="text" id="marca-producto" 
+                           placeholder="MARCA">
+                    <label for="marca-producto"></label>
+                </div>
+                
+                <div class="form-floating">
+                    <select class="casillasinfo" id="medida-producto" required>
+                        <option value="">UNIDAD DE MEDIDA</option>
+                        <option value="libra">Libra</option>
+                        <option value="kilo">Kilo</option>
+                        <option value="unidad">Unidad</option>
+                        <option value="litro">Litro</option>
+                        <option value="frasco">Frasco</option>
+                    </select>
+                    <label for="medida-producto"></label>
+                </div>
+                
+                <div class="form-floating">
+                    <input class="casillasinfo" type="number" id="precio-producto" 
+                           placeholder="PRECIO" min="0" step="0.01" required>
+                    <label for="precio-producto"></label>
+                </div>
 
-        <div class="form-floating">
-        <select class="casillasinfo" id="categoria-producto" name="categoria" required>
-            <option value="">SELECCIONE UNA CATEGORÍA</option>
-            <option value="GRANOS">GRANOS</option>
-            <option value="CEREALES">CEREALES</option>
-            <option value="LACTEOS">LÁCTEOS</option>
-            <option value="EMBUTIDOS">EMBUTIDOS</option>
-            <option value="FRUTAS">FRUTAS</option>
-            <option value="CARNICOS">CÁRNICOS</option>
-            <option value="VERDURAS">VERDURAS</option>
-            <option value="OTROS">OTROS</option>
-        </select>
-    <label for="categoria-producto"></label>
-        </div>
-        </div>
-        <div class="footer">
-            <button type="button" class="botonesfooter" id="btnvolvertendero">
+                <div class="form-floating">
+                    <select class="casillasinfo" id="categoria-producto" required>
+                        <option value="">SELECCIONE UNA CATEGORÍA</option>
+                        <option value="GRANOS">GRANOS</option>
+                        <option value="CEREALES">CEREALES</option>
+                        <option value="LACTEOS">LÁCTEOS</option>
+                        <option value="EMBUTIDOS">EMBUTIDOS</option>
+                        <option value="FRUTAS">FRUTAS</option>
+                        <option value="CARNICOS">CÁRNICOS</option>
+                        <option value="VERDURAS">VERDURAS</option>
+                        <option value="OTROS">OTROS</option>
+                    </select>
+                    <label for="categoria-producto"></label>
+                </div>
+            </form>
+        </main>
+        
+        <footer class="footer">
+            <button type="button" class="botonesfooter" id="btnvolvertendero" aria-label="Volver">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="iconosbotones" viewBox="0 0 16 16">
                     <path d="M9.05.435c-.58-.58-1.52-.58-2.1 0L.436 6.95c-.58.58-.58 1.519 0 2.098l6.516 6.516c.58.58 1.519.58 2.098 0l6.516-6.516c.58-.58.58-1.519 0-2.098zM7 8.466a.25.25 0 0 1-.41.192L4.23 6.692a.25.25 0 0 1 0-.384l2.36-1.966a.25.25 0 0 1 .41.192V6h1.5A2.5 2.5 0 0 1 11 8.5V11h-1V8.5A1.5 1.5 0 0 0 8.5 7H7z"/>
                 </svg>
                 VOLVER
             </button>
-            <button type="button" class="botonesfooter" id="btnlimpiar">
+            <button type="reset" class="botonesfooter" id="btnlimpiar" form="formulario-producto" aria-label="Limpiar formulario">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="iconosbotones" viewBox="0 0 16 16">
                     <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"/>
                     <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"/>
                 </svg>
                 LIMPIAR
             </button>
-            <button type="button" class="botonesfooter" id="btnguardar">
+            <button type="submit" class="botonesfooter" id="btnguardar" form="formulario-producto" aria-label="Guardar producto">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="iconosbotones" viewBox="0 0 16 16">
                     <path d="M2 1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H9.5a1 1 0 0 0-1 1v7.293l2.646-2.647a.5.5 0 0 1 .708.708l-3.5 3.5a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L7.5 9.293V2a2 2 0 0 1 2-2H14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h2.5a.5.5 0 0 1 0 1z"/>
                 </svg>
                 GUARDAR
             </button>
-        </div>
+        </footer>
     </div>
 </body>
 </html>

@@ -1,35 +1,20 @@
-export async function enviarAjax({url, method = 'GET', param = null, headers = {}}) {
+export async function enviarAjax(info){
+    let {url,method, param, fresp}= info 
+
+    if(param!==undefined && method==="GET") url += "?"+new URLSearchParams(param).toString()
+    
+    if(method==="POST" || method==="PUT" || method==="DELETE") method= {method,headers:
+        {"Content-type":"application/json"}, body: JSON.stringify(param)} 
+    else method= {method,headers:{"Content-type":"application/json"}}
+    
     try {
-        const options = {
-            method: method,
-            headers: {
-                'Content-Type': 'application/json',
-                ...headers
-            }
-        };
-
-        if (param) {
-            options.body = typeof param === 'object' ? JSON.stringify(param) : param;
-        }
-
-        const response = await fetch(url, options);
-        
-        // Verificar si la respuesta es JSON válido
-        const contentType = response.headers.get('content-type');
-        if (!contentType || !contentType.includes('application/json')) {
-            const text = await response.text();
-            throw new Error(text || 'Respuesta no JSON del servidor');
-        }
-
-        const data = await response.json();
-        
-        if (!response.ok) {
-            throw new Error(data.message || `Error ${response.status}`);
-        }
-
-        return data;
-    } catch (error) {
-        console.error('Error en enviarAjax:', error);
-        throw new Error(error.message || 'Error en la solicitud');
+        let resp = await fetch(url,method)
+        if(!resp.ok) throw new Error("Error en la respuesta del servidor")
+        let data = await resp.json()
+    fresp(data)
+    }catch (error){
+        console.error("Error en la solicitud",error)
+        fresp({code:500, msg: "Error en la solicitud"})
     }
+    //console.log("Ok despues de que se ejecuta el fecth")
 }

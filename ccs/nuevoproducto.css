@@ -1,9 +1,10 @@
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: 'Courier New', Courier, monospace;
 }
-.contenedor{
+
+.contenedor {
     width: 800px;
     height: 600px;
     background-color: none;
@@ -11,13 +12,15 @@
     padding: 0.5em;
     border-radius: 10px;
 }
+
 body {
     background-image: url('../images/best-food-background-ydy5u31lnrmww1pk.jpg');
     background-size: cover;
     background-position: center;
 }
-#header{
-    width:96%;
+
+#header {
+    width: 96%;
     height: 15%;
     display: flex;
     justify-content: center;
@@ -27,22 +30,24 @@ body {
     border-radius: 10px;
     position: relative;
 }
-.elemento{
+
+.elemento {
     height: 60%;
     width: 80%;
     color: white;
-    text-align:center;
+    text-align: center;
     position: initial;
-    background-color:none;
+    background-color: none;
     border-radius: 10px;
     font-size: 50px;
     text-shadow: 
-    -1px -1px 0 black, 
-    1px -1px 0 black,  
-    -1px 1px 0 black,  
-    1px 1px 0 black;
+        -1px -1px 0 black, 
+        1px -1px 0 black,  
+        -1px 1px 0 black,  
+        1px 1px 0 black;
 }
-#imagenlogo{
+
+#imagenlogo {
     width: 85px;
     height: 70px;
     float: right;
@@ -58,13 +63,14 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center; /* Centra verticalmente el contenido */
 }
 
 .form-floating {
     display: flex;
     flex-direction: column;
     align-items: center; 
-    width: 80%;
+    width: 100%;
     margin-bottom: 20px;
 }
 
@@ -78,8 +84,8 @@ body {
 }
 
 .casillasinfo {
-    width: 100%;
-    max-width: 400px; 
+    width: 100%; /* Ocupará el 100% del ancho de su contenedor (.form-floating) */
+    max-width: 500px; /* Ancho máximo más grande para los campos */
     font-size: 18px;
     border: 1px solid #ddd;
     text-align: center; 
@@ -108,7 +114,7 @@ select.casillasinfo option {
     text-align: center;
 }
 
-.footer{
+.footer {
     height: 13%;
     width: 98%;
     background-color: none;
@@ -116,16 +122,17 @@ select.casillasinfo option {
     margin-top: 8px;
     display: flex;
     justify-content: space-between;
+    align-items: center; /* Centra verticalmente los botones */
 }
-.botonesfooter{
+
+.botonesfooter {
     width: 200px;
     height: 60px;
-    font-size:25px;
+    font-size: 25px;
     color: green;
     background-color: white;
-    margin-left: 50px;
-    border-radius:15px;
-    margin-top: 10px;
+    margin: 0 25px; /* Margen igual a ambos lados para mejor centrado */
+    border-radius: 15px;
     text-align: center;
     display: flex;
     align-items: center;
@@ -145,7 +152,7 @@ select.casillasinfo option {
     color: white;
 }
 
-.iconosbotones{
+.iconosbotones {
     width: 25px;
     height: 25px;
     color: green;

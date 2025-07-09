@@ -1,7 +1,6 @@
 <?php
 header('Content-Type: application/json');
 
-// Incluir la configuración de la base de datos
 require_once '../configbd/db.php';
 
 $response = ['success' => false, 'message' => ''];
