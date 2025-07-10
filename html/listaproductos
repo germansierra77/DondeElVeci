@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LISTA DE PRODUCTOS - APP DONDE EL VECI</title>
+    <title>LISTA DE PRODUCTOS</title>
     <script type="module" src="../js/main.js"></script>
     <script type="module" src="../js/listaproductos.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -21,8 +21,8 @@
         <div class="contenido">
             <div class="filtros">
                 <div class="form-floating">
-                    <input class="casillasinfo" type="text" id="filtro-nombre" placeholder=" ">
-                    <label for="filtro-nombre">Nombre producto</label>
+                    <input class="casillasinfo" type="text" id="filtro-nombre" placeholder="NOMBRE">
+                    <label for="filtro-nombre"></label>
                 </div>
                 <div class="form-floating">
                 <button type="button" id="btn-actualizar" class="casillasinfo">
@@ -30,7 +30,7 @@
                 </button>
                 </div>
                 <div class="form-floating">
-                    <select class="casillasinfo" id="filtro-categoria">
+                    <select class="casillasinfo"  id="filtro-categoria">
                         <option value="">TODAS</option>
                         <option value="granos">GRANOS</option>
                         <option value="cereales">CEREALES</option>
@@ -40,11 +40,13 @@
                         <option value="carnicos">CÁRNICOS</option>
                         <option value="verduras">VERDURAS</option>
                     </select>
-                    <label for="filtro-categoria">Categoría</label>
+                    <label for="filtro-categoria"></label>
                 </div>
                 <div class="form-floating">
                     <button type="button" id="btn-buscar" class="casillasinfo">
-                        <i class="fas fa-search"></i> Buscar
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                        </svg> Buscar
                     </button>
                 </div>
             </div>            
@@ -62,7 +64,6 @@
                         </tr>
                     </thead>
                     <tbody id="cuerpo-tabla">
-                        <!-- Los datos se cargarán dinámicamente con JavaScript -->
                         <tr>
                             <td colspan="7" style="text-align: center;">
                                 <i class="fas fa-spinner fa-spin"></i> Cargando productos...

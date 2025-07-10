@@ -74,6 +74,25 @@ body {
     margin-bottom: 20px;
 }
 
+#precio-producto{
+    display: flex;
+    flex-direction:initial;
+    align-items: center; 
+    width: 500px;
+    height: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    font-size: 20px;
+    border: 2px solid #ddd;
+    border-color: green;
+    text-align: center; 
+    padding: 12px 15px; 
+    border-radius: 8px;
+    background-color: white;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0 auto; 
+
+}
 .casillasinfo {
     width: 100%;
     font-size: 20px;

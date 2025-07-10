@@ -7,6 +7,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const filtroNombre = document.getElementById('filtro-nombre');
     const filtroCategoria = document.getElementById('filtro-categoria');
 
+    // Evento para redirigir a nuevo producto
+    document.addEventListener("click", (e) => {
+        if(e.target.matches("#btnnuevo")) {
+            location.href = "nuevoproducto";
+        }
+    });
+
     async function cargarProductos() {
         try {
             // Mostrar estado de carga
@@ -90,3 +97,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Carga inicial
     cargarProductos();
 });
+
+
+
