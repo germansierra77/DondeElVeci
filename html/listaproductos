@@ -3,47 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LISTA DE PRODUCTOS</title>
-    <link rel="stylesheet" href="../ccs/fontawesome.css">
-    <link rel="stylesheet" href="../ccs/listaproductos.css?v=1.0">
+    <title>LISTA DE PRODUCTOS - APP DONDE EL VECI</title>
     <script type="module" src="../js/main.js"></script>
     <script type="module" src="../js/listaproductos.js"></script>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../ccs/listaproductos.css?v=1.1">
 </head>
 <body>
     <div class="contenedor">
         <div id="header">
             <div class="elemento">
                 <span class="titulo-app">APP DONDE EL VECI</span>
-                <img src="../images/logo app.png" alt="logo" id="imagenlogo"> 
+                <img src="../images/logo app.png" alt="Logo de la aplicación" id="imagenlogo"> 
             </div>
         </div>
         
         <div class="contenido">
             <div class="filtros">
                 <div class="form-floating">
-                    <input class="casillasinfo" type="text" id="filtro-nombre" placeholder="Nombre producto">
-                    <label for="filtro-nombre">Nombre</label>
+                    <input class="casillasinfo" type="text" id="filtro-nombre" placeholder=" ">
+                    <label for="filtro-nombre">Nombre producto</label>
+                </div>
+                <div class="form-floating">
+                <button type="button" id="btn-actualizar" class="casillasinfo">
+                <i class="fas fa-sync-alt"></i> Actualizar
+                </button>
                 </div>
                 <div class="form-floating">
                     <select class="casillasinfo" id="filtro-categoria">
-                    <option value="">CATEGORIA</option>
-                    <option value="granos">GRANOS</option>
-                    <option value="cereales">CEREALES</option>
-                    <option value="lacteos">LACTEOS</option>
-                    <option value="embutidos">EMBUTIDOS</option>
-                    <option value="frutas">FRUTAS</option>
-                    <option value="carnicos">CARNICOS</option>
-                    <option value="verduras">VERDURAS</option>
+                        <option value="">TODAS</option>
+                        <option value="granos">GRANOS</option>
+                        <option value="cereales">CEREALES</option>
+                        <option value="lacteos">LÁCTEOS</option>
+                        <option value="embutidos">EMBUTIDOS</option>
+                        <option value="frutas">FRUTAS</option>
+                        <option value="carnicos">CÁRNICOS</option>
+                        <option value="verduras">VERDURAS</option>
                     </select>
                     <label for="filtro-categoria">Categoría</label>
                 </div>
-                <!-- Elimina el input de marca y pon un botón -->
                 <div class="form-floating">
                     <button type="button" id="btn-buscar" class="casillasinfo">
-                        🔍 Buscar
+                        <i class="fas fa-search"></i> Buscar
                     </button>
-                    <label for="btn-buscar">Buscar</label>
                 </div>
             </div>            
             <div class="listado">
@@ -59,69 +61,11 @@
                             <th>ACCIONES</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody id="cuerpo-tabla">
+                        <!-- Los datos se cargarán dinámicamente con JavaScript -->
                         <tr>
-                            <td>001</td>
-                            <td>Arroz</td>
-                            <td>Diana</td>
-                            <td>Cereales</td>
-                            <td>Libra</td>
-                            <td>$3,600</td>
-                            <td>
-                                <button class="btn-detalle">
-                                    <i class="fas fa-edit"></i> Editar
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>002</td>
-                            <td>Leche Entera</td>
-                            <td>Alpina</td>
-                            <td>Lácteos</td>
-                            <td>Litro</td>
-                            <td>$4,200</td>
-                            <td>
-                                <button class="btn-detalle">
-                                    <i class="fas fa-edit"></i> Editar
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>003</td>
-                            <td>Café</td>
-                            <td>Juan Valdez</td>
-                            <td>Bebidas</td>
-                            <td>Libra</td>
-                            <td>$12,500</td>
-                            <td>
-                                <button class="btn-detalle">
-                                    <i class="fas fa-edit"></i> Editar
-                                </button>
-                            </td>
-                        <tr>
-                            <td>001</td>
-                            <td>Arroz</td>
-                            <td>Florhuila</td>
-                            <td>Cereales</td>
-                            <td>Libra</td>
-                            <td>$3,500</td>
-                            <td>
-                                <button class="btn-detalle">
-                                    <i class="fas fa-edit"></i> Editar
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>001</td>
-                            <td>Manzana</td>
-                            <td>N/A</td>
-                            <td>frutas</td>
-                            <td>Libra</td>
-                            <td>$1,500</td>
-                            <td>
-                                <button class="btn-detalle">
-                                    <i class="fas fa-edit"></i> Editar
-                                </button>
+                            <td colspan="7" style="text-align: center;">
+                                <i class="fas fa-spinner fa-spin"></i> Cargando productos...
                             </td>
                         </tr>
                     </tbody>
@@ -144,5 +88,6 @@
             </button>
         </div>
     </div>
+
 </body>
 </html>

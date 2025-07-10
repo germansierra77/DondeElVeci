@@ -1,79 +1,92 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Datos de ejemplo (en un caso real estos vendrían de una API)
-    const productos = [
-        { id: 1, nombre: "Arroz Diana", marca: "Diana", categoria: "Cereales", medida: "Libra", precio: 3500 },
-        { id: 2, nombre: "Leche Entera", marca: "Alpina", categoria: "Lácteos", medida: "Litro", precio: 4200 },
-        { id: 3, nombre: "Café", marca: "Juan Valdez", categoria: "Bebidas", medida: "Libra", precio: 12500 },
-        { id: 4, nombre: "Aceite", marca: "Gourmet", categoria: "Aceites", medida: "Botella 900ml", precio: 18000 },
-        { id: 5, nombre: "Azúcar", marca: "Incauca", categoria: "Endulzantes", medida: "Libra", precio: 2800 }
-    ];
+import { enviarAjax } from "../js/tools.js";
 
+document.addEventListener('DOMContentLoaded', function() {
     const cuerpoTabla = document.getElementById('cuerpo-tabla');
     const btnBuscar = document.getElementById('btn-buscar');
+    const btnActualizar = document.getElementById('btn-actualizar');
     const filtroNombre = document.getElementById('filtro-nombre');
     const filtroCategoria = document.getElementById('filtro-categoria');
 
-    // Función para cargar productos en la tabla
-    function cargarProductos(productosMostrar) {
+    async function cargarProductos() {
+        try {
+            // Mostrar estado de carga
+            cuerpoTabla.innerHTML = `<tr><td colspan="7" class="cargando">Cargando productos...</td></tr>`;
+            
+            // URL absoluta - IMPORTANTE: Verifica que esta ruta sea correcta
+            const url = '/dondeelveci/api/productos/consultarproductos.php';
+            
+            // Parámetros de búsqueda
+            const params = {
+                nombre: filtroNombre.value.trim(),
+                categoria: filtroCategoria.value.trim()
+            };
+
+            console.log('Solicitando:', url, 'con parámetros:', params);
+
+            const response = await fetch(`${url}?${new URLSearchParams(params)}`, {
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            console.log('Respuesta recibida. Estado:', response.status);
+
+            if (!response.ok) {
+                const errorText = await response.text();
+                throw new Error(`Error ${response.status}: ${errorText}`);
+            }
+
+            const data = await response.json();
+            console.log('Datos recibidos:', data);
+
+            if (!data.success) {
+                throw new Error(data.error || 'Error en los datos recibidos');
+            }
+
+            mostrarProductos(data.productos);
+            
+        } catch (error) {
+            console.error('Error al cargar productos:', error);
+            cuerpoTabla.innerHTML = `
+                <tr>
+                    <td colspan="7" class="error">
+                        Error: ${error.message}
+                        <br><small>Verifique la consola para más detalles</small>
+                    </td>
+                </tr>`;
+        }
+    }
+
+    function mostrarProductos(productos) {
         cuerpoTabla.innerHTML = '';
         
-        productosMostrar.forEach(producto => {
+        if (!productos || productos.length === 0) {
+            cuerpoTabla.innerHTML = `<tr><td colspan="7">No se encontraron productos</td></tr>`;
+            return;
+        }
+
+        productos.forEach(producto => {
             const fila = document.createElement('tr');
-            
             fila.innerHTML = `
-                <td>${producto.id}</td>
-                <td>${producto.nombre}</td>
-                <td>${producto.marca}</td>
-                <td>${producto.categoria}</td>
-                <td>${producto.medida}</td>
-                <td>$${producto.precio.toLocaleString()}</td>
+                <td>${producto.ID}</td>
+                <td>${producto.NOMBRE}</td>
+                <td>${producto.MARCA}</td>
+                <td>${producto.CATEGORIA}</td>
+                <td>${producto.MEDIDA}</td>
+                <td>${producto.PRECIO}</td>
                 <td>
-                    <button class="btn-accion btn-editar">
-                        <i class="fas fa-edit"></i> Editar
-                    </button>
-                    <button class="btn-accion btn-eliminar">
-                        <i class="fas fa-trash"></i> Eliminar
-                    </button>
+                    <button class="btn-editar" data-id="${producto.ID}">Editar</button>
+                    <button class="btn-eliminar" data-id="${producto.ID}">Eliminar</button>
                 </td>
             `;
-            
             cuerpoTabla.appendChild(fila);
         });
     }
 
-    // Función para filtrar productos
-    function filtrarProductos() {
-        const nombre = filtroNombre.value.toLowerCase();
-        const categoria = filtroCategoria.value;
-        
-        const productosFiltrados = productos.filter(producto => {
-            const cumpleNombre = producto.nombre.toLowerCase().includes(nombre);
-            const cumpleCategoria = categoria === '' || producto.categoria.toLowerCase() === categoria;
-            
-            return cumpleNombre && cumpleCategoria;
-        });
-        
-        cargarProductos(productosFiltrados);
-    }
-
-    // Eventos
-    btnBuscar.addEventListener('click', filtrarProductos);
-    filtroNombre.addEventListener('keyup', filtrarProductos);
-    filtroCategoria.addEventListener('change', filtrarProductos);
-
-    // Cargar todos los productos al inicio
-    cargarProductos(productos);
-});
-
-document.getElementById('btn-buscar').addEventListener('click', function() {
-  const nameFilter = document.getElementById('filtro-nombre').value.trim().toUpperCase();
-  const categoryFilter = document.getElementById('filtro-categoria').value.trim().toUpperCase();
-  const tbody = document.querySelector('.listado tbody');
-  Array.from(tbody.rows).forEach(row => {
-    const nameText = row.cells[1].textContent.toUpperCase();
-    const categoryText = row.cells[3].textContent.toUpperCase();
-    const matchesName = !nameFilter || nameText.includes(nameFilter);
-    const matchesCategory = !categoryFilter || categoryText.includes(categoryFilter);
-    row.style.display = (matchesName && matchesCategory) ? '' : 'none';
-  });
+    // Event listeners
+    btnBuscar.addEventListener('click', cargarProductos);
+    btnActualizar.addEventListener('click', cargarProductos);
+    
+    // Carga inicial
+    cargarProductos();
 });

@@ -78,6 +78,32 @@ body {
     margin-bottom: 10px;
     gap: 10px;
 }
+/* listaproductos.css */
+#btn-actualizar {
+    background-color: #17a2b8;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#btn-actualizar:hover {
+    background-color: #138496;
+}
+
+#btn-actualizar .fa-sync-alt {
+    margin-right: 5px;
+}
+
+.rotating {
+    animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
 
 .form-floating {
     flex: 1;
