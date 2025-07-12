@@ -6,7 +6,6 @@ require_once '../configbd/db.php';
 $response = ['success' => false, 'message' => ''];
 
 try {
-    // Verificar método de solicitud
     if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
         throw new Exception('Método no permitido');
     }

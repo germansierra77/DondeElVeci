@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const precioProducto = document.getElementById('precio-producto');
     const categoriaProducto = document.getElementById('categoria-producto');
 
-    // Función para formatear el precio
+    
     function formatearPrecio(valor) {
         // Eliminar todo excepto números
         const soloNumeros = valor.replace(/[^0-9]/g, '');
