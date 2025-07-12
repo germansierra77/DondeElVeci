@@ -12,7 +12,7 @@
 }
 #header{
     width:96%;
-    height: 15%;
+    height: 13%;
     display: flex;
     justify-content: center;
     align-items: center; 
@@ -76,7 +76,7 @@ body {
     text-align: center;
     font-size: 28px;
     width: 100%;
-    margin: 15px;
+    margin: 4px;
     color: white;
     border-color: green;
 }
@@ -94,7 +94,7 @@ body {
     width: 98%;
     background-color: none;
     border-radius: 1em;
-    margin-top: 8px;
+    margin-top: 14px;
     border-color: white;
 }
 .botonesfooter{

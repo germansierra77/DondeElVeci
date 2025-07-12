@@ -1,6 +1,6 @@
 <?php
 header('Content-Type: application/json');
-header('Access-Control-Allow-Origin: *'); // Permitir CORS
+header('Access-Control-Allow-Origin: *');
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
@@ -14,7 +14,6 @@ try {
         throw new Exception("Error de conexión a la base de datos");
     }
 
-    // Consulta SQL base
     $sql = "SELECT 
                 Id_Producto AS ID,
                 Nombre AS NOMBRE,
@@ -40,7 +39,6 @@ try {
         $params[':categoria'] = $_GET['categoria'];
     }
 
-    // Preparar y ejecutar consulta
     $stmt = $conn->prepare($sql);
     
     foreach ($params as $key => $value) {
@@ -53,12 +51,10 @@ try {
 
     $productos = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-    // Formatear precios
     foreach ($productos as &$producto) {
         $producto['PRECIO'] = '$' . number_format($producto['PRECIO'], 0, ',', '.');
     }
 
-    // Respuesta exitosa
     echo json_encode([
         'success' => true,
         'productos' => $productos,

@@ -1,4 +1,9 @@
 <?php
+
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 require_once "../configbd/db.php";
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json");
@@ -15,7 +20,7 @@ try {
                 $user = $_POST['usuario'];
                 $pass = $_POST['clave'];
 
-                $sql = "SELECT `Id`, `Nombre`, `Apellido`, `TipoUsuario` FROM `tbusuarios` 
+                $sql = "SELECT `Id`, `Nombres`, `Apellidos`, `TipoUsuario` FROM `tbusuarios` 
                 WHERE `Correo` = :user_name 
                 AND `Contrasena` =:password_user";
 
@@ -28,7 +33,7 @@ try {
 
                     if (count($result) > 0) {
                         $idUser = $result[0]["Id"];
-                        $userNombre = $result[0]["Nombre"] . " " . $result[0]["Apellido"];
+                        $userNombre = $result[0]["Nombres"] . " " . $result[0]["Apellidos"];
                         $tipoUsuario = $result[0]["TipoUsuario"];
 
                         header("HTTP/1.1 200 OK");
@@ -60,7 +65,11 @@ try {
         echo json_encode(["code" => 405, "msg" => "Método HTTP no permitido"]);
     }
 } catch (Exception $e) {
-    header("HTTP/1.1 500 Internal Server Error");
-    echo json_encode(["code" => 500, "msg" => "Error en el servidor\n" . $e->getMessage()]);
+    http_response_code(500);
+    echo json_encode([
+        "code" => 500,
+        "msg" => "Error en el servidor",
+        "detalles" => $e->getMessage()
+    ]);
 }
 ?>

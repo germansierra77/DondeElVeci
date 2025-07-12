@@ -6,12 +6,10 @@ require_once '../configbd/db.php';
 $response = ['success' => false, 'message' => ''];
 
 try {
-    // Verificar método de solicitud
     if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
         throw new Exception('Método no permitido');
     }
 
-    // Obtener y validar datos
     $requiredFields = ['nombre', 'medida', 'precio', 'categoria'];
     foreach ($requiredFields as $field) {
         if (empty($_POST[$field])) {
@@ -19,14 +17,12 @@ try {
         }
     }
 
-    // Asignar y sanitizar datos
     $nombre = htmlspecialchars(trim($_POST['nombre']));
     $marca = isset($_POST['marca']) ? htmlspecialchars(trim($_POST['marca'])) : null;
     $medida = htmlspecialchars(trim($_POST['medida']));
     $precio = filter_var($_POST['precio'], FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
     $categoria = htmlspecialchars(trim($_POST['categoria']));
 
-    // Validaciones adicionales
     if (strlen($nombre) > 60) {
         throw new Exception('El nombre no puede exceder los 60 caracteres');
     }
@@ -35,11 +31,9 @@ try {
         throw new Exception('El precio debe ser mayor que cero');
     }
 
-    // Conectar a la base de datos
     $db = new Db();
     $conn = $db->conectar();
 
-    // Preparar y ejecutar la consulta
     $stmt = $conn->prepare("INSERT INTO tbproductos 
                           (Nombre, Medida, Precio, Marca, Categoria) 
                           VALUES (?, ?, ?, ?, ?)");

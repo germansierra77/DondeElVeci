@@ -10,7 +10,6 @@ export function validarLogin() {
     $msg_log.innerHTML = "Procesando...";
 
     let usuario = username.value, pass = password.value;
-    password.value= md5(pass)
 
     if (!ExReg_mail.test(usuario)) {
         msg = "Correo inválido";
