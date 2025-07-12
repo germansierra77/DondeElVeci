@@ -6,6 +6,10 @@
     <title>CREACION DE USUARIO - DONDE EL VECI</title>
     <link rel="stylesheet" href="../ccs/fontawesome.css">
     <link rel="stylesheet" href="../ccs/creacionusuario.css?v=1.2">
+<<<<<<< HEAD
+=======
+    <script type="module" src="../js/tools.js"></script>
+>>>>>>> 822c27e279add7d75699cd8ac07803cd03186a11
     <script type="module" src="../js/creacionusuario.js?v=1.1" defer></script>
 </head>
 <body>

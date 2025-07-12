@@ -20,7 +20,7 @@ body {
     background-position: center;
 }
 
-/* Header */
+
 #header {
     width: 96%;
     height: 15%;
@@ -60,7 +60,7 @@ body {
     object-fit: contain;
 }
 
-/* Contenido principal */
+
 .contenido {
     background-color: rgba(255, 255, 255, 0.8);
     height: 70%;
@@ -71,17 +71,17 @@ body {
     overflow-y: auto;
 }
 
-/* Filtros */
+
 .filtros {
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
     gap: 10px;
 }
-/* listaproductos.css */
+
 #btn-actualizar {
-    background-color: #17a2b8;
-    color: white;
+    background-color: white;
+    color: green;
     border: none;
     padding: 10px;
     cursor: pointer;
@@ -89,7 +89,8 @@ body {
 }
 
 #btn-actualizar:hover {
-    background-color: #138496;
+    background-color: green;
+    color: white;
 }
 
 #btn-actualizar .fa-sync-alt {
@@ -240,4 +241,57 @@ tr:hover {
 
 .contenido::-webkit-scrollbar-thumb:hover {
     background: #555;
+}
+
+
+/*AJUSTE DE DISEÑO DE LOS BOTONES EDITAR Y ELIMINAR DE CADA UNO DE LOS PRODUCTOS*/
+
+.btn-editar, .btn-eliminar {
+    padding: 7px;
+    margin: 1px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.btn-editar {
+    background-color: green;
+    color: white;
+}
+
+.btn-editar:hover {
+    background-color: white;
+    color:green;
+    transform: translateY(-1px);
+}
+
+.btn-eliminar {
+    background-color: red; 
+    color: white;
+}
+
+.btn-eliminar:hover {
+    background-color:maroon;
+    color: white;
+    transform: translateY(-1px);
+}
+
+/* Efecto al hacer clic */
+.btn-editar:active, .btn-eliminar:active {
+    transform: translateY(0);
+}
+
+/* Ajustar el espacio de la columna "ACCIONES" */
+table td:nth-child(7) {
+    min-width: 180px; /* Más espacio para los botones */
+    text-align: center;
+}
+
+/* Iconos dentro de los botones */
+.btn-editar i, .btn-eliminar i {
+    font-size: 14px;
 }

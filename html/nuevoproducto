@@ -47,8 +47,12 @@
                 </div>
                 
                 <div class="form-floating">
+<<<<<<< HEAD
                     <input class="casillasinfo" type="text" id="precio-producto" 
                            placeholder="PRECIO" min="0" step="0.01" required>
+=======
+                    <input type="text" id="precio-producto" placeholder="PRECIO" required>
+>>>>>>> 822c27e279add7d75699cd8ac07803cd03186a11
                     <label for="precio-producto"></label>
                 </div>
 

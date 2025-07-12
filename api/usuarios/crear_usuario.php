@@ -71,4 +71,8 @@ try {
 }
 
 echo json_encode($response);
+<<<<<<< HEAD
 ?>
+=======
+?>
+>>>>>>> 822c27e279add7d75699cd8ac07803cd03186a11

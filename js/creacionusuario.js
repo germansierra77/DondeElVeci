@@ -8,7 +8,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Botón de volver
     document.getElementById('btniniciosesion').addEventListener('click', function() {
+<<<<<<< HEAD
         window.location.href = 'iniciosesion';
+=======
+        window.location.href = 'iniciosesion.html'; // Ajusta la URL según tu estructura
+>>>>>>> 822c27e279add7d75699cd8ac07803cd03186a11
     });
 });
 
@@ -64,4 +68,8 @@ function validarFormulario(formData) {
     }
 
     return true;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 822c27e279add7d75699cd8ac07803cd03186a11
