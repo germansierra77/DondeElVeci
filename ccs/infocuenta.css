@@ -9,16 +9,10 @@
     background-color: none;
     margin: 0.5em auto;
     padding: 0.5em;
-    border-radius: 20px;
-}
-body {
-    background-image: url('../images/best-food-background-ydy5u31lnrmww1pk.jpg');
-    background-size: cover;
-    background-position: center;
 }
 #header{
     width:96%;
-    height: 15%;
+    height: 13%;
     display: flex;
     justify-content: center;
     align-items: center; 
@@ -29,7 +23,7 @@ body {
 }
 .elemento{
     height: 60%;
-    width: 80%;
+    width: 85%;
     color: white;
     text-align:center;
     position: initial;
@@ -38,9 +32,9 @@ body {
     font-size: 50px;
     text-shadow: 
     -1px -1px 0 black, 
-    1px -1px 0  black,  
-    -1px 1px 0  black,  
-    1px 1px 0  black;  
+    1px -1px 0 black,  
+    -1px 1px 0 black,  
+    1px 1px 0 black;   
     color: white;
 }
 #imagenlogo{
@@ -49,6 +43,12 @@ body {
     float: right;
     border-radius: 10px;
 }
+body {
+    background-image: url('../images/best-food-background-ydy5u31lnrmww1pk.jpg');
+    background-size: cover;
+    background-position: center;
+}
+/*ESTAS SON LAS CASILLAS DE CONTENIDO */
 .contenido{
     background-color:none;
     height: 65%;
@@ -57,6 +57,18 @@ body {
     margin-top: 8px;
     padding: 2px;
 }
+.aviso{
+    text-align: center;
+    color: white;
+    width: 80%;
+    float: inline-start;
+    margin-left: 100px;
+    text-shadow: 
+    -1px -1px 0 black, 
+    1px -1px 0 black,  
+    -1px 1px 0 black,  
+    1px 1px 0 black;   
+}
 .form-floating{
     display: flex;
     flex-direction: column;
@@ -64,52 +76,46 @@ body {
     text-align: center;
     font-size: 28px;
     width: 100%;
-    margin: 2px;
-    text-shadow: 
-    -1px -1px 0 black, 
-    1px -1px 0  black,  
-    -1px 1px 0  black,  
-    1px 1px 0  black;   
+    margin: 4px;
     color: white;
-}
-.casillasinfo{
-    width: 600px;
-    font-size:25px;
     border-color: green;
+}
+.form-control{
+    width: 600px;
+    font-size:30px;
+    border-color: rgb(159, 219, 182);
     text-align: center;
     margin: 2px;
     border-radius: 10px;
     background-color: white;
-} 
+    color: black;
+}
+#casillaidcliente{
+    background-color: whitesmoke;
+    color: green;
+    height: 50px;
+    }
 .footer{
     height: 13%;
     width: 98%;
     background-color: none;
     border-radius: 1em;
-    margin-top: 8px;
+    margin-top: 14px;
     border-color: white;
 }
 .botonesfooter{
-    width: 200px;
+    width: 280px;
     height: 60px;
     font-size:25px;
     color: green;
     background-color: white;
-    margin-left: 47px;
+    margin-left: 80px;
     border-radius:15px;
     margin-top: 10px;
     text-align: center;
     border-color: green;
 }
-.iconosbotones{
-    width: 25px;
-    height: 25px;
-    color: green;
-    float: left;
-    margin-left: 20px;
-    border-color: green;
-}
-.iconosbotones{
+.iconosbotones1{
     width: 25px;
     height: 25px;
     color: green;
@@ -121,11 +127,11 @@ body {
     color: white;
 }
 
-.botonesfooter:hover .iconosbotones {
+.botonesfooter:hover .iconosbotones1 {
     color: white;
 }
 
-.iconosbotones{
+.iconosbotones1{
     width: 25px;
     height: 25px;
     color: green;

@@ -6,10 +6,7 @@
     <title>CREACION DE USUARIO - DONDE EL VECI</title>
     <link rel="stylesheet" href="../ccs/fontawesome.css">
     <link rel="stylesheet" href="../ccs/creacionusuario.css?v=1.2">
-<<<<<<< HEAD
-=======
     <script type="module" src="../js/tools.js"></script>
->>>>>>> 822c27e279add7d75699cd8ac07803cd03186a11
     <script type="module" src="../js/creacionusuario.js?v=1.1" defer></script>
 </head>
 <body>
@@ -31,54 +28,47 @@
             <br>
             
             <form id="formCreacionUsuario">
-                <!-- Campo Nombres -->
                 <div class="form-floating">
                     <input type="text" class="form-control" id="casillanombre" name="Nombres" 
                            placeholder="NOMBRES" required maxlength="60" autocomplete="given-name">
                     <label for="casillanombre"></label>
                 </div>
                 
-                <!-- Campo Apellidos -->
                 <div class="form-floating">
                     <input type="text" class="form-control" id="casillaapellido" name="Apellidos" 
                            placeholder="APELLIDOS" required maxlength="20" autocomplete="family-name">
                     <label for="casillaapellido"></label>
                 </div>
                 
-                <!-- Campo Correo -->
                 <div class="form-floating">
                     <input type="email" class="form-control" id="casillacorreo" name="Correo" 
                            placeholder="CORREO" required maxlength="150" autocomplete="email">
                     <label for="casillacorreo"></label>
                 </div>
                 
-                <!-- Campo Cédula -->
                 <div class="form-floating">
                     <input type="number" class="form-control" id="casillaid" name="Cedula" 
                            placeholder="CEDULA" required autocomplete="off">
                     <label for="casillaid"></label>
                 </div>
                 
-                <!-- Campo Contraseña -->
                 <div class="form-floating">
                     <input type="password" class="form-control" id="casillacontrasena" name="Contrasena" 
                            placeholder="CONTRASEÑA" required autocomplete="new-password">
                     <label for="casillacontrasena"></label>
                 </div>
                 
-                <!-- Campo Celular -->
                 <div class="form-floating">
                     <input type="tel" class="form-control" id="casillatelefono" name="Celular" 
                            placeholder="CELULAR" autocomplete="tel">
                     <label for="casillatelefono"></label>
                 </div>
                 
-                <!-- Campo Tipo de Usuario -->
                 <div class="form-floating">
                     <select class="form-control" id="casillatipousu" name="TipoUsuario" required>
                         <option value="">SELECCIONE TIPO DE USUARIO</option>
-                        <option value="tendero">TENDERO</option>
-                        <option value="cliente">CLIENTE</option>
+                        <option value="Tendero">TENDERO</option>
+                        <option value="Cliente">CLIENTE</option>
                     </select>
                     <label for="casillatipousu"></label>
                 </div>
