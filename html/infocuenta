@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>INFO DE CLIENTE - DONDE EL VECI</title>
     <link rel="stylesheet" href="../ccs/fontawesome.css">
-    <link rel="stylesheet" href="../ccs/infocuenta.css?v=1.7">
+    <link rel="stylesheet" href="../ccs/infocuenta.css?v=1.5">
     <script type="module" src="../js/main.js?v=1.1" defer></script>
+    <script type="module" src="../js/infocuenta.js?v=1.1" defer></script>
+
 </head>
 <body>
     <div class="contenedor">
@@ -23,50 +25,13 @@
                     <br>
                 </div>
             </div>
-            <br>
-            
-            <form id="formInfoCliente">
-                <div class="form-floating">
-                    <input type="number" class="form-control" id="casillaidcliente" 
-                           placeholder="ID CLIENTE" value="340957" readonly>
-                    <label for="casillaidcliente"></label>
-                </div>
-                <br>
-                <div class="form-floating">
-                    <input type="text" class="form-control" id="casillanombre" 
-                           placeholder="NOMBRE" value="GERMAN" readonly>
-                    <label for="casillanombre"></label>
-                </div>
-                <div class="form-floating">
-                    <input type="text" class="form-control" id="casillaapellido" 
-                           placeholder="APELLIDO" value="SIERRA" readonly>
-                    <label for="casillaapellido"></label>
-                </div>
-
-                <div class="form-floating">
-                    <input type="email" class="form-control" id="casillacorreo" 
-                           placeholder="CORREO" value="germansierra@mail.com" readonly>
-                    <label for="casillacorreo"></label>
-                </div>
-                
-                <div class="form-floating">
-                    <input type="text" class="form-control" id="casillaid" 
-                           placeholder="ID" value="100100100" readonly>
-                    <label for="casillaid"></label>
-                </div>
-
-                <div class="form-floating">
-                    <input type="tel" class="form-control" id="casillatelefono" 
-                           placeholder="TELÉFONO" value="300300300" readonly>
-                    <label for="casillatelefono"></label>
-                </div>
-
-                <div class="form-floating">
-                    <input type="text" class="form-control" id="casillatipousu" 
-                           placeholder="Tipo de usuario" value="TENDERO" readonly>
-                    <label for="casillatipousu"></label>
-                </div>
-            </form>
+                <input type="number" class="form-control" id="casillaidcliente" placeholder="ID CLIENTE" readonly>
+                <input type="text" class="form-control" id="casillanombre" placeholder="NOMBRE" readonly>
+                <input type="text" class="form-control" id="casillaapellido" placeholder="APELLIDO" readonly>
+                <input type="email" class="form-control" id="casillacorreo" placeholder="CORREO" readonly>
+                <input type="text" class="form-control" id="casillaid" placeholder="ID" readonly>
+                <input type="tel" class="form-control" id="casillatelefono" placeholder="TELÉFONO" readonly>
+                <input type="text" class="form-control" id="casillatipousu" placeholder="Tipo de usuario" readonly>
         </div>
         
         <div class="footer">

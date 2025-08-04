@@ -1,127 +1,137 @@
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: 'Courier New', Courier, monospace;
 }
-.contenedor{
+
+.contenedor {
     width: 800px;
     height: 600px;
-    background-color: none;
+    background-color: transparent;
     margin: 0.5em auto;
     padding: 0.5em;
 }
-#header{
-    width:96%;
+
+#header {
+    width: 96%;
     height: 13%;
     display: flex;
     justify-content: center;
-    align-items: center; 
-    background-color: none;
+    align-items: center;
+    background-color: transparent;
     padding: 10px;
     border-radius: 10px;
     position: relative;
 }
-.elemento{
+
+.elemento {
     height: 60%;
     width: 85%;
     color: white;
-    text-align:center;
-    position: initial;
-    background-color:none;
+    text-align: center;
+    background-color: transparent;
     border-radius: 10px;
     font-size: 50px;
     text-shadow: 
-    -1px -1px 0 black, 
-    1px -1px 0 black,  
-    -1px 1px 0 black,  
-    1px 1px 0 black;   
-    color: white;
+        -1px -1px 0 black, 
+        1px -1px 0 black,  
+        -1px 1px 0 black,  
+        1px 1px 0 black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-#imagenlogo{
+
+#imagenlogo {
     width: 80px;
     height: 70px;
-    float: right;
+    margin-left: 20px;
     border-radius: 10px;
 }
+
 body {
     background-image: url('../images/best-food-background-ydy5u31lnrmww1pk.jpg');
     background-size: cover;
     background-position: center;
 }
-/*ESTAS SON LAS CASILLAS DE CONTENIDO */
-.contenido{
-    background-color:none;
+
+.contenido {
+    background-color: transparent;
     height: 65%;
     width: 98%;
     border-radius: 10px;
     margin-top: 8px;
     padding: 2px;
-}
-.aviso{
-    text-align: center;
-    color: white;
-    width: 80%;
-    float: inline-start;
-    margin-left: 100px;
-    text-shadow: 
-    -1px -1px 0 black, 
-    1px -1px 0 black,  
-    -1px 1px 0 black,  
-    1px 1px 0 black;   
-}
-.form-floating{
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
-    font-size: 28px;
-    width: 100%;
-    margin: 4px;
-    color: white;
-    border-color: green;
 }
-.form-control{
-    width: 600px;
-    font-size:30px;
-    border-color: rgb(159, 219, 182);
+
+.aviso {
     text-align: center;
-    margin: 2px;
+    color: white;
+    width: 80%;
+    margin: 0 auto 15px auto;
+    text-shadow: 
+        -1px -1px 0 black, 
+        1px -1px 0 black,  
+        -1px 1px 0 black,  
+        1px 1px 0 black;
+}
+
+.aviso h2 {
+    font-size: 23px;
+}
+
+/* CAMPOS DEL FORMULARIO AJUSTADOS */
+.form-control {
+    width: 600px;
+    font-size: 20px;
+    border: 1px solid rgb(159, 219, 182);
     border-radius: 10px;
     background-color: white;
     color: black;
+    text-align: center;
+    padding: 6px;
+    margin: 2px;
+    display: block;
+    height: 30px;
 }
-#casillaidcliente{
-    background-color: whitesmoke;
-    color: green;
-    height: 50px;
-    }
-.footer{
+
+.footer {
     height: 13%;
     width: 98%;
-    background-color: none;
+    background-color: transparent;
     border-radius: 1em;
     margin-top: 14px;
-    border-color: white;
+    display: flex;
+    justify-content: center;
+    gap: 60px;
 }
-.botonesfooter{
-    width: 280px;
+
+.botonesfooter {
+    width: 250px;
     height: 60px;
-    font-size:25px;
+    font-size: 25px;
     color: green;
     background-color: white;
-    margin-left: 80px;
-    border-radius:15px;
-    margin-top: 10px;
-    text-align: center;
-    border-color: green;
+    border-radius: 15px;
+    border: 2px solid green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
-.iconosbotones1{
-    width: 25px;
-    height: 25px;
+
+.iconosbotones1 {
+    width: 20px;
+    height: 20px;
     color: green;
-    float: left;
-    margin-left: 20px;
+    margin-left: 15px;
+    transition: all 0.3s ease;
 }
+
 .botonesfooter:hover {
     background-color: green;
     color: white;
@@ -129,11 +139,4 @@ body {
 
 .botonesfooter:hover .iconosbotones1 {
     color: white;
-}
-
-.iconosbotones1{
-    width: 25px;
-    height: 25px;
-    color: green;
-    transition: all 0.3s ease;
 }

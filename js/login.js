@@ -41,6 +41,11 @@ export function validarLogin() {
     },
     fresp: (data)=>{
         if(data.code==200){
+            // Guardar los datos del usuario en sessionStorage
+            sessionStorage.setItem('idUsuario', data.idUser);
+            sessionStorage.setItem('tipoUsuario', data.tipoUsuario);
+            sessionStorage.setItem('nombreUsuario', data.usuario);
+            
             // Aqui se envia al menu segun el tipo de usuario ya que puede ser cliente o tendero 
             // y segun el tipo que esta en la base de datos varian las opciones
             if(data.tipoUsuario === "Tendero") {
@@ -52,7 +57,7 @@ export function validarLogin() {
                 location.href = "iniciosesion";
             }
         }else{
-            $msg_log.innerHTML = data.msg
+            $msg_log.innerHTML = data.msg;
         }
     }
     });
