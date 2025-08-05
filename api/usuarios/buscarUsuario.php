@@ -12,17 +12,16 @@ try {
         $base = new Db();
         $conn = $base->conectar();
 
-        // Buscar por ID o Correo
         if (isset($_GET['id'])) {
             $id = $_GET['id'];
-            $sql = "SELECT Id, Nombres, Apellidos, Correo, Celular as telefono 
+            $sql = "SELECT Id, Nombres, Apellidos, Correo, Celular 
                     FROM tbusuarios WHERE Id = ?";
             $stmt = $conn->prepare($sql);
             $stmt->execute([$id]);
         } 
         elseif (isset($_GET['correo'])) {
             $correo = $_GET['correo'];
-            $sql = "SELECT Id, Nombres, Apellidos, Correo, Celular as telefono 
+            $sql = "SELECT Id, Nombres, Apellidos, Correo, Celular 
                     FROM tbusuarios WHERE Correo = ?";
             $stmt = $conn->prepare($sql);
             $stmt->execute([$correo]);
@@ -36,6 +35,8 @@ try {
         $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
 
         if ($usuario) {
+            // Asegurar que el celular sea string
+            $usuario['Celular'] = $usuario['Celular'] ? (string)$usuario['Celular'] : '';
             echo json_encode([
                 'code' => 200,
                 'data' => $usuario,

@@ -26,7 +26,7 @@ try {
     $base = new Db();
     $conn = $base->conectar();
 
-    // Encriptar la nueva contraseña (usando MD5 como en tu login)
+    // Encriptar la nueva contraseña (MD5 como en tu login)
     $claveEncriptada = md5($datos['nuevaClave']);
 
     $sql = "UPDATE tbusuarios SET Contrasena = :clave WHERE Id = :id";

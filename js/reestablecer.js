@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Mostrar información en modal
                 document.getElementById('modal-nombre').value = usuarioEncontrado.Nombres || '';
                 document.getElementById('modal-apellido').value = usuarioEncontrado.Apellidos || '';
-                document.getElementById('modal-celular').value = usuarioEncontrado.telefono || '';
+                document.getElementById('modal-celular').value = usuarioEncontrado.Celular || '';
                 
                 modalUsuario.style.display = 'flex';
             } else {
@@ -85,38 +85,52 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Enviar código de verificación
-    document.getElementById('modal-enviarcodigo').addEventListener('click', async function() {
-        if (!usuarioEncontrado) return;
+    // Enviar código de verificación por WhatsApp (solución simplificada)
+    document.getElementById('modal-enviarcodigo').addEventListener('click', function() {
+        if (!usuarioEncontrado) {
+            alert('No se ha encontrado un usuario válido');
+            return;
+        }
         
         // Generar código de 6 dígitos
         codigoGenerado = Math.floor(100000 + Math.random() * 900000).toString();
         
-        try {
-            const btn = document.getElementById('modal-enviarcodigo');
-            btn.disabled = true;
-            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> ENVIANDO...';
-            
-            // Aquí deberías integrar con tu servicio de SMS/Email real
-            console.log(`Código generado para ${usuarioEncontrado.telefono}: ${codigoGenerado}`);
-            alert(`Código enviado al número registrado: ${codigoGenerado}`);
-            
+        // Obtener y limpiar número de teléfono
+        const telefono = usuarioEncontrado.Celular ? usuarioEncontrado.Celular.toString().replace(/\D/g, '') : '';
+        
+        if (!telefono || telefono.length < 10) {
+            alert('El usuario no tiene un número de WhatsApp válido registrado');
+            console.log('Código generado (para pruebas):', codigoGenerado);
             modalUsuario.style.display = 'none';
             modalCodigo.style.display = 'flex';
-            
-        } catch (error) {
-            console.error('Error:', error);
-            alert('Error al enviar el código');
-        } finally {
-            const btn = document.getElementById('modal-enviarcodigo');
-            btn.disabled = false;
-            btn.innerHTML = '<i class="fas fa-paper-plane"></i> ENVIAR CÓDIGO';
+            return;
         }
+        
+        // Formatear mensaje
+        const mensaje = `Hola ${usuarioEncontrado.Nombres || ''},\nTu código de verificación para DONDE EL VECI es: *${codigoGenerado}*\nPor favor ingrésalo en la aplicación para continuar.`;
+        
+        // Crear enlace directo a WhatsApp
+        const urlWhatsApp = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
+        
+        // Abrir en nueva pestaña
+        window.open(urlWhatsApp, '_blank');
+        
+        // Mostrar mensaje al usuario
+        alert('Se abrirá WhatsApp para enviar el código. Por favor confirma el envío manualmente.');
+        
+        // Continuar con el flujo
+        modalUsuario.style.display = 'none';
+        modalCodigo.style.display = 'flex';
     });
 
     // Verificar código
     document.getElementById('modal-verificarcodigo').addEventListener('click', function() {
         const codigoIngresado = document.getElementById('modal-codigo').value.trim();
+        
+        if (!codigoIngresado) {
+            alert('Por favor ingresa el código de verificación');
+            return;
+        }
         
         if (codigoIngresado !== codigoGenerado) {
             alert('Código de verificación incorrecto');
@@ -163,7 +177,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             if (data.code === 200) {
                 alert('Contraseña actualizada correctamente');
-                window.location.href = 'iniciosesion.html';
+                window.location.href = 'iniciosesion';
             } else {
                 alert('Error al actualizar: ' + data.msg);
             }
@@ -198,73 +212,3 @@ document.addEventListener('DOMContentLoaded', function() {
         window.history.back();
     });
 });
-
-    // Verificar código
-    document.getElementById('modal-verificarcodigo').addEventListener('click', function() {
-        const codigoIngresado = document.getElementById('modal-codigo').value.trim();
-        
-        if (codigoIngresado !== codigoGenerado) {
-            alert('Código de verificación incorrecto');
-            return;
-        }
-        
-        modalCodigo.style.display = 'none';
-        modalContrasena.style.display = 'flex';
-    });
-
-    // Guardar nueva contraseña
-    document.getElementById('modal-guardar').addEventListener('click', async function() {
-        const nuevaClave = document.getElementById('modal-nuevaclave').value.trim();
-        const confirmarClave = document.getElementById('modal-confirmarclave').value.trim();
-        
-        if (nuevaClave.length < 6) {
-            alert('La contraseña debe tener al menos 6 caracteres');
-            return;
-        }
-
-        if (nuevaClave !== confirmarClave) {
-            alert('Las contraseñas no coinciden');
-            return;
-        }
-
-        try {
-            const btn = document.getElementById('modal-guardar');
-            btn.disabled = true;
-            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> GUARDANDO...';
-            
-            // Simular guardado en servidor (reemplazar con tu API real)
-            await new Promise(resolve => setTimeout(resolve, 1000));
-            
-            alert('Contraseña actualizada correctamente');
-            window.location.href = 'iniciosesion.html';
-            
-        } catch (error) {
-            console.error('Error:', error);
-            alert('Error al guardar la contraseña');
-        } finally {
-            const btn = document.getElementById('modal-guardar');
-            btn.disabled = false;
-            btn.innerHTML = '<i class="fas fa-save"></i> GUARDAR CONTRASEÑA';
-        }
-    });
-
-    // Cerrar modales
-    cerrarModales.forEach(btn => {
-        btn.addEventListener('click', function() {
-            modalUsuario.style.display = 'none';
-            modalCodigo.style.display = 'none';
-            modalContrasena.style.display = 'none';
-        });
-    });
-
-    // Cerrar modal al hacer clic fuera del contenido
-    window.addEventListener('click', function(event) {
-        if (event.target === modalUsuario) modalUsuario.style.display = 'none';
-        if (event.target === modalCodigo) modalCodigo.style.display = 'none';
-        if (event.target === modalContrasena) modalContrasena.style.display = 'none';
-    });
-
-    // Botón volver
-    btnVolver.addEventListener('click', function() {
-        window.history.back();
-    });
