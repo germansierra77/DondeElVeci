@@ -1,54 +1,109 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>REESTABLECER CONTRASEÑA</title>
-    <link rel="stylesheet" href="../ccs/fontawesome.css">
-    <link rel="stylesheet" href="../ccs/reestablecer.css?v=1.3">
-    <script type="module" src="../js/main.js?v=1.1" defer></script> 
+    <title>REESTABLECER CONTRASEÑA - DONDE EL VECI</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../ccs/reestablecer.css?v=1.9">
+    <script type="module" src="../js/reestablecer.js?v=1.6" defer></script>
 </head>
 <body>
     <div class="contenedor">
         <div id="header">
-          <div class="elemento">APP DONDE EL VECI
-            <img src="../images/logo app.png" alt="logo" id="imagenlogo">
-          </div> 
-        </div>
-        <div class="contenido">
-              <div> 
-                <label class="form-label" id="idcliente">ID CLIENTE</label>
-                <input type="text" class="form-control" id="idcliente1" placeholder="357894">
+            <div class="elemento">APP DONDE EL VECI
+                <img src="../images/logo app.png" alt="logo" id="imagenlogo">
             </div>
-            <div class="form-floating">NOMBRE
-                <input type="text" class="casillasinfo" placeholder="GERMAN SIERRA" disabled>
-              </div>
-              <div class="form-floating">CORREO
-                <input type="email" class="casillasinfo" placeholder="germansierra@mail.com" disabled>
-              </div>
-              <div class="form-floating">CELULAR
-                <input type="text" class="casillasinfo" placeholder="300300300" disabled>
-              </div>
-            <form>
-                <fieldset disabled>ESTADO DE CUENTA
-                  <div class="casillaestado">
-                    <label for="casillaestado" class="form-label">ACTIVO</label>
-                  </div></fieldset>
-            </form>
         </div>
+        
+        <div class="contenido">
+            <div class="aviso">
+                <h3>INGRESA TU ID O CORREO ELECTRÓNICO PARA REESTABLECER TU CONTRASEÑA</h3>
+            </div>
+            <div class="selector-metodo">
+                <button id="btnPorId" class="metodo-activo">POR ID</button>
+                <button id="btnPorCorreo">POR CORREO</button>
+            </div>
+            <div id="formulario-id" class="formulario-metodo">
+                <div class="form-group">
+                    <label>ID CLIENTE</label>
+                    <input type="number" class="form-control" id="casillaidcliente" placeholder="INGRESA TU ID">
+                </div>
+            </div>
+            
+            <div id="formulario-correo" class="formulario-metodo" style="display: none;">
+                <div class="form-group">
+                    <label>CORREO ELECTRÓNICO</label>
+                    <input type="email" class="form-control" id="casillacorreobusqueda" placeholder="INGRESA TU CORREO">
+                </div>
+            </div>
+        </div>
+        
         <div class="footer">
-                <button type="button" class="botonesfooter" id="btniniciosesion">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="iconosbotones1" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0z"/>
-                    <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708z"/>
-                  </svg>
-                  VOLVER</button>
-                <button type="button" class="botonesfooter" id="btncodigo">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="iconosbotones1" viewBox="0 0 16 16">
-                    <path d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855a.75.75 0 0 0-.124 1.329l4.995 3.178 1.531 2.406a.5.5 0 0 0 .844-.536L6.637 10.07l7.494-7.494-1.895 4.738a.5.5 0 1 0 .928.372zm-2.54 1.183L5.93 9.363 1.591 6.602z"/>
-                    <path d="M16 12.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0m-3.5-2a.5.5 0 0 0-.5.5v1h-1a.5.5 0 0 0 0 1h1v1a.5.5 0 0 0 1 0v-1h1a.5.5 0 0 0 0-1h-1v-1a.5.5 0 0 0-.5-.5"/>
-                  </svg>
-                  ENVIAR CODIGO</button>
+            <button type="button" class="botonesfooter" id="btnvolver">
+                <i class="fas fa-arrow-left"></i> VOLVER
+            </button>
+            
+            <button type="button" class="botonesfooter" id="btnbuscarusuario">
+                <i class="fas fa-search"></i> BUSCAR USUARIO
+            </button>
+        </div>
+    </div>
+
+    <!-- Modal de Verificación de Usuario -->
+    <div class="modal" id="modalUsuario">
+        <div class="modal-contenido">
+            <span class="cerrar-modal">&times;</span>
+            <h2>Información del Usuario</h2>
+            <div class="form-group">
+                <label>NOMBRES</label>
+                <input type="text" class="form-control" id="modal-nombre" readonly>
+            </div>
+            <div class="form-group">
+                <label>APELLIDOS</label>
+                <input type="text" class="form-control" id="modal-apellido" readonly>
+            </div>
+            <div class="form-group">
+                <label>CELULAR</label>
+                <input type="text" class="form-control" id="modal-celular" readonly>
+            </div>
+            <button type="button" class="botonesfooter" id="modal-enviarcodigo">
+                <i class="fas fa-paper-plane"></i> ENVIAR CÓDIGO
+            </button>
+        </div>
+    </div>
+
+    <!-- Modal de Verificación de Código -->
+    <div class="modal" id="modalCodigo">
+        <div class="modal-contenido">
+            <span class="cerrar-modal">&times;</span>
+            <h2>Verificación de Código</h2>
+            <div class="form-group">
+                <label>CÓDIGO DE VERIFICACIÓN</label>
+                <input type="text" class="form-control" id="modal-codigo" placeholder="INGRESA EL CÓDIGO ENVIADO">
+            </div>
+            <button type="button" class="botonesfooter" id="modal-verificarcodigo">
+                <i class="fas fa-check"></i> VERIFICAR
+            </button>
+        </div>
+    </div>
+
+    <!-- Modal de Nueva Contraseña -->
+    <div class="modal" id="modalContrasena">
+        <div class="modal-contenido">
+            <span class="cerrar-modal">&times;</span>
+            <h2>Nueva Contraseña</h2>
+            <div class="form-group">
+                <label>NUEVA CONTRASEÑA</label>
+                <input type="password" class="form-control" id="modal-nuevaclave" placeholder="INGRESA NUEVA CONTRASEÑA">
+            </div>
+            <div class="form-group">
+                <label>CONFIRMAR CONTRASEÑA</label>
+                <input type="password" class="form-control" id="modal-confirmarclave" placeholder="CONFIRMA TU CONTRASEÑA">
+            </div>
+            <button type="button" class="botonesfooter" id="modal-guardar">
+                <i class="fas fa-save"></i> GUARDAR CONTRASEÑA
+            </button>
         </div>
     </div>
 </body>

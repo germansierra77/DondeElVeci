@@ -1,163 +1,400 @@
-*{
+/* Estilos generales */
+* {
     margin: 0;
     padding: 0;
     font-family: 'Courier New', Courier, monospace;
+    box-sizing: border-box;
 }
-.contenedor{
-    width: 800px;
-    height: 600px;
-    background-color: none;
-    margin: 0.5em auto;
-    padding: 0.5em;
-    border-radius: 10px;
+
+body, html {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
 }
-#header{
-    width:96%;
-    height: 15%;
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    background-color: none;
-    padding: 10px;
-    border-radius: 10px;
-    position: relative;
-}
+
 body {
     background-image: url('../images/best-food-background-ydy5u31lnrmww1pk.jpg');
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.elemento{
+
+.contenedor {
+    width: 800px;
+    height: 95vh;
+    max-height: 600px;
+    margin: auto;
+    padding: 0.5em;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+#header {
+    width: 96%;
+    height: 15%;
+    min-height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    padding: 10px;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+.elemento {
     height: 60%;
-    width: 80%;
+    width: 85%;
     color: white;
-    text-align:center;
-    position: initial;
-    background-color:none;
+    text-align: center;
     border-radius: 10px;
     font-size: 50px;
     text-shadow: 
-    -1px -1px 0 black, /* Borde superior izquierdo */
-    1px -1px 0  black,  /* Borde superior derecho */
-    -1px 1px 0  black,  /* Borde inferior izquierdo */
-    1px 1px 0  black;   /* Borde inferior derecho */;
-    color: white;
+        -1px -1px 0 black, 
+        1px -1px 0 black,  
+        -1px 1px 0 black,  
+        1px 1px 0 black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
-#imagenlogo{
+
+#imagenlogo {
     width: 80px;
     height: 70px;
-    float: right;
     border-radius: 10px;
+    object-fit: cover;
 }
-.contenido{
-    background-color:none;
-    height: 65%;
+
+.contenido {
+    flex: 1;
     width: 98%;
     border-radius: 10px;
-    margin-top: 10px;
-    padding: 2px;
-}
-#idcliente{
+    margin: 8px auto;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow-y: auto;
+}
+
+.aviso {
     text-align: center;
-    font-size: 28px;
-    width: 100%;
-    margin: 3px;
     color: white;
-}
-.form-floating{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    font-size: 28px;
-    width: 100%;
-    margin: 2px;
+    width: 80%;
     text-shadow: 
-    -1px -1px 0 black, 
-    1px -1px 0  black,  
-    -1px 1px 0  black,  
-    1px 1px 0  black;  
-    color: white;
+        -1px -1px 0 black, 
+        1px -1px 0 black,  
+        -1px 1px 0 black,  
+        1px 1px 0 black;
+    margin-bottom: 20px;
+    font-size: 24px;
 }
-.form-control{
-    text-align: center;
-    font-size: 32px;
-    width: 70%;
-    margin-left: 120px;
-    background-color: none;
-    font-weight: bold;
-    border-radius: 30px;
+
+.selector-metodo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 20px 0;
+    width: 100%;
 }
-.casillasinfo{
-    width: 600px;
-    font-size:25px;
-    border-color: green;
-    text-align: center;
-    margin: 2px;
+
+.selector-metodo button {
+    padding: 12px 30px;
+    font-size: 24px;
+    border: 2px solid green;
     border-radius: 10px;
     background-color: white;
-} 
-.casillaestado{
-    font-size: 30px;
+    color: green;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 180px;
     text-align: center;
+}
+
+.selector-metodo button.metodo-activo {
     background-color: green;
+    color: white;
 }
-.footer{
-    height: 13%;
+
+.selector-metodo button:hover {
+    background-color: #e6ffe6;
+    transform: translateY(-2px);
+}
+
+.selector-metodo button.metodo-activo:hover {
+    background-color: #006400;
+}
+
+.formulario-metodo {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 28px;
+    width: 100%;
+    margin: 15px 0;
+    color: white;
+    text-shadow: 
+        -1px -1px 0 black, 
+        1px -1px 0 black,  
+        -1px 1px 0 black,  
+        1px 1px 0 black;
+}
+
+.form-control {
+    width: 600px;
+    font-size: 30px;
+    border: 2px solid rgb(159, 219, 182);
+    text-align: center;
+    margin: 5px 0;
+    border-radius: 10px;
+    background-color: white;
+    padding: 8px;
+    transition: all 0.3s;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: green;
+    box-shadow: 0 0 10px rgba(0, 100, 0, 0.5);
+}
+
+.footer {
+    height: 15%;
+    min-height: 80px;
     width: 98%;
-    background-color: none;
-    border-radius: 1em;
-    margin: 5px; 
-    border-color: white;
+    border-radius: 10px;
+    margin: 0 auto 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    padding: 0 20px;
 }
-.botonesfooter{
+
+.botonesfooter {
     width: 280px;
     height: 60px;
-    font-size:25px;
+    font-size: 25px;
     color: green;
     background-color: white;
-    margin-left: 70px;
-    border-radius:15px;
-    margin-top: 10px;
-    text-align: center;
-    border-color: green;
+    border: 2px solid green;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
-.iconosbotones1{
-    width: 30px;
-    height: 30px;
+
+.botonesfooter i {
+    margin-right: 10px;
+    font-size: 25px;
     color: green;
-    float: left;
-    margin-left: 20px;
 }
-fieldset{
-    text-align: center;
-    color:white;
-    font-size: 40px;
-    text-shadow: 
-    -1px -1px 0 black, 
-    1px -1px 0  black,  
-    -1px 1px 0  black,  
-    1px 1px 0  black;  
-}
-.form-label{
-    background-color: none;
-    border-top: 10px;
-}
+
 .botonesfooter:hover {
     background-color: green;
     color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-.botonesfooter:hover .iconosbotones {
+.botonesfooter:hover i {
     color: white;
 }
 
-.iconosbotones{
-    width: 25px;
-    height: 25px;
+.botonesfooter:disabled {
+    background-color: #95a5a6;
+    border-color: #7f8c8d;
+    cursor: not-allowed;
+    opacity: 0.7;
+    transform: none;
+}
+
+/* Estilos para los modales */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    overflow: auto;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.modal-contenido {
+    background-color: #f8f9fa;
+    margin: auto;
+    padding: 30px;
+    border: 2px solid green;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+    animation: slideDown 0.3s;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.modal-contenido h2 {
     color: green;
-    transition: all 0.3s ease;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 28px;
+    text-shadow: none;
+}
+
+.cerrar-modal {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.cerrar-modal:hover {
+    color: #333;
+    transform: rotate(90deg);
+}
+
+.modal .form-group {
+    color: #333;
+    margin-bottom: 20px;
+    text-shadow: none;
+}
+
+.modal .form-control {
+    width: 100%;
+    font-size: 22px;
+    border: 2px solid green;
+    background-color: white;
+    color: #333;
+}
+
+.modal .botonesfooter {
+    width: 100%;
+    margin-top: 25px;
+    font-size: 22px;
+    height: 50px;
+}
+
+/* Efecto de hover para inputs en modales */
+.modal .form-control:focus {
+    border-color: #006400;
+    box-shadow: 0 0 8px rgba(0, 100, 0, 0.4);
+}
+
+/* Estilos responsivos */
+@media (max-width: 850px) {
+    .contenedor {
+        width: 95%;
+        height: 95vh;
+        max-height: none;
+    }
+    
+    .elemento {
+        font-size: 40px;
+    }
+    
+    .form-control {
+        width: 90%;
+        font-size: 25px;
+    }
+    
+    .aviso {
+        width: 90%;
+        font-size: 20px;
+    }
+    
+    .footer {
+        flex-direction: column;
+        height: auto;
+        min-height: 120px;
+        gap: 10px;
+        padding: 15px;
+    }
+    
+    .botonesfooter {
+        width: 90%;
+        height: 50px;
+        font-size: 20px;
+    }
+    
+    .selector-metodo {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .selector-metodo button {
+        width: 90%;
+        padding: 10px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .elemento {
+        font-size: 30px;
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    #imagenlogo {
+        width: 60px;
+        height: 50px;
+    }
+    
+    .selector-metodo button, 
+    .botonesfooter {
+        font-size: 18px;
+    }
+    
+    .form-group {
+        font-size: 22px;
+    }
+}
+
+/* Animación para spinner */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.fa-spinner {
+    animation: spin 1s linear infinite;
+}
+
+/* Transiciones suaves */
+button, input, .modal {
+    transition: all 0.3s ease-in-out;
 }

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CREACION DE USUARIO - DONDE EL VECI</title>
+    <title>CREACION DE USUARIO</title>
     <link rel="stylesheet" href="../ccs/fontawesome.css">
     <link rel="stylesheet" href="../ccs/creacionusuario.css?v=1.2">
     <script type="module" src="../js/tools.js"></script>

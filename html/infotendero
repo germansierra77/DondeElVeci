@@ -1,66 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>INFO DE TENDERO</title>
-    <link rel="stylesheet" href="../ccs/fontawesome.css">
-    <link rel="stylesheet" href="../ccs/infotendero.css?v=1.4">
-    <script type="module" src="../js/main.js?v=1.2" defer></script> 
+    <link rel="stylesheet" href="../ccs/infotendero.css?v=1.7">
+    <script type="module" src="../js/main.js?v=1.2" defer></script>
+    <script type="module" src="../js/infotendero.js?v=1.2" defer></script>
 </head>
 <body>
     <div class="contenedor">
-            <div id="header">
-                    <div class="elemento">APP DONDE EL VECI
-                    <img src="../images/logo app.png" alt="logo" id="imagenlogo"> 
-                    </div>
+        <div id="header">
+            <div class="elemento">APP DONDE EL VECI
+                <img src="../images/logo app.png" alt="logo" id="imagenlogo"> 
             </div>
+        </div> 
+        
         <div class="contenido">
-            <br>
-            <div class="form-floating">ID TENDERO
-                <input class="casillasinfo" type="text" id="idtendero" placeholder="340957" disabled>
-                <label for="floatingInputDisabled"></label>
-              </div>
-            <div class="form-floating">NOMBRE
-                <input class="casillasinfo" type="text" placeholder="GERMAN SIERRA" disabled>
-                <label for="floatingInputDisabled"></label>
-              </div>
-              <div class="form-floating">CORREO
-                <input class="casillasinfo" type="email"  placeholder="germansierra@mail.com" disabled>
-                <label for="floatingInputDisabled"></label>
-              </div>
-              <div class="form-floating">DIRECCION
-                <input class="casillasinfo" type="text"  placeholder="Calle 128#100-100" disabled>
-                <label for="floatingInputDisabled"></label>
-              </div>
-              <div class="form-floating">TELEFONO
-                <input class="casillasinfo" type="text"  placeholder="300300300" disabled>
-                <label for="floatingInputDisabled"></label>
-              </div>
+            <div class="aviso"><h3>INFORMACIÓN DEL CLIENTE</h3> 
+            </div>
+                <input type="number" class="form-control" id="casillaidcliente" placeholder="ID CLIENTE" readonly><h5>ID CLIENTE</h5>
+                <input type="text" class="form-control" id="casillanombre" placeholder="NOMBRE"><h5>NOMBRES</h5>
+                <input type="text" class="form-control" id="casillaapellido" placeholder="APELLIDO"><h5>APELLIDOS</h5>
+                <input type="email" class="form-control" id="casillacorreo" placeholder="CORREO"><h5>CORREO</h5>
+                <input type="text" class="form-control" id="casillaid" placeholder="ID" readonly><h5>IDENTIFICACION</h5>
+                <input type="tel" class="form-control" id="casillatelefono" placeholder="TELÉFONO"><h5>TELEFONO</h5>
+                <input type="text" class="form-control" id="casillatipousu" placeholder="Tipo de usuario" readonly><h5>TIPO DE USUARIO</h5>
         </div>
+        
         <div class="footer">
-               <button type="button" class="botonesfooter" id="btnvolvertendero">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="iconosbotones" viewBox="0 0 16 16">
-                        <path d="M9.05.435c-.58-.58-1.52-.58-2.1 0L.436 6.95c-.58.58-.58 1.519 0 2.098l6.516 6.516c.58.58 1.519.58 2.098 0l6.516-6.516c.58-.58.58-1.519 0-2.098zM7 8.466a.25.25 0 0 1-.41.192L4.23 6.692a.25.25 0 0 1 0-.384l2.36-1.966a.25.25 0 0 1 .41.192V6h1.5A2.5 2.5 0 0 1 11 8.5V11h-1V8.5A1.5 1.5 0 0 0 8.5 7H7z"/>
-                      </svg>
-                VOLVER</button>
-                <button type="button" class="botonesfooter" id="btniniciosesion">
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="iconosbotones" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0z"/>
-                        <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708z"/>
-                      </svg>
-                SALIR</button>
-                <button type="button" class="botonesfooter" id="btnguardar">
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="iconosbotones" viewBox="0 0 16 16">
-                      <path d="M1.5 0h11.586a1.5 1.5 0 0 1 1.06.44l1.415 1.414A1.5 1.5 0 0 1 16 2.914V14.5a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 14.5v-13A1.5 1.5 0 0 1 1.5 0M1 1.5v13a.5.5 0 0 0 .5.5H2v-4.5A1.5 1.5 0 0 1 3.5 9h9a1.5 1.5 0 0 1 1.5 1.5V15h.5a.5.5 0 0 0 .5-.5V2.914a.5.5 0 0 0-.146-.353l-1.415-1.415A.5.5 0 0 0 13.086 1H13v3.5A1.5 1.5 0 0 1 11.5 6h-7A1.5 1.5 0 0 1 3 4.5V1H1.5a.5.5 0 0 0-.5.5m9.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5z"/>
-                      </svg>
-
-
-                      
-                GUARDAR</button>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="iconosbotones" viewBox="0 0 16 16">
-                        <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm0 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1z"/>
-                      </svg>
+            <button type="button" class="botonesfooter" id="btnvolver">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="iconosbotones1" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0z"/>
+                    <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708z"/>
+                </svg>
+                VOLVER
+            </button>
+            
+            <button type="button" class="botonesfooter" id="btnguardar">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="iconosbotones1" viewBox="0 0 16 16">
+                    <path d="M11 2H9v3h2z"/>
+                    <path d="M1.5 0h11.586a1.5 1.5 0 0 1 1.06.44l1.415 1.414A1.5 1.5 0 0 1 16 2.914V14.5a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 14.5v-13A1.5 1.5 0 0 1 1.5 0M1 1.5v13a.5.5 0 0 0 .5.5H2v-4.5A1.5 1.5 0 0 1 3.5 9h9a1.5 1.5 0 0 1 1.5 1.5V15h.5a.5.5 0 0 0 .5-.5V2.914a.5.5 0 0 0-.146-.353l-1.415-1.415A.5.5 0 0 0 13.086 1H13v4.5A1.5 1.5 0 0 1 11.5 7h-7A1.5 1.5 0 0 1 3 5.5V1H1.5a.5.5 0 0 0-.5.5m3 4a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 .5-.5V1H4zM3 15h10v-4.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5z"/>
+                </svg>
+                GUARDAR
+            </button>
         </div>
     </div>
 </body>
