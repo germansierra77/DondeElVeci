@@ -1,40 +1,82 @@
-*{
+/* Estilos generales */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: 'Courier New', Courier, monospace;
 }
-.contenedor{
-    width: 800px;
-    height: 600px;
-    background-color: none;
-    margin: 0.5em auto;
-    padding: 0.5em;
-    border-radius: 10px;
-}
+
 body {
     background-image: url('../images/best-food-background-ydy5u31lnrmww1pk.jpg');
     background-size: cover;
     background-position: center;
+    color: #333;
+    line-height: 1.6;
 }
-#header{
-    width:96%;
-    height: 15%;
+
+/* Contenedor principal */
+.contenedor {
+    width: 800px;
+    height: 600px;
+    margin: 0.5em auto;
+    padding: 0.5em;
+    border-radius: 10px;
+    position: relative;
+}
+
+/* Header */
+#header {
+    width: 96%;
+    height: 12%;
     display: flex;
     justify-content: center;
-    align-items: center; 
-    background-color: none;
+    align-items: center;
     padding: 10px;
     border-radius: 10px;
     position: relative;
 }
-.elemento{
-    height: 60%;
-    width: 80%;
+
+.elemento {
+    height: 20%;
+    width: 100%;
     color: white;
-    text-align:center;
-    background-color:none;
+    text-align: center;
     border-radius: 10px;
     font-size: 50px;
+    text-shadow: 
+        -1px -1px 0 black, 
+        1px -1px 0 black,  
+        -1px 1px 0 black,  
+        1px 1px 0 black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#imagenlogo {
+    width: 85px;
+    height: 70px;
+    margin-left: 20px;
+    border-radius: 10px;
+}
+
+/* Contenido principal */
+.contenido {
+    height: 75%;
+    width: 98%;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 2px;
+}
+
+/* Formularios */
+.form-group, .form-floating {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+    color: white;
+    font-weight: bold;
     text-shadow: 
     -1px -1px 0 black, 
     1px -1px 0  black,  
@@ -42,120 +84,269 @@ body {
     1px 1px 0  black;   
     color: white;
 }
-#imagenlogo{
-    width: 85px;
-    height: 70px;
-    float: right;
-    border-radius: 10px;
-}
-.contenido{
-    background-color:none;
-    height: 65%;
-    width: 98%;
-    border-radius: 10px;
-    margin-top: 10px;
-    padding: 2px;
-}
-#idcliente{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
+.form-label {
     text-align: center;
     font-size: 28px;
+    font-weight: bold;
     width: 100%;
     margin: 3px;
     color: white;
 }
-.form-floating{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    font-size: 28px;
-    width: 100%;
-    margin: 3px;
-    color: white;
-}
-.form-control{
+
+.form-control {
     text-align: center;
     font-size: 32px;
-    width: 70%;
-    margin-left: 120px;
+    width: 30%;
+    height: 30px;
+    margin: 0 auto;
     background-color: white;
     font-weight: bold;
-    border-color: black;
+    border: 2px solid black;
     border-radius: 30px;
+    padding: 5px;
+    
 }
-.casillasinfo{
-    width: 600px;
-    font-size:25px;
-    border-color: rgba(148, 157, 238, 0.616);
+
+.casillasinfo {
+    width: 500px;
+    font-size: 25px;
+    font-weight: bold;
+    border: 2px solid green;
     text-align: center;
-    margin: 2px;
+    margin: 2px auto;
     border-radius: 10px;
     background-color: white;
-} 
-.form-select{
+    padding: 5px;
+}
+
+.form-select {
     width: 300px;
-    font-size:25px;
-    border-color: rgba(148, 157, 238, 0.616);
+    font-size: 25px;
+    border: 2px;
     text-align: center;
-    margin: 2px;
+    margin: 2px auto;
     border-radius: 10px;
-    background-color: white;
+    padding: 5px;
 }
-#btnentidadbancaria{
-    background-color: white;
-    border-color: green;
-    font-size: 20px;
-    margin-left: 32%;
-    border-radius: 2em;
+
+/* Pestañas de operación */
+.operacion-container {
+    margin-top: 20px;
 }
-.footer{
+
+.operacion-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+    gap: 10px;
+}
+
+.operacion-tab {
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 5px 5px 0 0;
+    cursor: pointer;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.operacion-tab.active {
+    background-color: green;
+    color: white;
+}
+
+.operacion-tab:focus {
+    outline: 2px solid green;
+    outline-offset: 2px;
+}
+
+.tab-content {
+    display: none;
+    padding: 15px;
+    border-radius: 0 0 5px 5px;
+}
+
+.tab-content.active {
+    display: block;
+    margin-left: 210px;
+    width: 700px;
+    
+}
+
+#montoRecarga{
+    width: 400px;
+    height: 50px;
+    font-size: large;
+    margin-left: -60px;
+    color: green;
+}
+/* Footer */
+.footer {
     height: 13%;
     width: 98%;
-    background-color: none;
     border-radius: 1em;
-    margin: 5px; 
+    margin: 5px auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
-.botonesfooter{
+
+.botonesfooter {
     width: 280px;
     height: 60px;
-    font-size:25px;
+    font-size: 25px;
     color: green;
     background-color: white;
-    margin-left: 75px;
-    border-radius:15px;
-    margin-top: 10px;
-    text-align: center;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
 }
-.iconosbotones1{
-    width: 30px;
-    height: 30px;
-    color: green;
-    float: left;
-    margin-left: 20px;
-}
-fieldset{
-    text-align: center;
-    font-size: 40px;
-}
-.form-label{
-    color: white;
-    border-top: 10px;
-}
+
 .botonesfooter:hover {
     background-color: green;
     color: white;
+}
+
+.botonesfooter:focus {
+    outline: 2px solid green;
+    outline-offset: 2px;
+}
+
+.iconosbotones1 {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
 }
 
 .botonesfooter:hover .iconosbotones1 {
     color: white;
 }
 
-.iconosbotones1{
-    width: 25px;
-    height: 25px;
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+}
+
+.close-modal {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+    color: black;
+    text-decoration: none;
+}
+
+#codigoVerificacion {
+    width: 80%;
+    padding: 10px;
+    margin: 15px 0;
+    font-size: 18px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#codigoVerificacion:focus {
+    outline: 2px solid #0056b3;
+}
+
+.btn-verificar {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.btn-verificar:hover {
+    background-color: darkgreen;
+}
+
+.btn-verificar:focus {
+    outline: 2px solid #0056b3;
+    outline-offset: 2px;
+}
+
+#reenviarCodigo {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+#btnReenviarCodigo {
     color: green;
-    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+#btnReenviarCodigo:hover {
+    text-decoration: underline;
+}
+
+/* Clases para accesibilidad */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* Estilos para inert (si no hay soporte nativo) */
+[inert] {
+    pointer-events: none;
+    cursor: default;
+}
+
+[inert], [inert] * {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+/* Estilos para el enfoque accesible */
+:focus-visible {
+    outline: 2px solid green;
+    outline-offset: 2px;
 }

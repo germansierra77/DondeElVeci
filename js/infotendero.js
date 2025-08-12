@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Configurar eventos de los botones
-    document.getElementById('btnvolver').addEventListener('click', function() {
+    document.getElementById('btnvolvertendero').addEventListener('click', function() {
         console.log('[DEBUG] Botón volver clickeado');
         window.history.back();
     });

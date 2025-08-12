@@ -9,15 +9,15 @@ header("Content-Type: application/json");
 
 try {
     if ($_SERVER["REQUEST_METHOD"] == "GET") {
-        $idCliente = isset($_GET['id']) ? $_GET['id'] : null;
+        $idUsuario = isset($_GET['id']) ? $_GET['id'] : null;
 
-        if ($idCliente) {
+        if ($idUsuario) {
             $base = new Db();
             $conn = $base->conectar();
 
-            $sql = "SELECT Id, Nombres, Apellidos, Correo, Celular FROM tbusuarios WHERE Id = :idCliente";
+            $sql = "SELECT Saldo FROM tbsaldos WHERE IdUsuario = :idUsuario";
             $stmt = $conn->prepare($sql);
-            $stmt->bindValue(':idCliente', $idCliente, PDO::PARAM_INT);
+            $stmt->bindValue(':idUsuario', $idUsuario, PDO::PARAM_INT);
 
             if ($stmt->execute()) {
                 $result = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -26,12 +26,17 @@ try {
                     http_response_code(200);
                     echo json_encode([
                         "code" => 200,
-                        "data" => $result,
-                        "msg" => "Datos del cliente obtenidos correctamente"
+                        "saldo" => $result['Saldo'],
+                        "msg" => "Saldo obtenido correctamente"
                     ]);
                 } else {
-                    http_response_code(404);
-                    echo json_encode(["code" => 404, "msg" => "Cliente no encontrado"]);
+                    // Si no tiene saldo registrado, devolver 0
+                    http_response_code(200);
+                    echo json_encode([
+                        "code" => 200,
+                        "saldo" => 0,
+                        "msg" => "El usuario no tiene saldo registrado"
+                    ]);
                 }
             } else {
                 http_response_code(500);
@@ -39,7 +44,7 @@ try {
             }
         } else {
             http_response_code(400);
-            echo json_encode(["code" => 400, "msg" => "Se requiere el ID del cliente"]);
+            echo json_encode(["code" => 400, "msg" => "Se requiere el ID del usuario"]);
         }
     } else {
         http_response_code(405);
