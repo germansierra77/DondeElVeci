@@ -22,15 +22,46 @@ async function cargarDatosCliente(idCliente) {
         console.log('[DEBUG] Datos recibidos:', data);
         
         if (data.code === 200) {
-            document.getElementById('casillaidcliente').value = data.data.id || '';
-            document.getElementById('casillanombre').value = data.data.nombres || '';
-            document.getElementById('casillaapellido').value = data.data.apellidos || '';
-            document.getElementById('casillacorreo').value = data.data.correo || '';
-            document.getElementById('casillaid').value = data.data.cedula || '';
-            document.getElementById('casillatelefono').value = data.data.telefono || '';
-            document.getElementById('casillatipousu').value = data.data.tipoUsuario || '';
+            console.log('[DEBUG] Campos disponibles en data.data:', Object.keys(data.data));
+            
+            // Función helper para obtener valores sin importar mayúsculas/minúsculas
+            const getValue = (obj, possibleKeys) => {
+                // Buscar exact match primero
+                for (const key of possibleKeys) {
+                    if (obj[key] !== undefined && obj[key] !== null) {
+                        return obj[key];
+                    }
+                }
+                // Buscar case-insensitive
+                const lowerKeys = possibleKeys.map(k => k.toLowerCase());
+                for (const actualKey in obj) {
+                    if (obj.hasOwnProperty(actualKey) && 
+                        lowerKeys.includes(actualKey.toLowerCase())) {
+                        return obj[actualKey];
+                    }
+                }
+                return '';
+            };
+            
+            // Asignar valores CORRECTAMENTE - compatible con ambos formatos
+            document.getElementById('casillaidcliente').value = getValue(data.data, ['Id', 'id', 'ID']) || '';
+            document.getElementById('casillanombre').value = getValue(data.data, ['Nombres', 'nombres', 'NOMBRES', 'nombre', 'NOMBRE']) || '';
+            document.getElementById('casillaapellido').value = getValue(data.data, ['Apellidos', 'apellidos', 'APELLIDOS', 'apellido', 'APELLIDO']) || '';
+            document.getElementById('casillacorreo').value = getValue(data.data, ['Correo', 'correo', 'CORREO', 'email', 'EMAIL']) || '';
+            document.getElementById('casillatelefono').value = getValue(data.data, ['Celular', 'celular', 'CELULAR', 'telefono', 'Telefono', 'TELEFONO']) || '';
+            document.getElementById('casillaid').value = getValue(data.data, ['Cedula', 'cedula', 'CEDULA', 'documento', 'Documento']) || '';
+            document.getElementById('casillatipousu').value = getValue(data.data, ['TipoUsuario', 'tipoUsuario', 'TIPO_USUARIO', 'tipo_usuario']) || '';
             
             console.log('[DEBUG] Datos cargados correctamente');
+            console.log('[DEBUG] Valores asignados:');
+            console.log('  ID Cliente:', document.getElementById('casillaidcliente').value);
+            console.log('  Nombre:', document.getElementById('casillanombre').value);
+            console.log('  Apellido:', document.getElementById('casillaapellido').value);
+            console.log('  Correo:', document.getElementById('casillacorreo').value);
+            console.log('  Teléfono:', document.getElementById('casillatelefono').value);
+            console.log('  Cédula:', document.getElementById('casillaid').value);
+            console.log('  Tipo Usuario:', document.getElementById('casillatipousu').value);
+            
         } else {
             console.error('[DEBUG] Error en respuesta:', data.msg);
             throw new Error(data.msg || 'Error al cargar datos del cliente');
@@ -91,6 +122,8 @@ async function guardarCambios() {
         const respuesta = await fetch(url, {
             method: 'POST',
             headers: {
+                'Cache-Control': 'no-cache, no-store, must-revalidate',
+                'Pragma': 'no-cache',
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'
             },
@@ -147,16 +180,26 @@ document.addEventListener('DOMContentLoaded', function() {
         window.location.href = '../index.html';
     }
     
-    // Configurar eventos de los botones
-    document.getElementById('btnvolver').addEventListener('click', function() {
-        console.log('[DEBUG] Botón volver clickeado');
-        window.history.back();
-    });
+    // Configurar eventos de los botones - AJUSTA ESTOS IDs SEGÚN TU HTML
+    const btnVolver = document.getElementById('btnvolver') || document.getElementById('btnvolvercliente') || document.getElementById('btnvolvertendero');
+    if (btnVolver) {
+        btnVolver.addEventListener('click', function() {
+            console.log('[DEBUG] Botón volver clickeado');
+            window.history.back();
+        });
+    } else {
+        console.error('[ERROR] No se encontró botón volver');
+    }
     
-    document.getElementById('btnguardar').addEventListener('click', function() {
-        console.log('[DEBUG] Botón guardar clickeado');
-        guardarCambios();
-    });
+    const btnGuardar = document.getElementById('btnguardar');
+    if (btnGuardar) {
+        btnGuardar.addEventListener('click', function() {
+            console.log('[DEBUG] Botón guardar clickeado');
+            guardarCambios();
+        });
+    } else {
+        console.error('[ERROR] No se encontró botón guardar');
+    }
     
     console.log('[DEBUG] Configuración inicial completada');
 });

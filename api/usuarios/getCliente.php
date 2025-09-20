@@ -6,6 +6,9 @@ error_reporting(E_ALL);
 require_once "../configbd/db.php";
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json");
+header("Cache-Control: no-cache, no-store, must-revalidate");
+header("Pragma: no-cache");
+header("Expires: 0");
 
 try {
     if ($_SERVER["REQUEST_METHOD"] == "GET") {
@@ -15,7 +18,11 @@ try {
             $base = new Db();
             $conn = $base->conectar();
 
-            $sql = "SELECT Id, Nombres, Apellidos, Correo, Celular FROM tbusuarios WHERE Id = :idCliente";
+            // CONSULTA ACTUALIZADA para incluir todos los campos necesarios
+            $sql = "SELECT Id, Nombres, Apellidos, Correo, Celular, Cedula, TipoUsuario 
+                    FROM tbusuarios 
+                    WHERE Id = :idCliente";
+                    
             $stmt = $conn->prepare($sql);
             $stmt->bindValue(':idCliente', $idCliente, PDO::PARAM_INT);
 
