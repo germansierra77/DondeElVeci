@@ -14,26 +14,25 @@ try {
         throw new Exception("Error de conexión a la base de datos");
     }
 
+    // AGREGAR: IFNULL(Stock, 0) AS STOCK
     $sql = "SELECT 
                 Id_Producto AS ID,
                 Nombre AS NOMBRE,
                 Marca AS MARCA,
                 Categoria AS CATEGORIA,
                 Medida AS MEDIDA,
-                Precio AS PRECIO
+                Precio AS PRECIO,
+                IFNULL(Stock, 0) AS STOCK
             FROM tbproductos
-            WHERE 1=1"; // Condición siempre verdadera para facilitar agregar filtros
+            WHERE 1=1";
 
-    // Parámetros para filtros
     $params = [];
 
-    // Filtro por nombre
     if (isset($_GET['nombre']) && !empty($_GET['nombre'])) {
         $sql .= " AND Nombre LIKE :nombre";
         $params[':nombre'] = '%' . $_GET['nombre'] . '%';
     }
 
-    // Filtro por categoría
     if (isset($_GET['categoria']) && !empty($_GET['categoria'])) {
         $sql .= " AND Categoria = :categoria";
         $params[':categoria'] = $_GET['categoria'];
@@ -62,20 +61,11 @@ try {
         'timestamp' => date('Y-m-d H:i:s')
     ]);
 
-} catch (PDOException $e) {
-    http_response_code(500);
-    echo json_encode([
-        'success' => false,
-        'error' => $e->getMessage(),
-        'error_info' => isset($conn) ? $conn->errorInfo() : null,
-        'suggestion' => 'Verifique la conexión a la base de datos'
-    ]);
 } catch (Exception $e) {
     http_response_code(500);
     echo json_encode([
         'success' => false,
-        'error' => $e->getMessage(),
-        'suggestion' => 'Error en el servidor'
+        'error' => $e->getMessage()
     ]);
 }
 ?>

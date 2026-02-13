@@ -73,6 +73,8 @@ document.addEventListener("click",(e)=> {
     location.href="nuevoproducto"
     if(e.target.matches("#btnlistaproductos"))
     location.href="listaproductos"
+    if(e.target.matches("#btnmovimiento")) // Este es el botón REGISTRAR
+    location.href="nuevaventa"
 })
 
     //BOTON GENERICO QUE DA LA OPCION DE VOLVER AL MENU TENDERO EN TODAS LAS INTERFACES

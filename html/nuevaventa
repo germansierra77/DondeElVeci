@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NUEVO MOVIMIENTO</title>
+  <link rel="stylesheet" href="../ccs/fontawesome.css">
+  <link rel="stylesheet" href="../ccs/nuevaventa.css?v=1.0">
+  <script type="module" src="../js/main.js?v=1.2"></script> 
+  <script type="module" src="../js/nuevomovimiento.js?v=1.0"></script>
+</head>
+<body>
+    <div class="contenedor">
+        <div id="header">
+          <div class="elemento">NUEVA VENTA
+            <img src="../images/logo app.png" alt="logo" id="imagenlogo"> 
+          </div>
+        </div>
+        
+        <div class="contenido">
+          <!-- BUSCADOR DE CLIENTE (NUEVO) -->
+          <div class="cliente-container">
+            <div class="cliente-busqueda">
+              <input type="text" class="buscador-cliente" id="buscador-cliente" 
+                     placeholder="Buscar cliente por ID o correo...">
+              <button class="btn-buscar-cliente" id="btn-buscar-cliente">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                </svg>
+              </button>
+            </div>
+            <div class="cliente-seleccionado" id="cliente-seleccionado" style="display: none;">
+              <div class="cliente-info">
+                <span class="cliente-nombre" id="cliente-nombre"></span>
+                <span class="cliente-documento" id="cliente-documento"></span>
+              </div>
+              <button class="btn-cambiar-cliente" id="btn-cambiar-cliente">Cambiar</button>
+            </div>
+            <div class="cliente-error" id="cliente-error" style="display: none;"></div>
+          </div>
+
+          <!-- Barra de búsqueda de productos -->
+          <div class="buscador-container">
+            <input type="text" class="buscador" id="buscador" placeholder="Buscar producto...">
+            <button class="btn-buscar" id="btn-buscar-producto">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Lista de productos -->
+          <div class="lista-productos" id="lista-productos">
+            <div class="cargando-productos">Cargando productos...</div>
+          </div>
+
+          <!-- Resumen de compra -->
+          <div class="resumen-compra">
+            <div class="total-container">
+              <span class="total-label">TOTAL:</span>
+              <span class="total-valor" id="total-valor">$0</span>
+            </div>
+            <div class="botones-accion">
+              <button class="btn-accion cancelar" id="btn-cancelar-venta">CANCELAR</button>
+              <button class="btn-accion confirmar" id="btn-confirmar-venta">CONFIRMAR VENTA</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer">
+          <button type="button" class="botonesfooter" id="btnvolvertendero">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="iconosbotones" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+            </svg>
+            VOLVER
+          </button>
+        </div>
+    </div>
+</body>
+</html>
