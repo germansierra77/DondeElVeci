@@ -44,6 +44,10 @@ body {
     1px 1px 0  black;   
     color: white;
 }
+#eslogan{
+    font-size: 18px;
+    color: white;
+}
 #msg_log{
     color: white;
     font-size: 20px;

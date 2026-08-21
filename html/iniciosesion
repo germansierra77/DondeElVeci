@@ -12,7 +12,9 @@
     <div class="contenedor">
        <img src="../images/logo app.png" id="imagenlogin" alt="Logo de la app">
        <div id="header">
-          <div id="letreroapp">BIENVENIDO A "DONDE EL VECI" APP</div>
+          <div id="letreroapp">BIENVENIDO A "DONDE EL VECI" APP 
+            <div id="eslogan">Control simple para tu negocio, tranquilidad para tu bolsillo</div>
+          </div>
        </div>
        <form id="f_login">
           <div class="form-floating mb-3">
