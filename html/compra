@@ -1,118 +1,185 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>COMPRAR</title>
     <link rel="stylesheet" href="../ccs/fontawesome.css">
-    <link rel="stylesheet" href="../ccs/compra.css?v=1.0">
-    <script type="module" src="../js/main.js?v=1.0"></script>
-    <script type="module" src="../js/compra.js?v=1.0"></script>
+    <link rel="stylesheet" href="../ccs/compra.css?v=1.2">
+    <script type="module" src="../js/main.js?v=1.1"></script>
+    <script type="module" src="../js/compra.js?v=1.1" defer></script>
+
 </head>
+
 <body>
+
     <div class="contenedor">
+
         <div id="header">
+
             <div class="elemento">
-                <span class="titulo-app">APP DONDE EL VECI</span>
+
+                <span class="titulo-app">
+                    APP DONDE EL VECI
+                </span>
                 <img src="../images/logo app.png" alt="logo" id="imagenlogo"> 
             </div>
+
         </div>
-        
+
         <div class="contenido">
+
             <div class="filtros">
+
                 <div class="form-floating">
-                    <input class="casillasinfo" type="text" id="filtro-nombre" placeholder="NOMBRE PRODUCTO">
-                    <label for="filtro-nombre"></label>
+
+                    <input
+                        class="casillasinfo"
+                        type="text"
+                        id="filtro-nombre"
+                        placeholder="NOMBRE PRODUCTO"
+                        autocomplete="off"
+                    >
+
+                    <label for="filtro-nombre">
+                        Nombre producto
+                    </label>
+
                 </div>
+
+
+                <!-- BOTÓN BUSCAR -->
+
                 <div class="form-floating">
-                    <button type="button" id="btn-buscar" class="casillasinfo">
-                       BUSCAR 🔍 
+
+                    <button
+                        type="button"
+                        id="btn-buscar"
+                        class="casillasinfo"
+                    >
+
+                        BUSCAR 🔍
+
                     </button>
-                    <label for="btn-buscar"></label>
+
                 </div>
-            </div>            
-            <div class="listado">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>NOMBRE</th>
-                            <th>MARCA</th>
-                            <th>MEDIDA</th>
-                            <th>PRECIO</th>
-                            <th id="casillacantidad">CANTIDAD</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>001</td>
-                            <td>Arroz</td>
-                            <td>Diana</td>
-                            <td>Libra</td>
-                            <td>$3,600</td>
-                            <td>
-                                <input type="number" min="0" class="input-cantidad">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>002</td>
-                            <td>Leche Entera</td>
-                            <td>Alpina</td>
-                            <td>Litro</td>
-                            <td>$4,200</td>
-                            <td>
-                                <input type="number" min="0" class="input-cantidad">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>003</td>
-                            <td>Cafe</td>
-                            <td>Juan Valdez</td>
-                            <td>Libra</td>
-                            <td>$12,500</td>
-                            <td>
-                                <input type="number" min="0" class="input-cantidad">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>004</td>
-                            <td>Arroz</td>
-                            <td>Florhuila</td>
-                            <td>Libra</td>
-                            <td>$3,500</td>
-                            <td>
-                                <input type="number" min="0" class="input-cantidad">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>005</td>
-                            <td>Manzana</td>
-                            <td>N/A</td>
-                            <td>Libra</td>
-                            <td>$1,500</td>
-                            <td>
-                                <input type="number" min="0" class="input-cantidad">
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+
+
             </div>
+
+            <div class="listado">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                ID
+                            </th>
+
+                            <th>
+                                NOMBRE
+                            </th>
+
+                            <th>
+                                MARCA
+                            </th>
+
+                            <th>
+                                MEDIDA
+                            </th>
+
+                            <th>
+                                PRECIO
+                            </th>
+
+                            <th id="casillacantidad">
+                                CANTIDAD
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="tabla-productos">
+
+                        <tr>
+
+                            <td colspan="6">
+                                Cargando productos...
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+
+                </table>
+
+            </div>
+
+
         </div>
-        
+
         <div class="footer">
-            <button type="button" class="botonesfooter" id="btnvolver">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="iconosbotones" viewBox="0 0 16 16">
-                    <path d="M9.05.435c-.58-.58-1.52-.58-2.1 0L.436 6.95c-.58.58-.58 1.519 0 2.098l6.516 6.516c.58.58 1.519.58 2.098 0l6.516-6.516c.58-.58.58-1.519 0-2.098zM7 8.466a.25.25 0 0 1-.41.192L4.23 6.692a.25.25 0 0 1 0-.384l2.36-1.966a.25.25 0 0 1 .41.192V6h1.5A2.5 2.5 0 0 1 11 8.5V11h-1V8.5A1.5 1.5 0 0 0 8.5 7H7z"/>
+
+            <button
+                type="button"
+                class="botonesfooter"
+                id="btnvolver"
+            >
+
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    class="iconosbotones"
+                    viewBox="0 0 16 16"
+                >
+
+                    <path
+                        d="M9.05.435c-.58-.58-1.52-.58-2.1 0L.436 6.95c-.58.58-.58 1.519 0 2.098l6.516 6.516c.58.58 1.519.58 2.098 0l6.516-6.516c.58-.58.58-1.519 0-2.098zM7 8.466a.25.25 0 0 1-.41.192L4.23 6.692a.25.25 0 0 1 0-.384l2.36-1.966a.25.25 0 0 1 .41.192V6h1.5A2.5 2.5 0 0 1 11 8.5V11h-1V8.5A1.5 1.5 0 0 0 8.5 7H7z"
+                    />
+
                 </svg>
+
                 VOLVER
+
             </button>
-            <button type="button" class="botonesfooter" id="btncomprar">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="iconosbotones" viewBox="0 0 16 16">
-                    <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m-1.646-7.646-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708"/>
+
+            <button
+                type="button"
+                class="botonesfooter"
+                id="btncomprar"
+            >
+
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    class="iconosbotones"
+                    viewBox="0 0 16 16"
+                >
+
+                    <path
+                        d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m-1.646-7.646-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708"
+                    />
+
                 </svg>
+
                 COMPRAR
+
             </button>
+
+
         </div>
+
+
     </div>
+
+
 </body>
+
 </html>
