@@ -5,81 +5,418 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HISTORIAL DE COMPRAS</title>
     <link rel="stylesheet" href="../ccs/fontawesome.css">
-    <link rel="stylesheet" href="../ccs/historialcompras.css?v=1.3">
-    <script type="module" src="../js/main.js?v=1.4"></script>
+    <link rel="stylesheet" href="../ccs/historialcompras.css?v=7.0">
+    <script type="module" src="../js/main.js?v=4.0"></script>
+    <script type="module" src="../js/historialcompras.js?v=7.0"></script>
 </head>
 <body>
+
     <div class="contenedor">
         <div id="header">
-    <div class="elemento">
-        <span class="titulo-app">APP DONDE EL VECI</span>
-        <img src="../images/logo app.png" alt="logo" id="imagenlogo"> 
-    </div>
-    </div>
-        <div class="contenido"> 
+
+            <div class="elemento">
+
+                <span class="titulo-app">
+                APP DONDE EL VECI
+                </span>
+                <img src="../images/logo app.png" alt="logo" id="imagenlogo"> 
+
+            </div>
+
+        </div>
+
+
+        <!-- ============================================= -->
+        <!-- CONTENIDO -->
+        <!-- ============================================= -->
+
+        <div class="contenido">
+
+
+            <!-- ========================================= -->
+            <!-- FILTROS -->
+            <!-- ========================================= -->
+
             <div class="filtros">
+
+
+                <!-- FECHA INICIAL -->
+
                 <div class="form-floating">
-                    <input class="casillasinfo" type="date" id="fechaInicio" placeholder="Fecha inicio">
-                    <label for="fechaInicio">Desde</label>
+
+                    <input
+                        class="casillasinfo"
+                        type="date"
+                        id="fechaInicioCompra"
+                    >
+
+                    <label for="fechaInicioCompra">
+                        Desde
+                    </label>
+
                 </div>
+
+
+                <!-- FECHA FINAL -->
+
                 <div class="form-floating">
-                    <input class="casillasinfo" type="date" id="fechaFin" placeholder="Fecha fin">
-                    <label for="fechaFin">Hasta</label>
+
+                    <input
+                        class="casillasinfo"
+                        type="date"
+                        id="fechaFinCompra"
+                    >
+
+                    <label for="fechaFinCompra">
+                        Hasta
+                    </label>
+
                 </div>
+
+
             </div>
-            <div class="listado"> 
+
+
+            <!-- ========================================= -->
+            <!-- TABLA DE COMPRAS -->
+            <!-- ========================================= -->
+
+            <div class="listado">
+
                 <table>
+
                     <thead>
+
                         <tr>
-                            <th>FECHA</th>
-                            <th>ESTADO</th>
-                            <th>REVISAR</th>
+
+                            <th>
+                                FECHA
+                            </th>
+
+                            <th>
+                                PRODUCTOS
+                            </th>
+
+                            <th>
+                                TOTAL
+                            </th>
+
+                            <th>
+                                ESTADO
+                            </th>
+
+                            <th>
+                                REVISAR
+                            </th>
+
                         </tr>
+
                     </thead>
-                    <tbody>
+
+
+                    <!--
+                        Las compras ya NO se escriben
+                        manualmente.
+
+                        historialcompras.js cargara aqui
+                        las compras del cliente conectado.
+                    -->
+
+                    <tbody id="tablaCompras">
+
                         <tr>
-                            <td>2023-10-15</td>
-                            <td>EXITOSO</td>
-                            <td><button class="btn-detalle"><i class="fas fa-search"></i> Detalle</button></td>
+
+                            <td colspan="5">
+                                Cargando historial de compras...
+                            </td>
+
                         </tr>
-                        <tr>
-                            <td>2023-10-14</td>
-                            <td>EXITOSO</td>
-                            <td><button class="btn-detalle"><i class="fas fa-search"></i> Detalle</button></td>
-                        </tr>
-                        <tr>
-                            <td>2023-10-12</td>
-                            <td>CANCELADO</td>
-                            <td><button class="btn-detalle"><i class="fas fa-search"></i> Detalle</button></td>
-                        </tr>
-                        <tr>
-                            <td>2023-10-10</td>
-                            <td>EXISTOSO</td>
-                            <td><button class="btn-detalle"><i class="fas fa-search"></i> Detalle</button></td>
-                        </tr>
-                        <tr>
-                            <td>2023-10-08</td>
-                            <td>CANCELADO</td>
-                            <td><button class="btn-detalle"><i class="fas fa-search"></i> Detalle</button></td>
-                        </tr>
+
                     </tbody>
+
                 </table>
+
             </div>
+
+
         </div>
+
+
+        <!-- ============================================= -->
+        <!-- FOOTER -->
+        <!-- ============================================= -->
+
         <div class="footer">
-            <button type="button" class="botonesfooter" id="btnvolver">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="iconosbotones" viewBox="0 0 16 16">
-                <path d="M9.05.435c-.58-.58-1.52-.58-2.1 0L.436 6.95c-.58.58-.58 1.519 0 2.098l6.516 6.516c.58.58 1.519.58 2.098 0l6.516-6.516c.58-.58.58-1.519 0-2.098zM7 8.466a.25.25 0 0 1-.41.192L4.23 6.692a.25.25 0 0 1 0-.384l2.36-1.966a.25.25 0 0 1 .41.192V6h1.5A2.5 2.5 0 0 1 11 8.5V11h-1V8.5A1.5 1.5 0 0 0 8.5 7H7z"/>
+
+
+            <!-- BOTON VOLVER -->
+
+            <button
+                type="button"
+                class="botonesfooter"
+                id="btnvolver"
+            >
+
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    class="iconosbotones"
+                    viewBox="0 0 16 16"
+                >
+
+                    <path
+                        d="M9.05.435c-.58-.58-1.52-.58-2.1 0L.436 6.95c-.58.58-.58 1.519 0 2.098l6.516 6.516c.58.58 1.519.58 2.098 0l6.516-6.516c.58-.58.58-1.519 0-2.098zM7 8.466a.25.25 0 0 1-.41.192L4.23 6.692a.25.25 0 0 1 0-.384l2.36-1.966a.25.25 0 0 1 .41.192V6h1.5A2.5 2.5 0 0 1 11 8.5V11h-1V8.5A1.5 1.5 0 0 0 8.5 7H7z"
+                    />
+
                 </svg>
+
                 VOLVER
+
             </button>
-            <button type="button" class="botonesfooter" id="btnfiltrar">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="iconosbotones" viewBox="0 0 16 16">
-                <path d="M6 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5m-2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5"/>
+
+
+            <!-- BOTON FILTRAR -->
+
+            <button
+                type="button"
+                class="botonesfooter"
+                id="btnFiltrarCompras"
+            >
+
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    class="iconosbotones"
+                    viewBox="0 0 16 16"
+                >
+
+                    <path
+                        d="M6 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5m-2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5"
+                    />
+
                 </svg>
+
                 FILTRAR
+
             </button>
+
+
         </div>
+
     </div>
+
+
+    <!-- ================================================ -->
+    <!-- MODAL DETALLE DE COMPRA -->
+    <!-- ================================================ -->
+
+    <dialog id="modalDetalleCompra">
+
+        <div class="modal-contenido">
+
+
+            <!-- TITULO -->
+
+            <h2 class="modal-titulo">
+                DETALLE DE MI COMPRA
+            </h2>
+
+
+            <!-- ========================================== -->
+            <!-- INFORMACION GENERAL -->
+            <!-- ========================================== -->
+
+            <div class="info-compra">
+
+
+                <!-- NUMERO DE COMPRA -->
+
+                <p>
+
+                    <strong>
+                        Compra No:
+                    </strong>
+
+                    <span id="compraIdVenta">
+                        -
+                    </span>
+
+                </p>
+
+
+                <!-- FECHA -->
+
+                <p>
+
+                    <strong>
+                        Fecha:
+                    </strong>
+
+                    <span id="compraFecha">
+                        -
+                    </span>
+
+                </p>
+
+
+                <!-- ESTADO -->
+
+                <p>
+
+                    <strong>
+                        Estado:
+                    </strong>
+
+                    <span id="compraEstado">
+                        -
+                    </span>
+
+                </p>
+
+
+                <!-- TENDERO -->
+
+                <p>
+
+                    <strong>
+                        ID Tendero:
+                    </strong>
+
+                    <span id="compraTendero">
+                        -
+                    </span>
+
+                </p>
+
+
+            </div>
+
+
+            <!-- ========================================== -->
+            <!-- PRODUCTOS -->
+            <!-- ========================================== -->
+
+            <div class="tabla-detalle-container">
+
+                <table class="tabla-detalle">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                PRODUCTO
+                            </th>
+
+                            <th>
+                                MARCA
+                            </th>
+
+                            <th>
+                                MEDIDA
+                            </th>
+
+                            <th>
+                                CANTIDAD
+                            </th>
+
+                            <th>
+                                PRECIO
+                            </th>
+
+                            <th>
+                                SUBTOTAL
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="tablaDetalleCompra">
+
+                        <tr>
+
+                            <td colspan="6">
+
+                                Seleccione una compra para ver el detalle.
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+            <!-- ========================================== -->
+            <!-- RESUMEN -->
+            <!-- ========================================== -->
+
+            <div class="resumen-compra">
+
+                Productos diferentes:
+
+                <strong>
+                    <span id="compraCantidadProductos">
+                        0
+                    </span>
+                </strong>
+
+                <br>
+
+                Unidades compradas:
+
+                <strong>
+                    <span id="compraCantidadUnidades">
+                        0
+                    </span>
+                </strong>
+
+            </div>
+
+
+            <!-- ========================================== -->
+            <!-- TOTAL -->
+            <!-- ========================================== -->
+
+            <div class="total-compra">
+
+                TOTAL:
+
+                <span id="compraTotal">
+                    $0
+                </span>
+
+            </div>
+
+
+            <!-- ========================================== -->
+            <!-- CERRAR -->
+            <!-- ========================================== -->
+
+            <div class="modal-botones">
+
+                <button
+                    type="button"
+                    id="btnCerrarDetalleCompra"
+                >
+
+                    CERRAR
+
+                </button>
+
+            </div>
+
+
+        </div>
+
+    </dialog>
+
+
 </body>
+
 </html>

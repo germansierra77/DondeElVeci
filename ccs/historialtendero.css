@@ -1,3 +1,7 @@
+/* =====================================================
+   CONFIGURACION GENERAL
+===================================================== */
+
 * {
     margin: 0;
     padding: 0;
@@ -5,389 +9,657 @@
     font-family: 'Courier New', Courier, monospace;
 }
 
-.contenedor {
-    width: 800px;
-    height: 600px;
-    background-color: none;
-    margin: 0.5em auto;
-    padding: 0.5em;
-    border-radius: 10px;
-}
+
+/* =====================================================
+   BODY
+===================================================== */
 
 body {
+    margin: 0;
+    min-height: 100vh;
+
     background-image: url('../images/Fondotendero.jpeg');
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
 }
 
-/* Estilos para el header */
-#header {
-    width: 96%;
-    height: 15%;
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    background-color: none;
-    padding: 10px;
+
+/* =====================================================
+   CONTENEDOR PRINCIPAL
+===================================================== */
+
+.contenedor {
+    width: 800px;
+    height: 600px;
+
+    margin: 0.5em auto;
+    padding: 0.5em;
+
     border-radius: 10px;
 }
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+#header {
+    width: 96%;
+    h*ight: 15%;
+
+    display: flex;
+   *justify-content: center;
+    align-items: center;
+
+    padding: 10px;
+
+    border-radius: 10px;
+}
+
 
 .elemento {
     display: flex;
     align-items: center;
     justify-content: center;
+
     gap: 20px;
+
     height: 60%;
+
     color: white;
-    background-color: none;
-    border-radius: 10px;
+
     font-size: 50px;
-    text-shadow: 
-        -1px -1px 0 black, 
-        1px -1px 0 black,  
-        -1px 1px 0 black,  
+
+    text-shadow:
+        -1px -1px 0 black,
+        1px -1px 0 black,
+        -1px 1px 0 black,
         1px 1px 0 black;
 }
+
 
 .titulo-app {
     line-height: 1;
 }
 
+
 #imagenlogo {
     width: 85px;
     height: 70px;
+
     border-radius: 10px;
+
     object-fit: contain;
 }
 
+
+/* =====================================================
+   CONTENIDO
+===================================================== */
+
 .contenido {
-    background-color: rgba(255, 255, 255, 0.8);
-    height: 70%;
     width: 98%;
-    border-radius: 10px;
+    height: 70%;
+
     margin-top: 8px;
     padding: 10px;
+
+    background-color: rgba(255, 255, 255, 0.8);
+
+    border-radius: 10px;
+
     overflow-y: auto;
 }
 
+
+/* =====================================================
+   FILTROS
+===================================================== */
+
 .filtros {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-    gap: 10px;
+ *  justify-content: space-between;
+*    gap: 10px;
+
+    margin-bottom:*10px;
 }
 
+
 .form-floating {
-    flex: 1;
+    fle*: 1;
+
     display: flex;
-    flex-direction: column;
+    flex-*irection: column;
+
+    color: #333*
+
     font-size: 16px;
+}
+
+
+.casill*sinfo {
+    width: 100%;
+
+    padding: 8px;
+
+    background-color: white;
+
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+
+    text-align: center;
+}
+
+
+.casillasinfo:focus {
+    outline: 2px solid green;
+    outline-offset: 1px;
+}
+
+
+label {
+    margin-top: 3px;
+
+    font-size: 20px;
+
+    text-align: center;
+
     color: #333;
 }
 
-.casillasinfo {
+
+/* =====================================================
+   CONTENEDOR DE LA TABLA
+===================================================== */
+
+.listado {
     width: 100%;
-    font-size: 20px;
-    border: 1px solid #ccc;
-    text-align: center;
-    padding: 8px;
-    border-radius: 5px;
-    background-color: white;
+
+    overflow-x: auto;
 }
 
-label{
-    font-size: 20px;
-    text-align: center;
-}
+
+/* =====================================================
+   TABLA HISTORIAL DE VENTAS
+===================================================== */
 
 table {
     width: 100%;
-    border-collapse: collapse;
+
     margin-top: 10px;
+
+    border-collapse: collapse;
+
     background-color: white;
 }
 
-th, td {
+
+th,
+td {
     padding: 12px 15px;
+
     text-align: center;
+
     border-bottom: 1px solid #ddd;
+
     color: #333;
 }
 
+
 th {
-    background-color: green;
-    font-size: 18px;
-    color: white;
-    font-weight: bold;
     position: sticky;
+
     top: 0;
+
+    z-index: 1;
+
+    background-color: green;
+
+    color: white;
+
+    font-size: 18px;
+    font-weight: bold;
 }
 
-tr:hover {
+
+tbody tr:hover {
     background-color: #f5f5f5;
-    font-size: 17px;
 }
+
+
+/* =====================================================
+   BOTON DETALLE
+===================================================== */
 
 .btn-detalle {
-    background-color: green;
-    color: white;
-    border: none;
-    padding: 8px 12px;
-    border-radius: 5px;
-    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 5px;
+
     margin: 0 auto;
+
+    padding: 8px 12px;
+
+    background-color: green;
+
+    color: white;
+
+    border: none;
+    border-radius: 5px;
+
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+
+    cursor: pointer;
 }
+
 
 .btn-detalle:hover {
     background-color: darkgreen;
 }
 
+
+.btn-detalle:active {
+    background-color: #005500;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
 .footer {
-    height: 13%;
     width: 98%;
-    background-color: none;
-    border-radius: 1em;
+    height: 13%;
+
     margin-top: 8px;
+
     display: flex;
     justify-content: space-between;
+    align-items: center;
+
+    border-radius: 1em;
 }
 
-.botonesfooter{
+
+/* =====================================================
+   BOTONES VOLVER Y FILTRAR
+===================================================== */
+
+.botonesfooter {
     width: 200px;
     height: 60px;
-    font-size:25px;
-    color: green;
-    background-color: white;
-    margin-left: 40px;
-    border-radius:15px;
-    margin-top: 10px;
-    text-align: center;
-    border-color: green;
-    margin-right: 100px;
+
     margin-left: 100px;
+    margin-right: 100px;
+
+    background-color: white;
+
+    color: green;
+
+    border: 2px solid green;
+    border-radius: 15px;
+
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 25px;
+
+    text-align: center;
+
+    cursor: pointer;
 }
 
-.iconosbotones {
-    width: 25px;
-    height: 25px;
-    color: green;
-}
+
 .botonesfooter:hover {
     background-color: green;
+
     color: white;
 }
 
-.botonesfooter:hover .iconosbotones {
+
+.botonesfooter:active {
+    background-color: darkgreen;
+
     color: white;
 }
 
-.iconosbotones{
-    width: 25px;
-    height: 25px;
-    color: green;
-    transition: all 0.3s ease;
-}
+
+/* =====================================================
+   MODAL DETALLE DE LA VENTA
+===================================================== */
 
 #modalDetalleVenta {
-            width: 90%;
-            max-width: 900px;
+    width: 90%;
+    max-width: 900px;
+    max-height: 90vh;
 
-            border: none;
-            border-radius: 15px;
+    padding: 0;
 
-            padding: 0;
+    background-color: white;
 
-            box-shadow:
-                0 10px 40px
-                rgba(0, 0, 0, 0.4);
+    border: none;
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 10px 40px rgba(0, 0, 0, 0.4);
 }
 
 
-        /* Fondo oscuro cuando se abre el detalle */
+/* Fondo oscuro del modal */
+
 #modalDetalleVenta::backdrop {
-            background:
-                rgba(0, 0, 0, 0.65);
-        }
+    background-color: rgba(0, 0, 0, 0.65);
+}
 
 
-        /* Contenido interno */
-        .modal-contenido {
-            padding: 25px;
+/* =====================================================
+   CONTENIDO DEL MODAL
+===================================================== */
 
-            background-color: white;
-        }
+.modal-contenido {
+    width: 100%;
+    max-height: 90vh;
 
+    padding: 25px;
 
-        /* Titulo */
-        .modal-titulo {
-            text-align: center;
+    background-color: white;
 
-            margin-top: 0;
-            margin-bottom: 20px;
+    overflow-y: auto;
+}
 
-            color: #064b13;
-        }
 
+/* =====================================================
+   TITULO DEL MODAL
+===================================================== */
 
-        /* Informacion general de la venta */
-        .info-venta {
-            display: grid;
+.modal-titulo {
+    margin-top: 0;
+    margin-bottom: 20px;
 
-            grid-template-columns:
-                repeat(2, 1fr);
+    color: #064b13;
 
-            gap: 12px;
+    font-size: 26px;
 
-            padding: 15px;
+    text-align: center;
+}
 
-            margin-bottom: 20px;
 
-            background-color: #f3f3f3;
+/* =====================================================
+   INFORMACION GENERAL DE LA VENTA
+===================================================== */
 
-            border-radius: 10px;
-        }
+.info-venta {
+    display: grid;
 
+    grid-template-columns: repeat(2, 1fr);
 
-        .info-venta p {
-            margin: 5px 0;
-        }
+    gap: 12px;
 
+    padding: 15px;
+    margin-bottom: 20px;
 
-        /* Contenedor de tabla */
-        .tabla-detalle-container {
-            width: 100%;
+    background-color: #f3f3f3;
 
-            overflow-x: auto;
+    border-radius: 10px;
+}
 
-            margin-top: 15px;
-        }
 
+.info-venta p {
+    margin: 5px 0;
 
-        /* Tabla detalle */
-        .tabla-detalle {
-            width: 100%;
+    color: #333;
 
-            border-collapse: collapse;
-        }
+    font-size: 16px;
+}
 
 
-        .tabla-detalle thead th {
-            background-color: #064b13;
+.info-venta strong {
+    color: #064b13;
+}
 
-            color: white;
 
-            padding: 12px 8px;
+/* =====================================================
+   CONTENEDOR TABLA DETALLE
+===================================================== */
 
-            text-align: center;
-        }
+.tabla-detalle-container {
+    width: 100%;
 
+    overflow-x: auto;
+}
 
-        .tabla-detalle tbody td {
-            padding: 10px 8px;
 
-            text-align: center;
+/* =====================================================
+   TABLA DEL DETALLE DE VENTA
+===================================================== */
 
-            border-bottom:
-                1px solid #dddddd;
-        }
+.tabla-detalle {
+    width: 100%;
 
+    margin-top: 0;
 
-        .tabla-detalle tbody tr:hover {
-            background-color: #f4f4f4;
-        }
+    border-collapse: collapse;
 
+    background-color: white;
+}
 
-        /* Total */
-        .total-detalle {
-            margin-top: 20px;
 
-            text-align: right;
+.tabla-detalle th {
+    position: static;
 
-            font-size: 21px;
+    padding: 10px 8px;
 
-            font-weight: bold;
+    background-color: green;
 
-            color: #064b13;
-        }
+    color: white;
 
+    font-size: 15px;
 
-        /* Cantidad total */
-        .resumen-detalle {
-            margin-top: 15px;
+    text-align: center;
+}
 
-            text-align: right;
 
-            color: #444444;
-        }
+.tabla-detalle td {
+    padding: 10px 8px;
 
+    color: #333;
 
-        /* Botones del modal */
-        .modal-botones {
-            display: flex;
+    text-align: center;
 
-            justify-content: center;
+    border-bottom: 1px solid #ddd;
+}
 
-            margin-top: 25px;
-        }
 
+.tabla-detalle tbody tr:hover {
+    background-color: #f5f5f5;
+}
 
-        /* Boton cerrar */
-        #btnCerrarDetalle {
-            padding: 11px 35px;
 
-            border: none;
+/* =====================================================
+   RESUMEN DE LA VENTA
+===================================================== */
 
-            border-radius: 10px;
+.resumen-detalle {
+    margin-top: 15px;
 
-            background-color: #064b13;
+    color: #444;
 
-            color: white;
+    font-size: 16px;
 
-            font-size: 16px;
+    line-height: 1.7;
 
-            font-weight: bold;
+    text-align: right;
+}
 
-            cursor: pointer;
-        }
 
+/* =====================================================
+   TOTAL DE LA VENTA
+===================================================== */
 
-        #btnCerrarDetalle:hover {
-            background-color: #08751d;
-        }
+.total-detalle {
+    margin-top: 15px;
 
+    color: green;
 
-        /* Mensaje de carga */
-        .mensaje-detalle {
-            text-align: center;
+    font-size: 21px;
+    font-weight: bold;
 
-            padding: 20px;
-        }
+    text-align: right;
+}
 
 
-        /* Adaptacion para celular */
-        @media (max-width: 600px) {
+/* =====================================================
+   BOTONES DEL MODAL
+===================================================== */
 
-            #modalDetalleVenta {
-                width: 95%;
-            }
+.modal-botones {
+    display: flex;
+    justify-content: center;
 
+    margin-top: 25px;
+}
 
-            .modal-contenido {
-                padding: 15px;
-            }
 
+/* =====================================================
+   BOTON CERRAR
+===================================================== */
 
-            .info-venta {
-                grid-template-columns: 1fr;
-            }
+#btnCerrarDetalle {
+    padding: 10px 30px;
 
+    background-color: green;
 
-            .tabla-detalle {
-                min-width: 700px;
-            }
+    color: white;
 
+    border: none;
+    border-radius: 5px;
+
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+#btnCerrarDetalle:hover {
+    background-color: darkgreen;
+}
+
+
+#btnCerrarDetalle:active {
+    background-color: #005500;
+}
+
+
+/* =====================================================
+   PANTALLAS PEQUENAS
+===================================================== */
+
+@media (max-width: 600px) {
+
+    body {
+        background-attachment: scroll;
+    }
+
+
+    .contenedor {
+        width: 96%;
+        height: auto;
+
+        margin: 0 auto;
+    }
+
+
+    #header {
+        width: 100%;
+        height: auto;
+    }
+
+
+    .elemento {
+        height: auto;
+
+        gap: 10px;
+
+        font-size: 28px;
+    }
+
+
+    #imagenlogo {
+        width: 65px;
+        height: 55px;
+    }
+
+
+    .contenido {
+        width: 100%;
+        height: auto;
+        min-height: 400px;
+    }
+
+
+    .filtros {
+        flex-direction: column;
+    }
+
+
+    .casillasinfo {
+        font-size: 17px;
+    }
+
+
+    label {
+        font-size: 17px;
+    }
+
+
+    table {
+        min-width: 600px;
+    }
+
+
+    .footer {
+        width: 100%;
+        height: auto;
+
+        flex-direction: column;
+
+        gap: 10px;
+
+        padding: 10px 0;
+    }
+
+
+    .botonesfooter {
+        width: 100%;
+        max-width: 250px;
+
+        margin: 0;
+    }
+
+
+    #modalDetalleVenta {
+        width: 95%;
+    }
+
+
+    .modal-contenido {
+        padding: 15px;
+    }
+
+
+    .info-venta {
+        grid-template-columns: 1fr;
+    }
+
+
+    .tabla-detalle {
+        min-width: 700px;
+    }
 }

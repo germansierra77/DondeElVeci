@@ -7,17 +7,12 @@
 
     <title>HISTORIAL DE VENTAS</title>
     <link rel="stylesheet" href="../ccs/fontawesome.css">
-    <link rel="stylesheet" href="../ccs/historialtendero.css?v=1.4">
+    <link rel="stylesheet" href="../ccs/historialtendero.css?v=1.7">
     <script type="module" src="../js/main.js?v=4.0"></script>
 </head>
 <body>
 
     <div class="contenedor">
-
-
-        <!-- ===================================================== -->
-        <!-- ENCABEZADO -->
-        <!-- ===================================================== -->
 
         <div id="header">
 
@@ -27,26 +22,15 @@
                     APP DONDE EL VECI
                 </span>
                 <img src="../images/logo app.png" alt="logo" id="imagenlogo"> 
+
             </div>
 
         </div>
 
 
-        <!-- ===================================================== -->
-        <!-- CONTENIDO -->
-        <!-- ===================================================== -->
-
         <div class="contenido">
 
-
-            <!-- ================================================= -->
-            <!-- FILTROS -->
-            <!-- ================================================= -->
-
             <div class="filtros">
-
-
-                <!-- FECHA DESDE -->
 
                 <div class="form-floating">
 
@@ -63,8 +47,6 @@
                 </div>
 
 
-                <!-- FECHA HASTA -->
-
                 <div class="form-floating">
 
                     <input
@@ -79,8 +61,6 @@
 
                 </div>
 
-
-                <!-- ID USUARIO -->
 
                 <div class="form-floating">
 
@@ -97,13 +77,8 @@
 
                 </div>
 
-
             </div>
 
-
-            <!-- ================================================= -->
-            <!-- LISTADO DE VENTAS -->
-            <!-- ================================================= -->
 
             <div class="listado">
 
@@ -112,47 +87,20 @@
                     <thead>
 
                         <tr>
-
-                            <th>
-                                FECHA
-                            </th>
-
-                            <th>
-                                ID USUARIO
-                            </th>
-
-                            <th>
-                                ESTADO
-                            </th>
-
-                            <th>
-                                REVISAR
-                            </th>
-
+                            <th>FECHA</th>
+                            <th>ID USUARIO</th>
+                            <th>ESTADO</th>
+                            <th>REVISAR</th>
                         </tr>
 
                     </thead>
 
-
-                    <!--
-                        IMPORTANTE:
-
-                        main.js colocara aqui automaticamente
-                        las ventas obtenidas desde:
-
-                        api/ventas/listarventas.php
-                    -->
-
                     <tbody id="tablaVentas">
 
                         <tr>
-
                             <td colspan="4">
-
-                                Cargando historial de ventas...
-
+                                Cargando historial...
                             </td>
-
                         </tr>
 
                     </tbody>
@@ -161,285 +109,117 @@
 
             </div>
 
-
         </div>
 
 
-        <!-- ===================================================== -->
-        <!-- FOOTER -->
-        <!-- ===================================================== -->
-
         <div class="footer">
-
-
-            <!-- ================================================= -->
-            <!-- BOTON VOLVER -->
-            <!-- ================================================= -->
 
             <button
                 type="button"
                 class="botonesfooter"
                 id="btnvolvertendero"
             >
-
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="currentColor"
-                    class="iconosbotones"
-                    viewBox="0 0 16 16"
-                >
-
-                    <path
-                        d="M9.05.435c-.58-.58-1.52-.58-2.1 0L.436 6.95c-.58.58-.58 1.519 0 2.098l6.516 6.516c.58.58 1.519.58 2.098 0l6.516-6.516c.58-.58.58-1.519 0-2.098zM7 8.466a.25.25 0 0 1-.41.192L4.23 6.692a.25.25 0 0 1 0-.384l2.36-1.966a.25.25 0 0 1 .41.192V6h1.5A2.5 2.5 0 0 1 11 8.5V11h-1V8.5A1.5 1.5 0 0 0 8.5 7H7z"
-                    />
-
-                </svg>
-
                 VOLVER
-
             </button>
 
-
-            <!-- ================================================= -->
-            <!-- BOTON FILTRAR -->
-            <!-- ================================================= -->
 
             <button
                 type="button"
                 class="botonesfooter"
                 id="btnfiltrar"
             >
-
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="currentColor"
-                    class="iconosbotones"
-                    viewBox="0 0 16 16"
-                >
-
-                    <path
-                        d="M6 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5m-2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5"
-                    />
-
-                </svg>
-
                 FILTRAR
-
             </button>
 
-
         </div>
-
 
     </div>
 
 
-
-    <!-- ========================================================= -->
-    <!-- MODAL DETALLE DE LA VENTA -->
-    <!-- ========================================================= -->
+    <!-- DETALLE DE LA VENTA -->
 
     <dialog id="modalDetalleVenta">
 
-
         <div class="modal-contenido">
 
-
-            <!-- ================================================= -->
-            <!-- TITULO -->
-            <!-- ================================================= -->
-
             <h2 class="modal-titulo">
-
                 DETALLE DE LA VENTA
-
             </h2>
 
 
-            <!-- ================================================= -->
-            <!-- INFORMACION GENERAL -->
-            <!-- ================================================= -->
-
             <div class="info-venta">
 
-
-                <!-- ID DE VENTA -->
-
                 <p>
-
-                    <strong>
-                        Venta No:
-                    </strong>
-
-                    <span id="detalleIdVenta">
-                        -
-                    </span>
-
+                    <strong>Venta No:</strong>
+                    <span id="detalleIdVenta">-</span>
                 </p>
 
-
-                <!-- CLIENTE -->
-
                 <p>
-
-                    <strong>
-                        ID Cliente:
-                    </strong>
-
-                    <span id="detalleCliente">
-                        -
-                    </span>
-
+                    <strong>ID Cliente:</strong>
+                    <span id="detalleCliente">-</span>
                 </p>
 
-
-                <!-- TENDERO -->
-
                 <p>
-
-                    <strong>
-                        ID Tendero:
-                    </strong>
-
-                    <span id="detalleTendero">
-                        -
-                    </span>
-
+                    <strong>ID Tendero:</strong>
+                    <span id="detalleTendero">-</span>
                 </p>
 
-
-                <!-- FECHA -->
-
                 <p>
-
-                    <strong>
-                        Fecha:
-                    </strong>
-
-                    <span id="detalleFecha">
-                        -
-                    </span>
-
+                    <strong>Fecha:</strong>
+                    <span id="detalleFecha">-</span>
                 </p>
 
-
-                <!-- FECHA REGISTRO -->
-
                 <p>
-
-                    <strong>
-                        Fecha registro:
-                    </strong>
-
-                    <span id="detalleFechaRegistro">
-                        -
-                    </span>
-
+                    <strong>Fecha registro:</strong>
+                    <span id="detalleFechaRegistro">-</span>
                 </p>
 
-
-                <!-- ESTADO -->
-
                 <p>
-
-                    <strong>
-                        Estado:
-                    </strong>
-
-                    <span id="detalleEstado">
-                        -
-                    </span>
-
+                    <strong>Estado:</strong>
+                    <span id="detalleEstado">-</span>
                 </p>
-
 
             </div>
 
 
-            <!-- ================================================= -->
-            <!-- TABLA PRODUCTOS DE LA VENTA -->
-            <!-- ================================================= -->
-
             <div class="tabla-detalle-container">
 
-
                 <table class="tabla-detalle">
-
 
                     <thead>
 
                         <tr>
-
-                            <th>
-                                PRODUCTO
-                            </th>
-
-                            <th>
-                                MARCA
-                            </th>
-
-                            <th>
-                                MEDIDA
-                            </th>
-
-                            <th>
-                                CANTIDAD
-                            </th>
-
-                            <th>
-                                PRECIO UNITARIO
-                            </th>
-
-                            <th>
-                                SUBTOTAL
-                            </th>
-
+                            <th>PRODUCTO</th>
+                            <th>MARCA</th>
+                            <th>MEDIDA</th>
+                            <th>CANTIDAD</th>
+                            <th>PRECIO</th>
+                            <th>SUBTOTAL</th>
                         </tr>
 
                     </thead>
 
-
-                    <!--
-                        main.js colocara aqui los productos
-                        obtenidos desde detalleventa.php
-                    -->
-
                     <tbody id="tablaDetalleVenta">
 
                         <tr>
-
-                            <td
-                                colspan="6"
-                                class="mensaje-detalle"
-                            >
-
-                                Seleccione una venta para ver el detalle.
-
+                            <td colspan="6">
+                                Cargando detalle...
                             </td>
-
                         </tr>
 
                     </tbody>
 
-
                 </table>
-
 
             </div>
 
-
-            <!-- ================================================= -->
-            <!-- RESUMEN -->
-            <!-- ================================================= -->
 
             <div class="resumen-detalle">
 
                 Productos diferentes:
 
                 <strong>
-                    <span id="detalleCantidadProductos">
-                        0
-                    </span>
+                    <span id="detalleCantidadProductos">0</span>
                 </strong>
 
                 <br>
@@ -447,34 +227,22 @@
                 Unidades vendidas:
 
                 <strong>
-                    <span id="detalleCantidadUnidades">
-                        0
-                    </span>
+                    <span id="detalleCantidadUnidades">0</span>
                 </strong>
 
             </div>
 
-
-            <!-- ================================================= -->
-            <!-- TOTAL -->
-            <!-- ================================================= -->
 
             <div class="total-detalle">
 
                 TOTAL VENTA:
 
                 <span id="detalleTotal">
-
                     $0
-
                 </span>
 
             </div>
 
-
-            <!-- ================================================= -->
-            <!-- BOTON CERRAR -->
-            <!-- ================================================= -->
 
             <div class="modal-botones">
 
@@ -482,19 +250,14 @@
                     type="button"
                     id="btnCerrarDetalle"
                 >
-
                     CERRAR
-
                 </button>
 
             </div>
 
-
         </div>
 
-
     </dialog>
-
 
 </body>
 
