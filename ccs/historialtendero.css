@@ -191,3 +191,203 @@ tr:hover {
     color: green;
     transition: all 0.3s ease;
 }
+
+#modalDetalleVenta {
+            width: 90%;
+            max-width: 900px;
+
+            border: none;
+            border-radius: 15px;
+
+            padding: 0;
+
+            box-shadow:
+                0 10px 40px
+                rgba(0, 0, 0, 0.4);
+}
+
+
+        /* Fondo oscuro cuando se abre el detalle */
+#modalDetalleVenta::backdrop {
+            background:
+                rgba(0, 0, 0, 0.65);
+        }
+
+
+        /* Contenido interno */
+        .modal-contenido {
+            padding: 25px;
+
+            background-color: white;
+        }
+
+
+        /* Titulo */
+        .modal-titulo {
+            text-align: center;
+
+            margin-top: 0;
+            margin-bottom: 20px;
+
+            color: #064b13;
+        }
+
+
+        /* Informacion general de la venta */
+        .info-venta {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 12px;
+
+            padding: 15px;
+
+            margin-bottom: 20px;
+
+            background-color: #f3f3f3;
+
+            border-radius: 10px;
+        }
+
+
+        .info-venta p {
+            margin: 5px 0;
+        }
+
+
+        /* Contenedor de tabla */
+        .tabla-detalle-container {
+            width: 100%;
+
+            overflow-x: auto;
+
+            margin-top: 15px;
+        }
+
+
+        /* Tabla detalle */
+        .tabla-detalle {
+            width: 100%;
+
+            border-collapse: collapse;
+        }
+
+
+        .tabla-detalle thead th {
+            background-color: #064b13;
+
+            color: white;
+
+            padding: 12px 8px;
+
+            text-align: center;
+        }
+
+
+        .tabla-detalle tbody td {
+            padding: 10px 8px;
+
+            text-align: center;
+
+            border-bottom:
+                1px solid #dddddd;
+        }
+
+
+        .tabla-detalle tbody tr:hover {
+            background-color: #f4f4f4;
+        }
+
+
+        /* Total */
+        .total-detalle {
+            margin-top: 20px;
+
+            text-align: right;
+
+            font-size: 21px;
+
+            font-weight: bold;
+
+            color: #064b13;
+        }
+
+
+        /* Cantidad total */
+        .resumen-detalle {
+            margin-top: 15px;
+
+            text-align: right;
+
+            color: #444444;
+        }
+
+
+        /* Botones del modal */
+        .modal-botones {
+            display: flex;
+
+            justify-content: center;
+
+            margin-top: 25px;
+        }
+
+
+        /* Boton cerrar */
+        #btnCerrarDetalle {
+            padding: 11px 35px;
+
+            border: none;
+
+            border-radius: 10px;
+
+            background-color: #064b13;
+
+            color: white;
+
+            font-size: 16px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+        }
+
+
+        #btnCerrarDetalle:hover {
+            background-color: #08751d;
+        }
+
+
+        /* Mensaje de carga */
+        .mensaje-detalle {
+            text-align: center;
+
+            padding: 20px;
+        }
+
+
+        /* Adaptacion para celular */
+        @media (max-width: 600px) {
+
+            #modalDetalleVenta {
+                width: 95%;
+            }
+
+
+            .modal-contenido {
+                padding: 15px;
+            }
+
+
+            .info-venta {
+                grid-template-columns: 1fr;
+            }
+
+
+            .tabla-detalle {
+                min-width: 700px;
+            }
+
+}

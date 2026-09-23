@@ -1,12 +1,18 @@
 // ======================================================
-// IMPORTAR FUNCIONES
+// MAIN.JS
+// FUNCIONES GENERALES DEL PROYECTO
+// ======================================================
+
+
+// ======================================================
+// IMPORTAR LOGIN
 // ======================================================
 
 import { validarLogin } from "./login.js";
 
 
 // ======================================================
-// FUNCIÓN GENERAL PARA REDIRECCIONAR
+// FUNCION GENERAL PARA REDIRECCIONAR
 // ======================================================
 
 function url(destino) {
@@ -15,24 +21,24 @@ function url(destino) {
 
 
 // ======================================================
-// BOTONES GENÉRICOS
+// BOTONES GENERICOS
 // ======================================================
 
 
-// Botón código
+// BOTON CODIGO
 document.addEventListener("click", (e) => {
 
-    if (e.target.matches("#btncodigo")) {
+    if (e.target.closest("#btncodigo")) {
         location.href = "validar";
     }
 
 });
 
 
-// Botón restablecer
+// BOTON RESTABLECER
 document.addEventListener("click", (e) => {
 
-    if (e.target.matches("#btnreestablecer")) {
+    if (e.target.closest("#btnreestablecer")) {
         location.href = "reestablecer";
     }
 
@@ -40,31 +46,31 @@ document.addEventListener("click", (e) => {
 
 
 // ======================================================
-// BOTONES INTERFAZ INICIO DE SESIÓN
+// BOTONES INICIO DE SESION
 // ======================================================
 
 document.addEventListener("click", (e) => {
 
-    // Botón registrarse
-    if (e.target.matches("#btnregistrarse")) {
+    // REGISTRARSE
+    if (e.target.closest("#btnregistrarse")) {
         location.href = "creacionusuario";
     }
 
 
-    // Botón recordar contraseña
-    if (e.target.matches("#btnrecordar")) {
+    // RECORDAR CONTRASEÑA
+    if (e.target.closest("#btnrecordar")) {
         location.href = "reestablecer";
     }
 
 
-    // Botón volver al menú principal
-    if (e.target.matches("#btnvolver")) {
+    // VOLVER AL MENU PRINCIPAL
+    if (e.target.closest("#btnvolver")) {
         location.href = "menuprincipal";
     }
 
 
-    // Botón volver al inicio de sesión
-    if (e.target.matches("#btniniciosesion")) {
+    // VOLVER AL INICIO DE SESION
+    if (e.target.closest("#btniniciosesion")) {
         location.href = "iniciosesion";
     }
 
@@ -82,31 +88,37 @@ document.addEventListener("submit", (e) => {
         e.preventDefault();
 
         validarLogin();
-
     }
 
 });
 
 
 // ======================================================
-// BOTONES MENÚ PRINCIPAL DEL CLIENTE
+// BOTONES MENU PRINCIPAL CLIENTE
 // ======================================================
 
 document.addEventListener("click", (e) => {
 
-    if (e.target.matches("#btnmenucomprar")) {
+    // COMPRAR
+    if (e.target.closest("#btnmenucomprar")) {
         location.href = "compra";
     }
 
-    if (e.target.matches("#btnmenumicuenta")) {
+
+    // MI CUENTA
+    if (e.target.closest("#btnmenumicuenta")) {
         location.href = "infocuenta";
     }
 
-    if (e.target.matches("#btnmenuhistorial")) {
+
+    // HISTORIAL DE COMPRAS
+    if (e.target.closest("#btnmenuhistorial")) {
         location.href = "historialcompras";
     }
 
-    if (e.target.matches("#btnmenurecargar")) {
+
+    // RECARGAR CUENTA
+    if (e.target.closest("#btnmenurecargar")) {
         location.href = "recargarcuenta";
     }
 
@@ -114,87 +126,73 @@ document.addEventListener("click", (e) => {
 
 
 // ======================================================
-// BOTONES MENÚ DEL TENDERO
+// BOTONES MENU TENDERO
 // ======================================================
 
 document.addEventListener("click", (e) => {
 
-    // Historial de ventas
-    if (e.target.matches("#btnhistorialventas")) {
+    // HISTORIAL DE VENTAS
+    if (e.target.closest("#btnhistorialventas")) {
         location.href = "historialtendero";
     }
 
 
-    // Información del tendero
-    if (e.target.matches("#btninfotendero")) {
+    // INFORMACION DEL TENDERO
+    if (e.target.closest("#btninfotendero")) {
         location.href = "infotendero";
     }
 
 
-    // Nuevo producto
-    if (e.target.matches("#btnnuevoproducto")) {
+    // NUEVO PRODUCTO
+    if (e.target.closest("#btnnuevoproducto")) {
         location.href = "nuevoproducto";
     }
 
 
-    // Lista de productos
-    if (e.target.matches("#btnlistaproductos")) {
+    // LISTA DE PRODUCTOS
+    if (e.target.closest("#btnlistaproductos")) {
         location.href = "listaproductos";
     }
 
 
-    // Registrar nueva venta
-    if (e.target.matches("#btnmovimiento")) {
+    // NUEVA VENTA
+    if (e.target.closest("#btnmovimiento")) {
         location.href = "nuevaventa";
     }
 
-});
 
-
-// ======================================================
-// BOTONES GENÉRICOS DEL TENDERO
-// ======================================================
-
-document.addEventListener("click", (e) => {
-
-    // Volver al menú del tendero
-    if (e.target.matches("#btnvolvertendero")) {
+    // VOLVER AL MENU DEL TENDERO
+    if (e.target.closest("#btnvolvertendero")) {
         location.href = "menutendero";
     }
 
-
-    // Volver al inicio de sesión
-    if (e.target.matches("#btniniciosesion")) {
-        location.href = "iniciosesion";
-    }
-
 });
 
 
 // ======================================================
 // ======================================================
-// HISTORIAL DE VENTAS DEL TENDERO
+// HISTORIAL DE VENTAS
 // ======================================================
 // ======================================================
 
 
-// Aquí vamos a guardar las ventas que llegan desde PHP.
-// Esto también nos permitirá realizar los filtros.
+// Aqui vamos a guardar todas las ventas obtenidas
+// desde listarventas.php
 let ventasCargadas = [];
 
 
 // ======================================================
-// FUNCIÓN PARA CARGAR LAS VENTAS
+// CARGAR HISTORIAL DE VENTAS
 // ======================================================
 
 async function cargarHistorialVentas() {
 
-    // Buscar la tabla del historial
-    const tablaVentas = document.getElementById("tablaVentas");
+    const tablaVentas =
+        document.getElementById("tablaVentas");
 
 
-    // Si la tabla NO existe, significa que estamos en otra
-    // página del proyecto, por lo tanto no hacemos nada.
+    // Si no existe tablaVentas significa que estamos
+    // en otra interfaz del proyecto
     if (!tablaVentas) {
         return;
     }
@@ -202,7 +200,7 @@ async function cargarHistorialVentas() {
 
     try {
 
-        // Mostrar mensaje mientras consulta
+        // Mostrar mensaje de carga
         tablaVentas.innerHTML = `
             <tr>
                 <td colspan="4">
@@ -213,52 +211,79 @@ async function cargarHistorialVentas() {
 
 
         // ==================================================
-        // CONSULTAR API
+        // CONSULTAR API LISTAR VENTAS
         // ==================================================
 
-        const response = await fetch("../api/ventas/listarventas.php");
+        const response =
+            await fetch(
+                "../api/ventas/listarventas.php"
+            );
 
 
-        // Verificar respuesta HTTP
-        if (!response.ok) {
+        // Leemos primero como texto para detectar
+        // posibles errores PHP
+        const texto =
+            await response.text();
+
+
+        console.log(
+            "Respuesta listarventas.php:",
+            texto
+        );
+
+
+        // ==================================================
+        // CONVERTIR A JSON
+        // ==================================================
+
+        let data;
+
+
+        try {
+
+            data = JSON.parse(texto);
+
+        } catch (error) {
 
             throw new Error(
-                "Error HTTP: " + response.status
+                "listarventas.php no devolvio JSON valido"
             );
 
         }
 
 
-        // Convertir respuesta de PHP a JSON
-        const data = await response.json();
-
-
-        // Mostrar información en consola para pruebas
-        console.log("Respuesta historial:", data);
-
-
         // ==================================================
-        // VERIFICAR RESPUESTA DE LA API
+        // VALIDAR RESPUESTA
         // ==================================================
 
-        if (!data.success) {
+        if (
+            !response.ok ||
+            !data.success
+        ) {
 
             throw new Error(
-                data.error || "No fue posible obtener las ventas"
+                data.error ||
+                "No fue posible cargar el historial"
             );
 
         }
 
 
-        // Guardamos las ventas
-        ventasCargadas = data.ventas || [];
+        // Guardar ventas
+        ventasCargadas =
+            data.ventas || [];
 
 
-        // ==================================================
-        // MOSTRAR LAS VENTAS
-        // ==================================================
+        console.log(
+            "Ventas cargadas:",
+            ventasCargadas
+        );
 
-        mostrarVentas(ventasCargadas);
+
+        // Mostrar ventas
+        mostrarVentas(
+            ventasCargadas
+        );
 
 
     } catch (error) {
@@ -283,12 +308,13 @@ async function cargarHistorialVentas() {
 
 
 // ======================================================
-// FUNCIÓN PARA MOSTRAR LAS VENTAS EN LA TABLA
+// MOSTRAR VENTAS EN LA TABLA
 // ======================================================
 
 function mostrarVentas(ventas) {
 
-    const tablaVentas = document.getElementById("tablaVentas");
+    const tablaVentas =
+        document.getElementById("tablaVentas");
 
 
     if (!tablaVentas) {
@@ -304,7 +330,10 @@ function mostrarVentas(ventas) {
     // SI NO HAY VENTAS
     // ==================================================
 
-    if (!ventas || ventas.length === 0) {
+    if (
+        !ventas ||
+        ventas.length === 0
+    ) {
 
         tablaVentas.innerHTML = `
             <tr>
@@ -315,53 +344,48 @@ function mostrarVentas(ventas) {
         `;
 
         return;
-
     }
 
 
     // ==================================================
-    // RECORRER VENTAS
+    // CREAR FILAS
     // ==================================================
 
     ventas.forEach((venta) => {
 
-        const fila = document.createElement("tr");
+        const fila =
+            document.createElement("tr");
 
 
         fila.innerHTML = `
-
             <td>
-                ${venta.Fecha ?? ""}
+                ${venta.Fecha || ""}
             </td>
 
             <td>
-                ${venta.Id_Cliente ?? ""}
+                ${venta.Id_Cliente || ""}
             </td>
 
             <td>
-                ${venta.Estado ?? ""}
+                ${venta.Estado || ""}
             </td>
 
             <td>
-
                 <button
                     type="button"
                     class="btn-detalle"
                     data-id="${venta.Id_Venta}"
                 >
-
                     <i class="fas fa-search"></i>
-
                     Detalle
-
                 </button>
-
             </td>
-
         `;
 
 
-        tablaVentas.appendChild(fila);
+        tablaVentas.appendChild(
+            fila
+        );
 
     });
 
@@ -369,117 +393,584 @@ function mostrarVentas(ventas) {
 
 
 // ======================================================
-// FILTRAR HISTORIAL DE VENTAS
+// FILTRAR HISTORIAL
 // ======================================================
 
 function filtrarHistorialVentas() {
 
     const fechaInicio =
-        document.getElementById("fechaInicio")?.value || "";
+        document.getElementById(
+            "fechaInicio"
+        )?.value || "";
 
 
     const fechaFin =
-        document.getElementById("fechaFin")?.value || "";
+        document.getElementById(
+            "fechaFin"
+        )?.value || "";
 
 
-    const buscarUsuario =
-        document.getElementById("buscarUsuario")?.value
-            .trim()
-            .toLowerCase() || "";
+    const usuario =
+        document.getElementById(
+            "buscarUsuario"
+        )?.value.trim() || "";
 
 
-    // ==================================================
-    // FILTRAR
-    // ==================================================
-
-    const ventasFiltradas = ventasCargadas.filter((venta) => {
+    const ventasFiltradas =
+        ventasCargadas.filter(
+            (venta) => {
 
 
-        // Obtener solamente YYYY-MM-DD
-        // La fecha de MySQL normalmente llega como:
-        // 2026-09-22 15:30:00
+                // ==========================================
+                // FECHA DE LA VENTA
+                // ==========================================
 
-        const fechaVenta =
-            venta.Fecha
-                ? venta.Fecha.substring(0, 10)
-                : "";
-
-
-        // ID cliente convertido a texto
-        const idCliente =
-            String(venta.Id_Cliente ?? "")
-                .toLowerCase();
+                const fechaVenta =
+                    venta.Fecha
+                        ? venta.Fecha.substring(0, 10)
+                        : "";
 
 
-        // ==================================================
-        // FILTRO FECHA INICIO
-        // ==================================================
+                // ==========================================
+                // ID DEL CLIENTE
+                // ==========================================
 
-        const cumpleFechaInicio =
-            !fechaInicio ||
-            fechaVenta >= fechaInicio;
-
-
-        // ==================================================
-        // FILTRO FECHA FIN
-        // ==================================================
-
-        const cumpleFechaFin =
-            !fechaFin ||
-            fechaVenta <= fechaFin;
+                const idCliente =
+                    String(
+                        venta.Id_Cliente || ""
+                    );
 
 
-        // ==================================================
-        // FILTRO USUARIO
-        // ==================================================
+                // ==========================================
+                // VALIDAR FECHA INICIO
+                // ==========================================
 
-        const cumpleUsuario =
-            !buscarUsuario ||
-            idCliente.includes(buscarUsuario);
+                const cumpleInicio =
+                    !fechaInicio ||
+                    fechaVenta >= fechaInicio;
 
 
-        return (
-            cumpleFechaInicio &&
-            cumpleFechaFin &&
-            cumpleUsuario
+                // ==========================================
+                // VALIDAR FECHA FIN
+                // ==========================================
+
+                const cumpleFin =
+                    !fechaFin ||
+                    fechaVenta <= fechaFin;
+
+
+                // ==========================================
+                // VALIDAR CLIENTE
+                // ==========================================
+
+                const cumpleUsuario =
+                    !usuario ||
+                    idCliente.includes(
+                        usuario
+                    );
+
+
+                return (
+                    cumpleInicio &&
+                    cumpleFin &&
+                    cumpleUsuario
+                );
+
+            }
         );
-
-    });
 
 
     // Mostrar resultados
-    mostrarVentas(ventasFiltradas);
+    mostrarVentas(
+        ventasFiltradas
+    );
 
 }
 
 
 // ======================================================
-// BOTÓN FILTRAR
+// BOTON FILTRAR
 // ======================================================
 
 document.addEventListener("click", (e) => {
 
-    // closest permite que funcione incluso si se hace
-    // clic directamente sobre el SVG del botón.
-    const botonFiltrar = e.target.closest("#btnfiltrar");
+    const botonFiltrar =
+        e.target.closest("#btnfiltrar");
 
 
-    if (botonFiltrar) {
-
-        filtrarHistorialVentas();
-
+    if (!botonFiltrar) {
+        return;
     }
+
+
+    filtrarHistorialVentas();
 
 });
 
 
 // ======================================================
-// BOTÓN DETALLE DE LA VENTA
+// FORMATEAR DINERO
+// ======================================================
+
+function formatearDinero(valor) {
+
+    const numero =
+        Number(valor || 0);
+
+
+    return "$" +
+        numero.toLocaleString(
+            "es-CO"
+        );
+
+}
+
+
+// ======================================================
+// ======================================================
+// DETALLE DE VENTA
+// ======================================================
+// ======================================================
+
+
+// ======================================================
+// ABRIR DETALLE
+// ======================================================
+
+async function abrirDetalleVenta(idVenta) {
+
+    const modal =
+        document.getElementById(
+            "modalDetalleVenta"
+        );
+
+
+    const tabla =
+        document.getElementById(
+            "tablaDetalleVenta"
+        );
+
+
+    // Si la interfaz no tiene el modal,
+    // no hacemos nada
+    if (!modal || !tabla) {
+
+        console.error(
+            "No se encontro el modal de detalle"
+        );
+
+        return;
+    }
+
+
+    // ==================================================
+    // LIMPIAR INFORMACION ANTERIOR
+    // ==================================================
+
+    const detalleIdVenta =
+        document.getElementById(
+            "detalleIdVenta"
+        );
+
+
+    const detalleCliente =
+        document.getElementById(
+            "detalleCliente"
+        );
+
+
+    const detalleTendero =
+        document.getElementById(
+            "detalleTendero"
+        );
+
+
+    const detalleFecha =
+        document.getElementById(
+            "detalleFecha"
+        );
+
+
+    const detalleFechaRegistro =
+        document.getElementById(
+            "detalleFechaRegistro"
+        );
+
+
+    const detalleEstado =
+        document.getElementById(
+            "detalleEstado"
+        );
+
+
+    const detalleTotal =
+        document.getElementById(
+            "detalleTotal"
+        );
+
+
+    const detalleCantidadProductos =
+        document.getElementById(
+            "detalleCantidadProductos"
+        );
+
+
+    const detalleCantidadUnidades =
+        document.getElementById(
+            "detalleCantidadUnidades"
+        );
+
+
+    // Valores iniciales
+    if (detalleIdVenta) {
+        detalleIdVenta.textContent =
+            idVenta;
+    }
+
+
+    if (detalleCliente) {
+        detalleCliente.textContent =
+            "-";
+    }
+
+
+    if (detalleTendero) {
+        detalleTendero.textContent =
+            "-";
+    }
+
+
+    if (detalleFecha) {
+        detalleFecha.textContent =
+            "-";
+    }
+
+
+    if (detalleFechaRegistro) {
+        detalleFechaRegistro.textContent =
+            "-";
+    }
+
+
+    if (detalleEstado) {
+        detalleEstado.textContent =
+            "-";
+    }
+
+
+    if (detalleTotal) {
+        detalleTotal.textContent =
+            "$0";
+    }
+
+
+    if (detalleCantidadProductos) {
+        detalleCantidadProductos.textContent =
+            "0";
+    }
+
+
+    if (detalleCantidadUnidades) {
+        detalleCantidadUnidades.textContent =
+            "0";
+    }
+
+
+    // Mensaje mientras carga
+    tabla.innerHTML = `
+        <tr>
+            <td colspan="6">
+                Cargando detalle de la venta...
+            </td>
+        </tr>
+    `;
+
+
+    // ==================================================
+    // ABRIR MODAL
+    // ==================================================
+
+    if (!modal.open) {
+
+        modal.showModal();
+
+    }
+
+
+    try {
+
+        // ==================================================
+        // CONSULTAR DETALLEVENTA.PHP
+        // ==================================================
+
+        const urlDetalle =
+            "../api/ventas/detalleventa.php?id_venta=" +
+            encodeURIComponent(idVenta);
+
+
+        console.log(
+            "Consultando detalle:",
+            urlDetalle
+        );
+
+
+        const response =
+            await fetch(
+                urlDetalle
+            );
+
+
+        // Leer primero como texto
+        const texto =
+            await response.text();
+
+
+        console.log(
+            "Respuesta detalleventa.php:",
+            texto
+        );
+
+
+        // ==================================================
+        // CONVERTIR A JSON
+        // ==================================================
+
+        let data;
+
+
+        try {
+
+            data =
+                JSON.parse(texto);
+
+        } catch (error) {
+
+            throw new Error(
+                "detalleventa.php no devolvio JSON valido"
+            );
+
+        }
+
+
+        // ==================================================
+        // VALIDAR RESPUESTA
+        // ==================================================
+
+        if (
+            !response.ok ||
+            !data.success
+        ) {
+
+            throw new Error(
+                data.error ||
+                "No fue posible consultar el detalle de la venta"
+            );
+
+        }
+
+
+        console.log(
+            "Detalle de venta:",
+            data
+        );
+
+
+        // ==================================================
+        // MOSTRAR DATOS GENERALES
+        // ==================================================
+
+        if (detalleIdVenta) {
+
+            detalleIdVenta.textContent =
+                data.venta.Id_Venta;
+
+        }
+
+
+        if (detalleCliente) {
+
+            detalleCliente.textContent =
+                data.venta.Id_Cliente;
+
+        }
+
+
+        if (detalleTendero) {
+
+            detalleTendero.textContent =
+                data.venta.Id_Tendero;
+
+        }
+
+
+        if (detalleFecha) {
+
+            detalleFecha.textContent =
+                data.venta.Fecha;
+
+        }
+
+
+        if (detalleFechaRegistro) {
+
+            detalleFechaRegistro.textContent =
+                data.venta.Fecha_Registro || "-";
+
+        }
+
+
+        if (detalleEstado) {
+
+            detalleEstado.textContent =
+                data.venta.Estado;
+
+        }
+
+
+        if (detalleTotal) {
+
+            detalleTotal.textContent =
+                formatearDinero(
+                    data.venta.Total_Venta
+                );
+
+        }
+
+
+        if (detalleCantidadProductos) {
+
+            detalleCantidadProductos.textContent =
+                data.cantidad_productos || 0;
+
+        }
+
+
+        if (detalleCantidadUnidades) {
+
+            detalleCantidadUnidades.textContent =
+                data.cantidad_unidades || 0;
+
+        }
+
+
+        // ==================================================
+        // LIMPIAR TABLA DE DETALLES
+        // ==================================================
+
+        tabla.innerHTML = "";
+
+
+        // ==================================================
+        // VALIDAR SI EXISTEN PRODUCTOS
+        // ==================================================
+
+        if (
+            !data.detalles ||
+            data.detalles.length === 0
+        ) {
+
+            tabla.innerHTML = `
+                <tr>
+                    <td colspan="6">
+                        Esta venta no tiene productos registrados.
+                    </td>
+                </tr>
+            `;
+
+            return;
+        }
+
+
+        // ==================================================
+        // MOSTRAR PRODUCTOS
+        // ==================================================
+
+        data.detalles.forEach(
+            (detalle) => {
+
+
+                const fila =
+                    document.createElement(
+                        "tr"
+                    );
+
+
+                fila.innerHTML = `
+
+                    <td>
+                        ${detalle.Nombre || ""}
+                    </td>
+
+                    <td>
+                        ${detalle.Marca || "N/A"}
+                    </td>
+
+                    <td>
+                        ${detalle.Medida || ""}
+                    </td>
+
+                    <td>
+                        ${detalle.Cantidad || 0}
+                    </td>
+
+                    <td>
+                        ${formatearDinero(
+                            detalle.Precio_Unitario
+                        )}
+                    </td>
+
+                    <td>
+                        ${formatearDinero(
+                            detalle.Subtotal
+                        )}
+                    </td>
+
+                `;
+
+
+                tabla.appendChild(
+                    fila
+                );
+
+            }
+        );
+
+
+    } catch (error) {
+
+        // ==================================================
+        // MOSTRAR ERROR
+        // ==================================================
+
+        console.error(
+            "Error consultando detalle de venta:",
+            error
+        );
+
+
+        tabla.innerHTML = `
+            <tr>
+                <td colspan="6">
+                    Error al cargar el detalle de la venta.
+                </td>
+            </tr>
+        `;
+
+    }
+
+}
+
+
+// ======================================================
+// BOTON DETALLE DE VENTA
 // ======================================================
 
 document.addEventListener("click", (e) => {
 
-    const botonDetalle = e.target.closest(".btn-detalle");
+    const botonDetalle =
+        e.target.closest(
+            ".btn-detalle"
+        );
 
 
     if (!botonDetalle) {
@@ -487,40 +978,148 @@ document.addEventListener("click", (e) => {
     }
 
 
-    // Obtener ID de la venta
     const idVenta =
         botonDetalle.dataset.id;
 
 
+    if (!idVenta) {
+
+        alert(
+            "No fue posible identificar la venta."
+        );
+
+        return;
+    }
+
+
     console.log(
-        "ID venta seleccionada:",
+        "Abriendo detalle venta:",
         idVenta
     );
 
 
-    /*
-        Más adelante conectaremos este botón
-        con la API de detalle de venta.
-
-        Por el momento mostramos el ID.
-    */
-
-    alert(
-        "Venta seleccionada: " + idVenta
+    abrirDetalleVenta(
+        idVenta
     );
 
 });
 
 
 // ======================================================
-// CARGAR HISTORIAL AUTOMÁTICAMENTE
+// CERRAR DETALLE
+// ======================================================
+
+document.addEventListener("click", (e) => {
+
+    const botonCerrar =
+        e.target.closest(
+            "#btnCerrarDetalle"
+        );
+
+
+    if (!botonCerrar) {
+        return;
+    }
+
+
+    const modal =
+        document.getElementById(
+            "modalDetalleVenta"
+        );
+
+
+    if (
+        modal &&
+        modal.open
+    ) {
+
+        modal.close();
+
+    }
+
+});
+
+
+// ======================================================
+// CERRAR MODAL AL HACER CLIC FUERA DEL CONTENIDO
+// ======================================================
+
+document.addEventListener("click", (e) => {
+
+    const modal =
+        document.getElementById(
+            "modalDetalleVenta"
+        );
+
+
+    if (!modal) {
+        return;
+    }
+
+
+    // Solo evaluar si el modal esta abierto
+    if (!modal.open) {
+        return;
+    }
+
+
+    // Si el clic fue directamente sobre
+    // el fondo del dialog
+    if (e.target === modal) {
+
+        const rect =
+            modal.getBoundingClientRect();
+
+
+        const estaDentro =
+            (
+                e.clientX >= rect.left &&
+                e.clientX <= rect.right &&
+                e.clientY >= rect.top &&
+                e.clientY <= rect.bottom
+            );
+
+
+        if (!estaDentro) {
+
+            modal.close();
+
+        }
+
+    }
+
+});
+
+
+// ======================================================
+// INICIALIZACION DEL PROYECTO
 // ======================================================
 
 document.addEventListener(
     "DOMContentLoaded",
     () => {
 
-        cargarHistorialVentas();
+
+        // ==================================================
+        // DETECTAR HISTORIAL DE VENTAS
+        // ==================================================
+
+        const tablaVentas =
+            document.getElementById(
+                "tablaVentas"
+            );
+
+
+        if (tablaVentas) {
+
+            console.log(
+                "Historial de ventas detectado"
+            );
+
+
+            cargarHistorialVentas();
+
+        }
 
     }
 );
